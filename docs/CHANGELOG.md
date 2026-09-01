@@ -34,6 +34,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 <!-- 每条独立一行追加到本段末尾，无需分类标题，合并时冲突最小 -->
 - [新功能] 完善 Futu OpenD 港股数据源接入：系统设置支持 OpenD 地址、端口和港股实时数据源优先级，保留 Longbridge、AkShare、YFinance fallback。
 - [测试] 增加 Futu 配置 schema、港股实时路由和 fallback 契约覆盖。
+- [新功能] 每日选股（每日推荐）模式：新增独立 `daily-screening.yml` workflow，cron 工作日 UTC 07:45（北京时间 15:45 收盘后）自动触发，并支持手动 dispatch 选择策略/市场/数量/种子；`SCREENING_ENABLED` 环境开关，`TRADING_DAY_CHECK_ENABLED` 交易日校验；`00-daily-analysis.yml` 保持与上游官方一致（不含选股）。新增 `scripts/run_screening.py` 无头调用 `ScreeningService.screen()`，产物 `reports/screening_YYYYMMDD.md/.json` 作为 Actions artifact 上传（保留 30 天），失败软跳过不阻断。选股结果可选推送飞书：配置 `FEISHU_WEBHOOK_URL`（必填）自动发送，`FEISHU_WEBHOOK_SECRET` 加签、`FEISHU_WEBHOOK_KEYWORD` 关键词（与官方渠道一致），未配置则跳过不影响选股。
+- [改进] 选股报告精简为只含核心信息：去掉 LLM 市场观点/选股逻辑长文与 markdown 符号（飞书 text 不渲染），候选行收敛为「代码 名称（评分分）：短理由（超 30 字截断）」，元信息合并为两行，单只约 42 字、20 只报告约 1000 字（此前约 1500–3000 字），完整数据仍在同名 .json 中。
+- [修复] 报告时间戳改用北京时间（UTC+8）：`report_renderer.py` 的 `report_date`/`report_timestamp` 由 naive `datetime.now()` 改为 `datetime.now(timezone(timedelta(hours=8)))`，修复 GitHub Actions runner（UTC）生成的报告时间比北京时间早 8 小时的问题。
 
 - [新功能] 建立唯一、可生成、可校验、可降级的指数身份注册表：由 `scripts/stock_index_seeds/index_registry.csv` 的 31 项 manifest 确定性合并进 `apps/dsa-web/public/stocks.index.json`，运行时唯一真源为 JSON 中通过校验的 `active=true`/`assetType=index` 行，移除 `stock_list_parser` 的 5 项硬编码白名单；支持 `--index-only` 生成与字节稳定输出。
 - [新功能] 补齐显式 SH/SZ/CSI 指数 alias 收敛与 CSI 身份：`sh000300`/`000300.SH`/`sz399300`/`399300.SZ`/`000300.CSI` 均解析到 `sh000300`，`csi930955`/`930955.CSI` 解析到 `csi930955`；未登记 `.CSI` 输入返回 `unsupported`；裸数字恒为 stock 并仅通过 `matched_index` 暴露歧义。

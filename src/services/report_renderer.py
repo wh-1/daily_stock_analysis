@@ -110,7 +110,12 @@ def render(
     Returns:
         Rendered string, or None on error (caller should fallback).
     """
-    from datetime import datetime
+    from datetime import datetime, timezone, timedelta
+
+    # 报告时间统一按北京时间(UTC+8)渲染。原实现用 datetime.now()(系统本地时间)，
+    # 在 UTC 等非北京时区的环境(如 GitHub Actions runner)下会比用户所在时区偏早/偏晚，
+    # 导致"报告生成时间"显示与真实生成时刻不符。
+    _beijing_tz = timezone(timedelta(hours=8))
 
     try:
         from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -119,7 +124,7 @@ def render(
         return None
 
     if report_date is None:
-        report_date = datetime.now().strftime("%Y-%m-%d")
+        report_date = datetime.now(_beijing_tz).strftime("%Y-%m-%d")
 
     templates_dir = _resolve_templates_dir()
     template_name = f"report_{platform}.j2"
@@ -188,7 +193,7 @@ def render(
                 models_used.append(model)
         models_used = list(dict.fromkeys(models_used))
 
-    report_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    report_timestamp = datetime.now(_beijing_tz).strftime("%Y-%m-%d %H:%M:%S")
 
     def failed_checks(checklist: List[str]) -> List[str]:
         return [c for c in (checklist or []) if c.startswith("❌") or c.startswith("⚠️")]
