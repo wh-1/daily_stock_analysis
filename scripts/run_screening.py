@@ -45,6 +45,8 @@ _STRATEGY_CN = {
 }
 _MARKET_CN = {"cn": "A股", "hk": "港股", "us": "美股"}
 _RANKING_CN = {"llm": "AI 排序", "screen_score": "本地评分"}
+# 市场态中文语义（与下方 _AUTO_STRATEGIES_BY_STATE 的进攻/震荡/防御注释对齐）
+_STATE_CN = {"STRONG": "进攻", "MIX": "震荡", "BEAR": "防御"}
 
 
 def _strategy_label(code: str) -> str:
@@ -222,17 +224,23 @@ def _merge_daily_summaries(entries: list[tuple[str, dict]]) -> dict:
 def _daily_kline_brief(info: dict) -> str:
     """给报告/日志用的一行中文摘要。"""
     if not info:
-        return "日K 未知"
+        return "日K：未知"
     sources = info.get("sources") or {}
     attempted = int(info.get("attempted") or 0)
     succeeded = int(info.get("succeeded") or 0)
     if sources:
-        detail = " ".join(f"{_source_label(k)}×{v}" for k, v in sorted(sources.items(), key=lambda kv: -kv[1]))
-        return f"日K {detail}（{succeeded}/{attempted} 成功）"
+        detail = " ".join(f"{_kline_source_label(k)}×{v}" for k, v in sorted(sources.items(), key=lambda kv: -kv[1]))
+        return f"日K：{detail}（{succeeded}/{attempted} 成功）"
     if not info.get("requested"):
-        return "日K 未拉取（策略无需）"
+        return "日K：未拉取（策略无需）"
     reason = info.get("skipped_reason") or (info.get("error_samples") or ["取数失败"])[0]
-    return f"日K 拉取失败（0/{attempted}，{reason}）"
+    return f"日K：拉取失败（0/{attempted}，{reason}）"
+
+
+def _kline_source_label(key: str) -> str:
+    """日K fetcher 名 → 中文（引擎内部名形如 'dsa:TencentFetcher'，剥壳后查中文表）。"""
+    short = str(key).replace("dsa:", "").removesuffix("Fetcher").strip().lower()
+    return _SOURCE_CN.get(short, short)
 
 
 # auto 模式：市场状态 → 策略映射。与三态攻守体系的 CSI300 闸门口径对齐，
@@ -412,7 +420,7 @@ def _merge_strategy_results(results: list[dict], max_results: int) -> dict:
     return base
 
 
-def _candidate_row(c: dict, max_reason: int = 30) -> str:
+def _candidate_row(c: dict, max_reason: int = 56) -> str:
     """精简候选行：编号外的代码/名称/评分/短理由，理由超长截断。
 
     说明：飞书 text 消息不渲染 markdown，这里刻意不用 `**` 等符号。
@@ -549,28 +557,44 @@ def main() -> int:
     lines = []
     lines.append(f"# 每日选股 · {date}")
     lines.append("")
+
     strategies_used = [s for s in (result.get("strategies_used") or []) if s]
     if strategies_used:
-        strategy_label = " + ".join(_STRATEGY_CN.get(s, s) for s in strategies_used)
-        strategy_detail = " + ".join(strategies_used)
-        resonance_note = f"（共振 {result.get('resonance_count', 0)} 只）"
+        # auto 双策略交叉：中文名用 × 强调两策略并联关系（与 --strategy auto 帮助文案口径一致）
+        strategy_label = " × ".join(_STRATEGY_CN.get(s, s) for s in strategies_used)
+        resonance_count = int(result.get("resonance_count") or 0)
+        resonance_note = f"（共振 ★{resonance_count}）" if resonance_count else ""
     else:
         strategy_label = _strategy_label(result.get("strategy", args.strategy))
-        strategy_detail = ""
         resonance_note = ""
+
+    # 概要：行情环境(组1) + 运行环境(组2)，每行一个字段、行内不串接。
+    # 飞书 text 消息不渲染 md，一行一字段避免手机窄屏(~16字/行)随机折行；md 桌面阅读同样整齐。
+    state = str(result.get("market_state") or "").strip().upper()
+    if state:
+        state_cn = _STATE_CN.get(state)
+        lines.append(f"- 市场态：{state} · {state_cn}" if state_cn else f"- 市场态：{state}")
+    market = str(result.get("market") or args.market).lower()
+    if market and market != "cn":
+        # A股是默认市场，不写以免噪音；港/美股才标注
+        lines.append(f"- 市场：{_market_label(market)}")
+    lines.append(f"- 策略：{strategy_label}")
+    lines.append(f"- 入选：{len(candidates)} 只{resonance_note}")
+    lines.append("")
+    model = str(result.get("llm_model_used") or "").strip()
+    if model:
+        # provider 前缀只是 litellm 通道标识（如 gemini/xxx），对读者是噪音，只留模型名
+        lines.append(f"- 模型：{model.split('/', 1)[-1]}")
     lines.append(
-        f"- 策略 {strategy_label}"
-        f" ｜ 市场 {_market_label(result.get('market', args.market))}"
-        f" ｜ 入选 {len(candidates)} 只{resonance_note}"
+        f"- 快照：{_source_label(result.get('snapshot_source', 'n/a'))}"
+        f" {result.get('snapshot_count', 'n/a')} 只"
     )
-    lines.append(
-        f"- 快照 {_source_label(result.get('snapshot_source', 'n/a'))}"
-        f"（{result.get('snapshot_count', 'n/a')} 只）"
-        f" ｜ 排名 {_ranking_label(result.get('ranking_mode', 'n/a'))}"
-        f" ｜ {_daily_kline_brief(daily_info)}"
-    )
-    if strategies_used:
-        lines.append(f"- ★ = 双策略共振（{strategy_detail}）")
+    lines.append(f"- {_daily_kline_brief(daily_info)}")
+    lines.append(f"- 排名：{_ranking_label(result.get('ranking_mode', 'n/a'))}")
+
+    if strategies_used and resonance_note:
+        lines.append("")
+        lines.append(f"★ = 双策略共振（{strategy_label}）")
     lines.append("")
     lines.append("## 入选标的")
     lines.append("")

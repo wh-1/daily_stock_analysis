@@ -423,27 +423,203 @@ jobs:
             exit 0
           fi
           python - <<'PY'
-          import os, time, hmac, hashlib, base64, json, urllib.request, urllib.error
-
+          import os, time, hmac, hashlib, base64, json, re, urllib.request, urllib.error
+          
           date = os.environ["DATE"]
           url = os.environ.get("FEISHU_WEBHOOK_URL", "").strip()
           secret = os.environ.get("FEISHU_WEBHOOK_SECRET", "").strip()
           keyword = os.environ.get("FEISHU_WEBHOOK_KEYWORD", "").strip()
-
-          with open(f"reports/screening_{date}.md", encoding="utf-8") as fh:
-              text = fh.read().strip()
-
-          # 关键词校验由飞书服务端执行：配置了关键词且正文不含时，拼到开头
-          if keyword and keyword not in text:
-              text = f"{keyword}\n{text}"
-          text = f"📊 每日选股\n\n{text}"
-          # 飞书 text 消息单条上限约 30KB，截断到 4000 字符避免过长
-          if len(text) > 4000:
-              text = text[:4000] + "\n…（已截断，完整报告见 Actions 构建产物）"
-
-          body = {"msg_type": "text", "content": {"text": text}}
+          
+          # ---- 中文映射：与 scripts/run_screening.py 保持一致（改动需两侧同步）----
+          _STRATEGY_CN = {
+              "balanced_alpha": "均衡优选", "blue_chip_income": "蓝筹红利", "capital_heat": "资金热度",
+              "dual_low": "双低稳健", "low_volatility_quality": "低波质量", "momentum_quality": "趋势质量",
+              "oversold_reversal": "超跌反转", "quality_value": "质量价值", "shrink_pullback": "缩量回踩",
+              "volume_breakout": "放量突破",
+          }
+          _MARKET_CN = {"cn": "A股", "hk": "港股", "us": "美股"}
+          _STATE_CN = {"STRONG": "进攻", "MIX": "震荡", "BEAR": "防御"}
+          _STATE_COLOR = {"STRONG": "green", "MIX": "orange", "BEAR": "red"}
+          _RANKING_CN = {"llm": "AI 排序", "screen_score": "本地评分"}
+          _SOURCE_CN = {
+              "sina": "新浪", "tencent": "腾讯", "efinance": "东财(efinance)",
+              "akshare_em": "东财(akshare)", "em_datacenter": "东财(datacenter)",
+              "akshare": "AKShare", "baostock": "Baostock", "last_good_cache": "快照缓存",
+          }
+          _KLINE_SRC_CN = {"tencent": "腾讯", "efinance": "东财", "baostock": "Baostock",
+                           "akshare": "AKShare", "sina": "新浪"}
+          
+          
+          def _first(d: dict, *keys):
+              for k in keys:
+                  v = d.get(k)
+                  if v not in (None, ""):
+                      return v
+              return ""
+          
+          
+          def _short_kline_source(key: str) -> str:
+              s = str(key).replace("dsa:", "").removesuffix("Fetcher").strip().lower()
+              return _KLINE_SRC_CN.get(s, s)
+          
+          
+          def _kline_brief(info: dict) -> str:
+              if not info:
+                  return "日K 未知"
+              sources = info.get("sources") or {}
+              attempted = int(info.get("attempted") or 0)
+              succeeded = int(info.get("succeeded") or 0)
+              if sources:
+                  detail = " ".join(f"{_short_kline_source(k)}×{v}"
+                                    for k, v in sorted(sources.items(), key=lambda kv: -kv[1]))
+                  return f"日K：{detail}（{succeeded}/{attempted} 成功）"
+              if not info.get("requested"):
+                  return "日K：未拉取（策略无需）"
+              return "日K：拉取失败"
+          
+          
+          def _model_short(model) -> str:
+              return str(model).split("/", 1)[-1]
+          
+          
+          def _score_str(c: dict) -> str:
+              for k in ("score", "merge_score", "llm_score"):
+                  v = c.get(k)
+                  if v not in (None, ""):
+                      return str(v)
+              return ""
+          
+          
+          def _cand_line(c: dict) -> str:
+              code = _first(c, "code", "symbol")
+              name = _first(c, "name", "stock_name")
+              reason = _first(c, "reason", "selection_logic", "comment")
+              star = "★ " if len(c.get("source_strategies") or []) >= 2 else ""
+              title = f"**{code} {name}**"
+              sc = _score_str(c)
+              if sc:
+                  title += f"（{sc}分）"
+              if reason:
+                  reason = " ".join(str(reason).split()).strip()
+                  if len(reason) > 100:
+                      reason = reason[:100] + "…"
+                  return f"{star}{title}：{reason}"
+              return f"{star}{title}"
+          
+          
+          def _build_card(d: dict) -> dict:
+              cands = d.get("candidates") or []
+              strategies = [s for s in (d.get("strategies_used") or []) if s]
+              if strategies:
+                  strategy_label = " × ".join(_STRATEGY_CN.get(s, s) for s in strategies)
+                  rc = int(d.get("resonance_count") or 0)
+                  resonance_note = f"（共振 ★{rc}）" if rc else ""
+              else:
+                  strategy_label = str(d.get("strategy") or "auto")
+                  resonance_note = ""
+              state = str(d.get("market_state") or "").strip().upper()
+              state_cn = _STATE_CN.get(state)
+              market = str(d.get("market") or "cn").lower()
+          
+              head = []
+              if state:
+                  head.append(f"**市场态**：{state} · {state_cn}" if state_cn else f"**市场态**：{state}")
+              if market and market != "cn":
+                  head.append(f"**市场**：{_MARKET_CN.get(market, market)}")
+              head.append(f"**策略**：{strategy_label}")
+              head.append(f"**入选**：{len(cands)} 只{resonance_note}")
+          
+              elements = [
+                  {"tag": "div", "text": {"tag": "lark_md", "content": "\n".join(head)}},
+                  {"tag": "hr"},
+                  {"tag": "div", "text": {"tag": "lark_md", "content": "**入选标的**"}},
+              ]
+              for c in cands:
+                  elements.append({"tag": "div", "text": {"tag": "lark_md", "content": _cand_line(c)}})
+              risk = str(d.get("llm_portfolio_risk") or "").strip()
+              if risk:
+                  elements.append({"tag": "hr"})
+                  elements.append({"tag": "div", "text": {"tag": "lark_md", "content": f"**风险提示**：{risk}"}})
+              parts = []
+              model = _model_short(d.get("llm_model_used") or "")
+              if model:
+                  parts.append(f"模型 {model}")
+              src = str(d.get("snapshot_source") or "")
+              parts.append(f"快照 {_SOURCE_CN.get(src, src or 'n/a')} {d.get('snapshot_count') or 0} 只")
+              dk = (d.get("data_sources") or {}).get("daily_kline") or {}
+              parts.append(_kline_brief(dk))
+              rm = str(d.get("ranking_mode") or "")
+              parts.append(f"排名 {_RANKING_CN.get(rm, rm)}")
+              elements.append({"tag": "hr"})
+              elements.append({"tag": "note", "elements": [{"tag": "lark_md", "content": " ｜ ".join(parts)}]})
+              return {
+                  "config": {"wide_screen_mode": True},
+                  "header": {"template": _STATE_COLOR.get(state, "grey"),
+                             "title": {"tag": "plain_text", "content": f"📊 每日选股 · {date}"}},
+                  "elements": elements,
+              }
+          
+          
+          def _feishu_clean(text: str) -> str:
+              out: list[str] = []
+              for raw in text.splitlines():
+                  s = raw.strip()
+                  if not s:
+                      if out and out[-1] != "":
+                          out.append("")
+                      continue
+                  if s.startswith("### "):
+                      s = s[4:]
+                  elif s.startswith("## "):
+                      s = s[3:]
+                  elif s.startswith("# "):
+                      continue
+                  s = re.sub(r"^[-*]\s+", "", s)
+                  s = s.replace("**", "").strip()
+                  if s:
+                      out.append(s)
+              while out and out[-1] == "":
+                  out.pop()
+              return "\n".join(out)
+          
+          
+          body = None
+          # 主路径：读结构化 JSON 渲染 interactive 卡片（手机自适应，无 md 符号噪音）
+          try:
+              with open(f"reports/screening_{date}.json", encoding="utf-8") as fh:
+                  data = json.load(fh)
+              if isinstance(data, dict) and data.get("candidates") is not None:
+                  body = {"msg_type": "interactive", "card": _build_card(data)}
+              else:
+                  raise ValueError("json 结构异常")
+          except Exception as exc:
+              print(f"::warning::卡片构造失败({exc})，降级 text 推送")
+          
+          # 降级路径：JSON 缺失/异常时回退 md 清洗文本
+          if body is None:
+              try:
+                  with open(f"reports/screening_{date}.md", encoding="utf-8") as fh:
+                      md_text = fh.read().strip()
+                  cleaned = _feishu_clean(md_text)
+                  if keyword and keyword not in cleaned:
+                      cleaned = f"{keyword}\n{cleaned}"
+                  body = {"msg_type": "text", "content": {"text": f"📊 每日选股 · {date}\n\n{cleaned}"}}
+              except Exception as exc2:
+                  print(f"::warning::text 降级也失败: {exc2}")
+          
+          if body is None:
+              print("⚪ 无可推送内容，跳过")
+              exit(0)
+          
+          # 卡片/富文本约 30KB 上限；超长时裁剪候选区，只留概要/头部与尾部注脚
+          if len(json.dumps(body, ensure_ascii=False)) > 28000 and body.get("msg_type") == "interactive":
+              els = body["card"]["elements"]
+              body["card"]["elements"] = els[:3] + [
+                  {"tag": "note", "elements": [{"tag": "lark_md", "content": "…（候选过多已裁剪，完整清单见 Actions 构建产物）"}]}
+              ] + els[-2:]
+              print("::warning::卡片超长，候选区已裁剪")
+          
           if secret:
-              # 飞书自定义机器人加签（官方算法）
               timestamp = str(round(time.time()))
               string_to_sign = f"{timestamp}\n{secret}"
               sign = base64.b64encode(
@@ -451,18 +627,18 @@ jobs:
               ).decode("utf-8")
               body["timestamp"] = timestamp
               body["sign"] = sign
-
-          req = urllib.request.Request(
-              url,
-              data=json.dumps(body).encode("utf-8"),
-              headers={"Content-Type": "application/json"},
-              method="POST",
-          )
+          
           try:
+              req = urllib.request.Request(
+                  url,
+                  data=json.dumps(body, ensure_ascii=False).encode("utf-8"),
+                  headers={"Content-Type": "application/json"},
+                  method="POST",
+              )
               with urllib.request.urlopen(req, timeout=15) as resp:
                   result = json.loads(resp.read().decode("utf-8"))
               if result.get("code") == 0 or result.get("StatusCode") == 0:
-                  print("✅ 飞书推送成功")
+                  print(f"✅ 飞书推送成功（{body['msg_type']}）")
               else:
                   print(f"::warning::飞书推送返回异常: {result}")
           except urllib.error.HTTPError as e:
