@@ -10,6 +10,7 @@ import argparse
 import datetime
 import json
 import os
+import re
 import sys
 
 # 允许从仓库根目录运行：python scripts/run_screening.py
@@ -59,6 +60,181 @@ def _ranking_label(mode: str) -> str:
     return _RANKING_CN.get(mode, str(mode))
 
 
+# 数据源中文名。选股链路有两套互不相干的源：
+#   快照链 src/services/screening/snapshot.py —— 全市场一次拉全，SNAPSHOT_SOURCE_PRIORITY 控制顺序
+#   日K链 src/services/screening/daily.py    —— 每票各拉一次，DAILY_SOURCE 控制顺序
+# 两者各自维护健康度（连挂 3 次冷却 300s），所以健康度不能只看快照。
+_SOURCE_CN = {
+    "sina": "新浪",
+    "tencent": "腾讯",
+    "efinance": "东财(efinance)",
+    "akshare_em": "东财(akshare)",
+    "em_datacenter": "东财(datacenter)",
+    "akshare": "AKShare",
+    "baostock": "Baostock",
+    "tushare": "Tushare",
+    "yfinance": "Yfinance",
+    "last_good_cache": "快照缓存",
+}
+
+
+def _source_label(code: str) -> str:
+    return _SOURCE_CN.get(str(code), str(code))
+
+
+# 引擎已经把日 K 采集情况写进了 degradation 文本（pipeline.py:251-272），
+# 只是没结构化进 json。这里做纯文本解析，避免改动 src/（engine-zero-modification）。
+_DAILY_LINE_PATTERNS = {
+    "attempt": re.compile(
+        r"Daily K-line enrichment attempted (\d+) candidates, succeeded (\d+)"
+    ),
+    "sources": re.compile(r"Daily K-line sources: (.+)"),
+    "quality": re.compile(r"Daily K-line quality flags: (.+)"),
+    "ordering": re.compile(r"Daily K-line source ordering: (.+)"),
+    "health": re.compile(r"Daily K-line source health: (.+)"),
+    "errors": re.compile(r"Daily K-line enrichment row errors: (.+)"),
+    "skipped": re.compile(r"Daily K-line enrichment skipped: (.+)"),
+}
+
+
+def _parse_counts(text: str) -> dict[str, int]:
+    """解析 'tencent=3, sina=1' 这类计数串，忽略非整数项。"""
+    counts: dict[str, int] = {}
+    for item in str(text).split(","):
+        name, _, raw = item.partition("=")
+        name = name.strip()
+        if not name:
+            continue
+        try:
+            counts[name] = counts.get(name, 0) + int(raw.strip())
+        except ValueError:
+            continue
+    return counts
+
+
+def _daily_kline_summary(result: dict) -> dict:
+    """从 result 还原本轮日 K 采集情况（源、命中次数、降级、健康度、错误）。"""
+    info: dict = {
+        "requested": False,
+        "attempted": 0,
+        "succeeded": int(result.get("daily_enrich_count") or 0),
+        "sources": {},
+        "primary": "",
+        "quality_flags": {},
+        "source_order_notes": [],
+        "health_notes": [],
+        "error_samples": [],
+        "skipped_reason": "",
+        "status": "not_requested",
+    }
+    for line in (str(x) for x in (result.get("degradation") or [])):
+        m = _DAILY_LINE_PATTERNS["attempt"].search(line)
+        if m:
+            info["attempted"] = int(m.group(1))
+            info["succeeded"] = int(m.group(2))
+            info["requested"] = True
+            continue
+        m = _DAILY_LINE_PATTERNS["sources"].search(line)
+        if m:
+            info["sources"] = _parse_counts(m.group(1))
+            info["requested"] = True
+            continue
+        m = _DAILY_LINE_PATTERNS["quality"].search(line)
+        if m:
+            info["quality_flags"] = _parse_counts(m.group(1))
+            continue
+        m = _DAILY_LINE_PATTERNS["health"].search(line)
+        if m:
+            info["health_notes"] = [x.strip() for x in m.group(1).split(";") if x.strip()]
+            continue
+        m = _DAILY_LINE_PATTERNS["ordering"].search(line)
+        if m:
+            info["source_order_notes"] = [x.strip() for x in m.group(1).split("|") if x.strip()]
+            continue
+        m = _DAILY_LINE_PATTERNS["errors"].search(line)
+        if m:
+            info["error_samples"] = [x.strip() for x in m.group(1).split("|") if x.strip()]
+            continue
+        m = _DAILY_LINE_PATTERNS["skipped"].search(line)
+        if m:
+            info["skipped_reason"] = m.group(1).strip()
+            info["requested"] = True
+
+    if info["sources"]:
+        info["primary"] = max(info["sources"].items(), key=lambda kv: kv[1])[0]
+
+    if not info["requested"]:
+        info["status"] = "not_requested"
+    elif info["skipped_reason"] and info["attempted"] == 0:
+        info["status"] = "skipped"
+    elif info["attempted"] > 0 and info["succeeded"] <= 0:
+        info["status"] = "failed"
+    elif info["succeeded"] < info["attempted"]:
+        info["status"] = "partial"
+    else:
+        info["status"] = "ok"
+    return info
+
+
+def _merge_daily_summaries(entries: list[tuple[str, dict]]) -> dict:
+    """多策略各跑一次日 K，合并成一份：计数相加、备注去重、保留分策略明细。"""
+    if not entries:
+        return {}
+    if len(entries) == 1:
+        return entries[0][1]
+
+    merged = dict(entries[0][1])
+    sources: dict[str, int] = {}
+    flags: dict[str, int] = {}
+    attempted = succeeded = 0
+    for _strat, info in entries:
+        attempted += int(info.get("attempted") or 0)
+        succeeded += int(info.get("succeeded") or 0)
+        for name, count in (info.get("sources") or {}).items():
+            sources[name] = sources.get(name, 0) + int(count)
+        for name, count in (info.get("quality_flags") or {}).items():
+            flags[name] = flags.get(name, 0) + int(count)
+    merged["attempted"] = attempted
+    merged["succeeded"] = succeeded
+    merged["sources"] = sources
+    merged["quality_flags"] = flags
+    merged["requested"] = any(info.get("requested") for _, info in entries)
+    if sources:
+        merged["primary"] = max(sources.items(), key=lambda kv: kv[1])[0]
+    for key in ("source_order_notes", "health_notes", "error_samples"):
+        seen: list[str] = []
+        for _strat, info in entries:
+            for item in info.get(key) or []:
+                if item not in seen:
+                    seen.append(item)
+        merged[key] = seen
+    skipped = [info.get("skipped_reason") for _, info in entries if info.get("skipped_reason")]
+    merged["skipped_reason"] = " | ".join(skipped)
+    statuses = [info.get("status") for _, info in entries]
+    for candidate in ("failed", "partial", "ok", "skipped", "not_requested"):
+        if candidate in statuses:
+            merged["status"] = candidate
+            break
+    merged["per_strategy"] = {strat: info for strat, info in entries}
+    return merged
+
+
+def _daily_kline_brief(info: dict) -> str:
+    """给报告/日志用的一行中文摘要。"""
+    if not info:
+        return "日K 未知"
+    sources = info.get("sources") or {}
+    attempted = int(info.get("attempted") or 0)
+    succeeded = int(info.get("succeeded") or 0)
+    if sources:
+        detail = " ".join(f"{_source_label(k)}×{v}" for k, v in sorted(sources.items(), key=lambda kv: -kv[1]))
+        return f"日K {detail}（{succeeded}/{attempted} 成功）"
+    if not info.get("requested"):
+        return "日K 未拉取（策略无需）"
+    reason = info.get("skipped_reason") or (info.get("error_samples") or ["取数失败"])[0]
+    return f"日K 拉取失败（0/{attempted}，{reason}）"
+
+
 # auto 模式：市场状态 → 策略映射。与三态攻守体系的 CSI300 闸门口径对齐，
 # 但这里是轻量代理实现，权威状态仍以本地三态引擎为准。
 # 每态取 [首选, 替补] 两个策略交叉比对：双策略共振的票置信度更高。
@@ -69,19 +245,21 @@ _AUTO_STRATEGIES_BY_STATE = {
 }
 
 
-def _fetch_csi300_closes(lmt: int = 120) -> list[float]:
-    """拉沪深300日K收盘价（东财 push2his，与快照主源同族，海外 runner 实测可达）。"""
+def _http_json(url: str, timeout: float = 10.0):
     import urllib.request
 
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def _csi300_from_eastmoney(lmt: int) -> list[float]:
     url = (
         "https://push2his.eastmoney.com/api/qt/stock/kline/get"
         "?secid=1.000300&fields1=f1,f2,f3,f4,f5,f6"
         f"&fields2=f51,f53&klt=101&fqt=1&end=20500101&lmt={lmt}"
     )
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        payload = json.loads(resp.read().decode("utf-8"))
-    klines = (payload.get("data") or {}).get("klines") or []
+    klines = (_http_json(url).get("data") or {}).get("klines") or []
     closes = []
     for row in klines:
         parts = str(row).split(",")
@@ -91,6 +269,64 @@ def _fetch_csi300_closes(lmt: int = 120) -> list[float]:
             except ValueError:
                 continue
     return closes
+
+
+def _csi300_from_tencent(lmt: int) -> list[float]:
+    # 返回 data.sh000300.qfqday（或 day）：每行 [date, open, close, high, low, volume, ...]
+    url = f"https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000300,day,,,{lmt},qfq"
+    data = _http_json(url).get("data") or {}
+    node = data.get("sh000300") or {}
+    rows = node.get("qfqday") or node.get("day") or []
+    closes = []
+    for row in rows:
+        if len(row) >= 3:
+            try:
+                closes.append(float(row[2]))
+            except (TypeError, ValueError):
+                continue
+    return closes
+
+
+def _csi300_from_sina(lmt: int) -> list[float]:
+    # 返回 [{"day": "...", "close": "..."}, ...] 按时间升序
+    url = (
+        "https://quotes.sina.cn/cn/api/json_v2.php/CN_MarketDataService.getKLineData"
+        f"?symbol=sh000300&scale=240&ma=no&datalen={lmt}"
+    )
+    rows = _http_json(url)
+    if not isinstance(rows, list):
+        return []
+    closes = []
+    for row in rows:
+        try:
+            closes.append(float(row["close"]))
+        except (KeyError, TypeError, ValueError):
+            continue
+    return closes
+
+
+_CSI300_SOURCES = (
+    ("eastmoney", _csi300_from_eastmoney),
+    ("tencent", _csi300_from_tencent),
+    ("sina", _csi300_from_sina),
+)
+
+
+def _fetch_csi300_closes(lmt: int = 120) -> list[float]:
+    """拉沪深300日K收盘价，多源依次尝试：东财 push2his → 腾讯 → 新浪。
+
+    海外 runner 上 push2his 频繁断连（Run #6/#7 实测），腾讯/新浪接口独立可用。
+    """
+    errors = []
+    for name, fetch in _CSI300_SOURCES:
+        try:
+            closes = fetch(lmt)
+            if len(closes) >= 60:
+                return closes
+            errors.append(f"{name}: 仅 {len(closes)} 根")
+        except Exception as exc:  # noqa: BLE001
+            errors.append(f"{name}: {exc}")
+    raise RuntimeError("沪深300日K全部数据源失败: " + "; ".join(errors))
 
 
 def _detect_market_state() -> tuple[str, dict]:
@@ -246,6 +482,7 @@ def main() -> int:
 
     # 逐策略运行（共享同一份上游快照，边际成本低）；auto 下单边失败软降级
     results: list[dict] = []
+    daily_entries: list[tuple[str, dict]] = []
     for i, strat in enumerate(strategies):
         try:
             res = svc.screen(
@@ -255,6 +492,8 @@ def main() -> int:
                 selection_seed=args.seed,
             )
             results.append(res)
+            # 日 K 采集情况要趁 res 还在时抽出来：合并后只保留第一个策略的 degradation
+            daily_entries.append((strat, _daily_kline_summary(res)))
         except Exception as exc:  # noqa: BLE001
             if len(strategies) == 1:
                 print(f"❌ 选股运行失败: {_screen_err_msg(exc)}")
@@ -277,6 +516,19 @@ def main() -> int:
             f"🔀 双策略合并：{result['strategies_used']} → {len(result['candidates'])} 只"
             f"（共振 {result['resonance_count']} 只）"
         )
+
+    # 数据源健康度：快照链与日 K 链各走一套，健康度互不相通，分开记。
+    daily_info = _merge_daily_summaries(daily_entries)
+    result["data_sources"] = {
+        "snapshot": {
+            "source": result.get("snapshot_source") or "",
+            "count": result.get("snapshot_count") or 0,
+            "errors": [str(x) for x in (result.get("source_errors") or [])],
+        },
+        "daily_kline": daily_info,
+    }
+    print(f"🛰 数据源：快照 {_source_label(result.get('snapshot_source') or '未知')}"
+          f"（{result.get('snapshot_count') or 0} 只）｜{_daily_kline_brief(daily_info)}")
 
     # 报告日期统一用北京时间（UTC+8）：GitHub runner 是 UTC，直接用 today()
     # 会在北京凌晨跑出前一天的文件名，导致下游（如飞书推送按北京日期找文件）错位。
@@ -312,9 +564,10 @@ def main() -> int:
         f" ｜ 入选 {len(candidates)} 只{resonance_note}"
     )
     lines.append(
-        f"- 快照 {result.get('snapshot_source', 'n/a')}"
+        f"- 快照 {_source_label(result.get('snapshot_source', 'n/a'))}"
         f"（{result.get('snapshot_count', 'n/a')} 只）"
         f" ｜ 排名 {_ranking_label(result.get('ranking_mode', 'n/a'))}"
+        f" ｜ {_daily_kline_brief(daily_info)}"
     )
     if strategies_used:
         lines.append(f"- ★ = 双策略共振（{strategy_detail}）")

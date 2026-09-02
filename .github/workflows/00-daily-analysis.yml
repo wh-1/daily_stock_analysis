@@ -426,6 +426,10 @@ jobs:
           # 可选值: tencent, akshare_sina, efinance, akshare_em, tickflow, tushare
           # 如果有 TickFlow 或 Tushare Pro，可按权限把 tickflow / tushare 放在更靠前位置
           REALTIME_SOURCE_PRIORITY: ${{ vars.REALTIME_SOURCE_PRIORITY || 'tencent,akshare_sina,efinance,akshare_em' }}
+          # P1 单家锚定：pin 该源到 DataFetcherManager 日K 链路首位，配合
+          # src/storage.py save_daily_data 的 canonical_source 护栏，避免 stock_daily 跨源拼接。
+          # 本 workflow 跑 DSA 分析会写 stock_daily，故此处为生效主入口（默认 tencent，run#11/#12 实测 100/100）。
+          DAILY_CANONICAL_SOURCE: ${{ vars.DAILY_CANONICAL_SOURCE || 'tencent' }}
           
         run: |
           # 解析自选股配置：

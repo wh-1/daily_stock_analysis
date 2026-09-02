@@ -97,6 +97,23 @@ class DatabaseSchemaMigration(Base):
     applied_at = Column(DateTime, default=datetime.now, nullable=False, index=True)
 
 
+class DailySourcePolicy(Base):
+    """Per-code canonical daily-Kline source (P0-A/B single-source anchor).
+
+    Once a code's canonical source is established, :meth:`DatabaseManager.save_daily_data`
+    drops writes from any other source for the same ``(code, date)`` unless ``force=True``.
+    This prevents forward-adjusted (qfq) series from *different* providers (Tencent /
+    AkShare / Baostock / Sina / Tushare / Efinance) being stitched together in
+    ``stock_daily`` — their adjustment-factor bases differ and are not interchangeable.
+    """
+
+    __tablename__ = "daily_source_policy"
+
+    code = Column(String(10), primary_key=True)
+    canonical_source = Column(String(50), nullable=False)
+    updated_at = Column(DateTime, default=datetime.now, onupdate=datetime.now)
+
+
 class StockDaily(Base):
     """
     股票日线数据模型
@@ -3297,6 +3314,8 @@ class DatabaseManager(metaclass=_DatabaseManagerMeta):
         code: str,
         data_source: str = "Unknown",
         canonical_id: Optional[str] = None,
+        canonical_source: Optional[str] = None,
+        force: bool = False,
     ) -> int:
         """
         保存日线数据到数据库
@@ -3376,6 +3395,43 @@ class DatabaseManager(metaclass=_DatabaseManagerMeta):
         batch_dates = list(records_by_date.keys())
 
         def _write(session: Session) -> int:
+            # P0-B: single-source anchor. Once a code has a canonical source
+            # (daily_source_policy), drop writes from any other source for the
+            # same (code, date) unless force=True. Stops heterogeneous qfq series
+            # from different providers being stitched into stock_daily.
+            policy = session.get(DailySourcePolicy, code)
+            if policy is not None:
+                canon = policy.canonical_source
+            elif canonical_source:
+                canon = canonical_source
+            elif records:
+                canon = records[0]["data_source"]
+            else:
+                canon = None
+            if canon is not None and policy is None:
+                session.merge(
+                    DailySourcePolicy(code=code, canonical_source=canon, updated_at=now)
+                )
+
+            if canon is not None and not force:
+                canon_key = self._source_key(canon)
+                write_records = [
+                    r for r in records if self._source_key(r["data_source"]) == canon_key
+                ]
+                dropped = len(records) - len(write_records)
+                if dropped:
+                    logger.info(
+                        "save_daily_data[%s]: dropped %d non-canonical row(s) "
+                        "(incoming=%s, canon=%s)",
+                        code, dropped, records[0]["data_source"], canon,
+                    )
+            else:
+                write_records = records
+
+            if not write_records:
+                return 0
+            write_dates = [r["date"] for r in write_records]
+
             if self._is_sqlite_engine:
                 # SQLite has a per-statement bind-parameter limit (commonly 999).
                 # Each record has ~17 columns, so chunk upserts to stay within bounds.
@@ -3385,8 +3441,8 @@ class DatabaseManager(metaclass=_DatabaseManagerMeta):
                 # within one stable write window.
                 existing_dates = set()
                 _COUNT_CHUNK = 500
-                for j in range(0, len(batch_dates), _COUNT_CHUNK):
-                    chunk_dates = batch_dates[j : j + _COUNT_CHUNK]
+                for j in range(0, len(write_dates), _COUNT_CHUNK):
+                    chunk_dates = write_dates[j : j + _COUNT_CHUNK]
                     if not chunk_dates:
                         continue
                     existing_dates.update(
@@ -3400,10 +3456,10 @@ class DatabaseManager(metaclass=_DatabaseManagerMeta):
                         ).scalars().all()
                     )
                 new_records = [
-                    record for record in records if record['date'] not in existing_dates
+                    record for record in write_records if record['date'] not in existing_dates
                 ]
-                for i in range(0, len(records), _SQLITE_CHUNK):
-                    chunk = records[i : i + _SQLITE_CHUNK]
+                for i in range(0, len(write_records), _SQLITE_CHUNK):
+                    chunk = write_records[i : i + _SQLITE_CHUNK]
                     stmt = sqlite_insert(StockDaily).values(chunk)
                     excluded = stmt.excluded
                     session.execute(
@@ -3446,7 +3502,7 @@ class DatabaseManager(metaclass=_DatabaseManagerMeta):
                     ).scalars().all()
                 }
                 new_count = 0
-                for record in records:
+                for record in write_records:
                     existing = existing_rows.get(record['date'])
                     if existing is None:
                         session.add(StockDaily(**record))
@@ -3479,7 +3535,40 @@ class DatabaseManager(metaclass=_DatabaseManagerMeta):
         except Exception as e:
             logger.error(f"保存 {code} 数据失败: {e}")
             raise
-    
+
+    @staticmethod
+    def _source_key(name):
+        """Normalize a provider name for canonical-source comparisons.
+
+        stock_daily.data_source stores the fetcher's long name
+        (``TencentFetcher``), while daily_source_policy may hold a short alias
+        (``tencent``) when set via env/CLI. Lowercasing and stripping a
+        ``fetcher`` suffix makes both forms compare equal so the guard does not
+        silently drop same-source rows.
+        """
+        if not name:
+            return ""
+        return str(name).strip().lower().replace("fetcher", "")
+
+    def set_canonical_source(self, code: str, source: str) -> None:
+        """Establish/overwrite the canonical daily source for a code (P0-A/B).
+
+        After calling this, :meth:`save_daily_data` will drop any non-``source``
+        writes for ``code`` unless ``force=True``.
+        """
+        def _op(session: Session) -> None:
+            session.merge(
+                DailySourcePolicy(code=code, canonical_source=source, updated_at=datetime.now())
+            )
+
+        self._run_write_transaction(f"set_canonical_source[{code}]", _op)
+
+    def get_canonical_source(self, code: str) -> Optional[str]:
+        """Return the canonical daily source for a code, or ``None`` if unset."""
+        with self.get_session() as session:
+            policy = session.get(DailySourcePolicy, code)
+            return policy.canonical_source if policy else None
+
     def get_analysis_context(
         self, 
         code: str,

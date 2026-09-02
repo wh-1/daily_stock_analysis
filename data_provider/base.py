@@ -15,6 +15,7 @@
 """
 
 import logging
+import os
 import random
 import time
 from threading import BoundedSemaphore, RLock, Thread
@@ -35,6 +36,50 @@ from .realtime_types import CircuitBreaker
 
 # 配置日志
 logger = logging.getLogger(__name__)
+
+# ---------------------------------------------------------------------------
+# 单源锚定 (P1): 短名/别名 -> fetcher.name 规范长名解析
+#
+# stock_daily.data_source 与 save_daily_data 护栏比较用的都是 fetcher.name
+# (长名, 如 "TencentFetcher"), 而 DAILY_CANONICAL_SOURCE 环境变量/CLI 习惯写
+# 短名 (如 "tencent")。resolve_canonical_source() 把用户输入统一解析成规范
+# 长名, 避免长短名失配导致 P1 pin / repair / 护栏静默失效。
+# ---------------------------------------------------------------------------
+_CANONICAL_SOURCE_ALIASES = {
+    "tencent": "TencentFetcher",
+    "baostock": "BaostockFetcher",
+    "akshare": "AkshareFetcher",
+    "akshare_em": "AkshareFetcher",
+    "efinance": "EfinanceFetcher",
+    "tushare": "TushareFetcher",
+    "yfinance": "YfinanceFetcher",
+    "finnhub": "FinnhubFetcher",
+    "alphavantage": "AlphaVantageFetcher",
+    "longbridge": "LongbridgeFetcher",
+    "futu": "FutuFetcher",
+    "tickflow": "TickFlowFetcher",
+    "pytdx": "PytdxFetcher",
+}
+
+
+def resolve_canonical_source(name):
+    """Map a user-supplied source name to the canonical fetcher.name.
+
+    Accepts short aliases ("tencent"), exact fetcher names ("TencentFetcher"),
+    or None/empty. Unrecognized values are returned unchanged (case preserved)
+    so callers can detect the mismatch via their own comparisons.
+    """
+    if not name:
+        return None
+    text = str(name).strip()
+    if not text:
+        return None
+    if text in _CANONICAL_SOURCE_ALIASES:
+        return _CANONICAL_SOURCE_ALIASES[text]
+    low = text.lower()
+    if low in _CANONICAL_SOURCE_ALIASES:
+        return _CANONICAL_SOURCE_ALIASES[low]
+    return text
 
 
 # === 标准化列名定义 ===
@@ -1925,6 +1970,11 @@ class DataFetcherManager:
         stock_code = normalize_stock_code(stock_code)
 
         fetchers = self._get_fetchers_snapshot()
+        # P1: single-source anchor. DAILY_CANONICAL_SOURCE (if set) is pinned to the
+        # head of the daily chain below so the winning fetcher — and therefore the
+        # source recorded in stock_daily — stays stable across runs. Pairs with the
+        # save_daily_data canonical_source guard in src/storage.py.
+        canon = resolve_canonical_source(os.getenv("DAILY_CANONICAL_SOURCE"))
         errors = []
         request_start = time.time()
 
@@ -1942,6 +1992,12 @@ class DataFetcherManager:
         if market != "cn":
             fetchers = self._filter_daily_fetchers_for_market(fetchers, market)
         fetchers = self._filter_fetchers_by_capability(fetchers, capability="daily_data")
+        # P1: pin canonical source to the head of the CN daily chain (see note above).
+        if market == "cn" and canon:
+            fetchers = sorted(
+                fetchers,
+                key=lambda f: (0 if getattr(f, "name", None) == canon else 1, getattr(f, "priority", 0)),
+            )
         total_fetchers = len(fetchers)
 
         if total_fetchers == 0:
@@ -1966,6 +2022,9 @@ class DataFetcherManager:
             # 单项调整(如 YFINANCE_PRIORITY=0)即时生效;指数/Longbridge preferred 的锚定首选不被普通优先级覆盖
             pin_first = bool(is_us_index or prefer_lb)
             source_order = self._order_us_sources_by_priority(source_order, pin_first=pin_first)
+            # P1: pin canonical source to the head of the US daily chain (see note above).
+            if canon and canon in source_order:
+                source_order = [canon] + [s for s in source_order if s != canon]
             market_label = "美股指数" if is_us_index else "美股"
 
             for order_index, src_name in enumerate(source_order):

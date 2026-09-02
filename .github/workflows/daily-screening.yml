@@ -32,6 +32,16 @@ on:
         required: false
         default: ''
         type: string
+      llm_model:
+        description: '仅本次生效的主模型（如 gemini/gemini-3.6-flash）；留空则用 Variables 的 LITELLM_MODEL'
+        required: false
+        default: ''
+        type: string
+      llm_fallback_models:
+        description: '仅本次生效的备用模型链，逗号分隔；留空则用 Variables 的 LITELLM_FALLBACK_MODELS'
+        required: false
+        default: ''
+        type: string
 
 # 并发控制：同一时间只运行一个选股任务
 concurrency:
@@ -42,7 +52,7 @@ jobs:
   screening:
     runs-on: ubuntu-latest
     # 添加超时限制，防止任务卡死
-    timeout-minutes: ${{ fromJSON(vars.ANALYSIS_TIMEOUT_MINUTES || '30') }}
+    timeout-minutes: ${{ fromJSON(vars.ANALYSIS_TIMEOUT_MINUTES || '45') }}
 
     steps:
       - name: 随机延迟（避免固定时间访问）
@@ -82,8 +92,11 @@ jobs:
           LITELLM_CONFIG: ${{ vars.LITELLM_CONFIG || secrets.LITELLM_CONFIG }}
           LITELLM_CONFIG_YAML: ${{ vars.LITELLM_CONFIG_YAML || secrets.LITELLM_CONFIG_YAML }}
           LITELLM_API_KEY: ${{ secrets.LITELLM_API_KEY }}
-          LITELLM_MODEL: ${{ vars.LITELLM_MODEL || secrets.LITELLM_MODEL }}
-          LITELLM_FALLBACK_MODELS: ${{ vars.LITELLM_FALLBACK_MODELS || secrets.LITELLM_FALLBACK_MODELS }}
+          # 手动触发时可用 dispatch 输入临时覆盖（做模型 A/B 而不动 Variables，也不影响 cron）。
+          # 用 github.event.inputs 而不是 inputs context：schedule 触发时它求值为空字符串，
+          # 自动回落到仓库 Variables/Secrets，定时任务行为完全不变。
+          LITELLM_MODEL: ${{ github.event.inputs.llm_model || vars.LITELLM_MODEL || secrets.LITELLM_MODEL }}
+          LITELLM_FALLBACK_MODELS: ${{ github.event.inputs.llm_fallback_models || vars.LITELLM_FALLBACK_MODELS || secrets.LITELLM_FALLBACK_MODELS }}
           AGENT_LITELLM_MODEL: ${{ vars.AGENT_LITELLM_MODEL || secrets.AGENT_LITELLM_MODEL }}
           VISION_MODEL: ${{ vars.VISION_MODEL || secrets.VISION_MODEL }}
           OPENAI_VISION_MODEL: ${{ vars.OPENAI_VISION_MODEL || secrets.OPENAI_VISION_MODEL }}
@@ -281,6 +294,34 @@ jobs:
           # 数据源
           # ==========================================
           TUSHARE_TOKEN: ${{ secrets.TUSHARE_TOKEN }}
+          # —— 选股全链路统一来源优先级：新浪 > 腾讯 > Baostock > akshare > 东财 ——
+          # ① 实时/基本面链路（path ②，get_realtime_quote / fundamental valuation）走 REALTIME_SOURCE_PRIORITY
+          #    （named token）：akshare_sina 直连新浪、不经东财；腾讯次之；东财(efinance)垫底仅兜底。
+          #    baostock / 组合 akshare 不是 realtime token，进不到这层。
+          REALTIME_SOURCE_PRIORITY: ${{ vars.REALTIME_SOURCE_PRIORITY || 'akshare_sina,tencent,efinance' }}
+          # ② 日K历史链优先级（benchmark 实测，海外 runner）：
+          #    - DataFetcherManager 路径（path ③，个股深度分析 get_daily_data）按 *_PRIORITY 升序；
+          #      baostock 实测最快(234ms/100%)→提最前(0)，tencent(2)次之，akshare(10)，东财 efinance(99)沉底兜底。
+          #    - screening/daily.py 每票日K 路径走 DAILY_SOURCE（benchmark 序：baostock>sina>tencent>akshare，
+          #      东财/akshare 的 push2his 海外不稳定故沉底）。新浪日K 经 quotes.sina.cn 直连，稳定(877ms)。
+          #    - Tushare 已明确不纳入（主人 2026-09-02 拍板），日K序不含 tushare。
+          TENCENT_PRIORITY: ${{ vars.TENCENT_PRIORITY || '2' }}
+          BAOSTOCK_PRIORITY: ${{ vars.BAOSTOCK_PRIORITY || '0' }}
+          AKSHARE_PRIORITY: ${{ vars.AKSHARE_PRIORITY || '10' }}
+          EFINANCE_PRIORITY: ${{ vars.EFINANCE_PRIORITY || '99' }}
+          TUSHARE_PRIORITY: ${{ vars.TUSHARE_PRIORITY || '50' }}
+          YFINANCE_PRIORITY: ${{ vars.YFINANCE_PRIORITY || '50' }}
+          PYTDX_PRIORITY: ${{ vars.PYTDX_PRIORITY || '50' }}
+          FUTU_PRIORITY: ${{ vars.FUTU_PRIORITY || '50' }}
+          LONGBRIDGE_PRIORITY: ${{ vars.LONGBRIDGE_PRIORITY || '50' }}
+          DAILY_SOURCE: ${{ vars.DAILY_SOURCE || 'baostock,sina,tencent,akshare' }}
+          # 快照链（screening/snapshot.py，不走 data_provider）：仅控制快照这一拍。
+          # em_datacenter 打头为绕开 sina 快照 volume_ratio 解析坑（benchmark 测不出 schema 兼容，保留此序）。
+          SNAPSHOT_SOURCE_PRIORITY: ${{ vars.SNAPSHOT_SOURCE_PRIORITY || 'em_datacenter,akshare_em,sina,efinance' }}
+          # P1 单家锚定：把该源 pin 到 DataFetcherManager 日K 链路首位，配合
+          # src/storage.py save_daily_data 的 canonical_source 护栏，避免 stock_daily 跨源拼接。
+          # 选股快照链(snapshot.py)不写 stock_daily，但分析/回测/agent 路径写，故统一设 tencent（run#11/#12 实测 100/100）。
+          DAILY_CANONICAL_SOURCE: ${{ vars.DAILY_CANONICAL_SOURCE || 'tencent' }}
           # Tushare Pro 自定义接入地址（可选；指向自建网关或第三方兼容镜像时设置）
           TUSHARE_HTTP_URL: ${{ vars.TUSHARE_HTTP_URL || secrets.TUSHARE_HTTP_URL }}
           # TickFlow（A 股日 K、实时行情、股票列表/名称与大盘复盘增强；不设则走免费源 fallback）
@@ -326,8 +367,6 @@ jobs:
           # 选股引擎开关（默认 true；设 false 跳过选股）
           SCREENING_ENABLED: ${{ vars.SCREENING_ENABLED || secrets.SCREENING_ENABLED || 'true' }}
           TRADING_DAY_CHECK_ENABLED: ${{ vars.TRADING_DAY_CHECK_ENABLED || secrets.TRADING_DAY_CHECK_ENABLED || 'true' }}
-          # 实时行情数据源优先级（腾讯有量比且稳定，推荐首选）
-          REALTIME_SOURCE_PRIORITY: ${{ vars.REALTIME_SOURCE_PRIORITY || 'tencent,akshare_sina,efinance,akshare_em' }}
           # 系统配置
           LOG_LEVEL: INFO
           MAX_WORKERS: ${{ vars.MAX_WORKERS || secrets.MAX_WORKERS || '1' }}
@@ -355,6 +394,8 @@ jobs:
           echo "📊 市场: $SCREENING_MARKET"
           echo "🔢 上限: $SCREENING_MAX_RESULTS"
           echo "🌱 种子: ${SCREENING_SEED:-自动}"
+          echo "🤖 主模型: ${LITELLM_MODEL:-未设置（回落 GEMINI_MODEL=${GEMINI_MODEL:-默认}）}"
+          echo "🔗 备用链: ${LITELLM_FALLBACK_MODELS:-未设置}"
           echo ""
 
           python scripts/run_screening.py \
