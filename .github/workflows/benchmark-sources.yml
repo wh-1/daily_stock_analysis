@@ -1,0 +1,59 @@
+name: Benchmark Data Sources
+
+# 真实运行环境的数据源接口基准测试：测速 + 稳定性，排出每条链的真实优先级顺序。
+# 触发：手动（Actions → Benchmark Data Sources → Run workflow）。
+# 注意：screening 实际跑在海外 ubuntu runner 上，本 workflow 同样跑在 ubuntu-latest，
+#       因此测出的「东财/新浪可达性 & 延迟」才是生产真实情况（与本地合肥网络不同）。
+on:
+  workflow_dispatch:
+  # 如需定期复测，取消下一行注释（每周一 02:10 UTC）：
+  # schedule:
+  #   - cron: '10 2 * * 1'
+
+concurrency:
+  group: benchmark-sources-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    env:
+      # 让脚本对比「当前 env 序」= 主人在 repo Variables 里设的真实顺序
+      SNAPSHOT_SOURCE_PRIORITY: ${{ vars.SNAPSHOT_SOURCE_PRIORITY }}
+      REALTIME_SOURCE_PRIORITY: ${{ vars.REALTIME_SOURCE_PRIORITY }}
+      DAILY_SOURCE: ${{ vars.DAILY_SOURCE }}
+      TUSHARE_TOKEN: ${{ secrets.TUSHARE_TOKEN }}
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v5
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 📦 Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 🚀 Run data-source benchmark (non-blocking)
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python scripts/benchmark_sources.py \
+            --codes 600519,000001,300750,601318,002594 \
+            --iterations 3 --timeout 12 \
+            --json benchmark_result.json | tee benchmark_result.log
+
+      - name: 📤 Upload benchmark result (artifact)
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: benchmark-result-${{ github.run_number }}
+          path: |
+            benchmark_result.json
+            benchmark_result.log
+          if-no-files-found: ignore
+

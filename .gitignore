@@ -89,3 +89,6 @@ static/
 /apps/dsa-desktop/node_modules/
 /node_modules/
 docs/specs/
+
+# WorkBuddy 本地项目记忆（含 memory/），不进远程仓库
+.workbuddy/

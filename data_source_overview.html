@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>选股数据源 → 真上游总览图</title>
+<style>
+  :root{
+    --bg:#f5f7fa; --card:#ffffff; --ink:#1f2733; --sub:#5b6677; --line:#e3e8ef;
+    --em:#e8543f;      /* 东方财富 */
+    --sina:#d83b8e;    /* 新浪 */
+    --tx:#2f7de0;      /* 腾讯 */
+    --ts:#7a52d8;      /* Tushare */
+    --bs:#1aa179;      /* Baostock */
+    --ak:#8a6d3b;      /* akshare 元封装 */
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.6;padding:28px 18px 60px}
+  .wrap{max-width:1080px;margin:0 auto}
+  h1{font-size:24px;margin:0 0 4px}
+  .lead{color:var(--sub);margin:0 0 22px}
+  .legend{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 26px}
+  .chip{display:inline-flex;align-items:center;gap:7px;font-size:13px;
+    background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+  .dot{width:11px;height:11px;border-radius:50%}
+  .chain{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:20px 22px;margin:0 0 20px;box-shadow:0 1px 3px rgba(20,30,50,.04)}
+  .chain h2{font-size:18px;margin:0 0 2px}
+  .chain .meta{color:var(--sub);font-size:13px;margin:0 0 14px}
+  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:9px}
+  .node{display:flex;flex-direction:column;gap:3px;padding:8px 13px;border-radius:10px;
+    border:1px solid var(--line);min-width:118px;background:#fbfcfe}
+  .node .src{font-weight:600;font-size:13.5px}
+  .node .up{font-size:11.5px;color:var(--sub)}
+  .arrow{color:var(--sub);font-size:18px;font-weight:700}
+  .bar{height:4px;border-radius:3px;margin-top:5px}
+  .note{background:#fff8ec;border:1px solid #f3e0b8;color:#7a5a14;
+    border-radius:10px;padding:11px 14px;font-size:13.5px;margin-top:14px}
+  .callout{background:#fdecea;border:1px solid #f5c2bc;color:#9a2b1c;
+    border-radius:10px;padding:11px 14px;font-size:13.5px;margin-top:14px}
+  .ok{background:#eafaf3;border:1px solid #b6e6d3;color:#136b4f}
+  code{background:#eef1f6;padding:1px 6px;border-radius:5px;font-size:12.5px}
+  .foot{color:var(--sub);font-size:12.5px;margin-top:26px;text-align:center}
+  .tag{font-size:11px;padding:1px 7px;border-radius:6px;background:#eef1f6;color:var(--sub)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>选股数据源 → 真上游总览图</h1>
+  <p class="lead">三态攻守 daily_stock_analysis · 每条取数链"配置名 → 真实后端"对照。颜色=真上游；同一颜色＝同一后端＝互为冗余。</p>
+
+  <div class="legend">
+    <span class="chip"><span class="dot" style="background:var(--em)"></span>东方财富 EastMoney</span>
+    <span class="chip"><span class="dot" style="background:var(--sina)"></span>新浪 Sina</span>
+    <span class="chip"><span class="dot" style="background:var(--tx)"></span>腾讯 Tencent</span>
+    <span class="chip"><span class="dot" style="background:var(--ts)"></span>Tushare</span>
+    <span class="chip"><span class="dot" style="background:var(--bs)"></span>Baostock</span>
+    <span class="chip"><span class="dot" style="background:var(--ak)"></span>akshare 元封装</span>
+  </div>
+
+  <!-- 链① -->
+  <div class="chain">
+    <h2>① 快照（全市场一次性批量行情）</h2>
+    <p class="meta">入口 <code>screening/snapshot.py</code> · 控制 <code>SNAPSHOT_SOURCE_PRIORITY</code> · <b>不走</b> DataFetcherManager</p>
+    <div class="flow">
+      <div class="node"><span class="src">sina</span><span class="up">真上游：新浪</span><span class="bar" style="background:var(--sina)"></span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="src">efinance</span><span class="up">真上游：东方财富</span><span class="bar" style="background:var(--em)"></span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="src">akshare_em</span><span class="up">真上游：东方财富(经akshare)</span><span class="bar" style="background:var(--em)"></span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="src">em_datacenter</span><span class="up">真上游：东方财富</span><span class="bar" style="background:var(--em)"></span></div>
+    </div>
+    <p class="meta" style="margin-top:12px">原作者默认序：sina→efinance→akshare_em→em_datacenter（有 TUSHARE_TOKEN 则 tushare 打头）。</p>
+    <div class="note">你的定制序：<b>em_datacenter→akshare_em→sina→efinance</b>（海外 runner 新浪坏、故东财打头）。注意：默认 4 个源里 <b>3 个打东财</b>（efinance / akshare_em / em_datacenter），仅 sina 是新浪。</div>
+  </div>
+
+  <!-- 链② -->
+  <div class="chain">
+    <h2>② 实时 / 基本面（逐票）</h2>
+    <p class="meta">入口 <code>DataFetcherManager</code> · 控制 <code>realtime_source_priority</code> · 含 akshare 元封装内部再路由</p>
+    <div class="flow">
+      <div class="node"><span class="src">tencent</span><span class="up">真上游：腾讯</span><span class="bar" style="background:var(--tx)"></span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="src">akshare_sina</span><span class="up">真上游：新浪(经akshare)</span><span class="bar" style="background:var(--sina)"></span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="src">efinance</span><span class="up">真上游：东方财富</span><span class="bar" style="background:var(--em)"></span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="src">akshare_em</span><span class="up">真上游：东方财富(经akshare)</span><span class="bar" style="background:var(--em)"></span></div>
+    </div>
+    <p class="meta" style="margin-top:12px">原作者默认序：tencent→akshare_sina→efinance→akshare_em（有 TUSHARE_TOKEN 自动前置 tushare）。</p>
+    <div class="callout">⚠️ DataFetcherManager <b>没有独立的 sina_fetcher</b>：manager 内的"新浪"只经 <code>akshare_sina</code>（即 AkshareFetcher 包 <code>hq.sinajs.cn</code>）。纯新浪直连只在链①快照里存在。故东财在此链又占 2 席（efinance + akshare_em）。</div>
+  </div>
+
+  <!-- 链③ -->
+  <div class="chain">
+    <h2>③ 日K 历史（富集层，默认 OFF）</h2>
+    <p class="meta">入口 <code>screening/daily.py</code> <code>DAILY_SOURCE=auto</code> · <code>DAILY_ENRICH_ENABLED=False</code> 时整链不跑</p>
+    <div class="flow">
+      <div class="node"><span class="src">tushare</span><span class="up">真上游：Tushare</span><span class="bar" style="background:var(--ts)"></span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="src">tencent</span><span class="up">真上游：腾讯(qfq)</span><span class="bar" style="background:var(--tx)"></span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="src">sina</span><span class="up">真上游：新浪<b>（仅不复权！</b>）</span><span class="bar" style="background:var(--sina)"></span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="src">akshare</span><span class="up">真上游：东方财富(qfq)</span><span class="bar" style="background:var(--em)"></span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="src">baostock</span><span class="up">真上游：Baostock(qfq)</span><span class="bar" style="background:var(--bs)"></span></div>
+    </div>
+    <p class="meta" style="margin-top:12px">auto 序（无 token 去 tushare），随后按健康度动态重排。生产实际兜底走 DataFetcherManager（priority 升序）。</p>
+    <div class="note">生产兜底（DB miss）真上游升序：<b>东方财富(Efinance/AkShare) → Tushare/PyTdx/Futu → Baostock → YFinance → 腾讯</b>。你的定制 priority 把腾讯(2)/Baostock(3) 提前、东财(AkShare=10/Efinance=99) 沉后 → 与"东财打头"的原作者默认<b>完全相反</b>。</div>
+    <div class="callout">⚠️ 全链 qfq 唯一缺口：链③的 <code>_fetch_daily_sina</code> 走新浪 <code>getKLineData</code>（无 adjust 参数）→ <b>不复权</b>；其余 tencent/akshare/baostock/tushare 均 qfq。是否需要把它也改 qfq（diff 草稿见另一文件）待你拍板。</div>
+  </div>
+
+  <!-- 全局结论 -->
+  <div class="chain">
+    <h2>全局重叠结论</h2>
+    <div class="callout">🔴 <b>东方财富 = 三重封装</b>：<code>efinance</code> + <code>akshare_em</code> + <code>em_datacenter</code>（+ 日K 的 akshare_em）全打同一东财后端。所谓"多个东财源"= 同一东财的三种封装，降耗必须把三者一起往后压。</div>
+    <div class="ok">🟢 <b>akshare 是元封装</b>：本项目每个 akshare 函数只去爬东财/新浪/腾讯上游，与专门源命中同一后端。真正 akshare 独有 = ① 筹码分布 <code>ak.stock_cyq_em</code> ② 客户端前复权因子计算 ③ 跨市场一站式。其余是冗余而非扩展。</div>
+    <div class="note">🟡 真独立后端仅 5 家：<b>东方财富 / 新浪 / 腾讯 / Tushare / Baostock</b>。其余配置名皆为这 5 家的组合/封装。</div>
+  </div>
+
+  <p class="foot">数据来源：src/services/screening/{config,snapshot,daily}.py · src/config.py · data_provider/*_fetcher.py · 2026-09-02 代码级核实</p>
+</div>
+</body>
+</html>
