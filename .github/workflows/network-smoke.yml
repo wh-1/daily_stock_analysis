@@ -1,8 +1,10 @@
 name: Network Smoke
 
 on:
-  schedule:
-    - cron: '0 2 * * 1-5'
+  # 定时触发已停用（2026-09-03 拍板：探活覆盖极薄且结果无人消费，无实际价值；
+  # 与每日选股重复且早 5 小时，出问题也不会被看见）。需要恢复时取消下面三行注释即可。
+  # schedule:
+  #   - cron: '0 2 * * 1-5'
   workflow_dispatch:
 
 concurrency:
