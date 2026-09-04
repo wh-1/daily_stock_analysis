@@ -25,6 +25,13 @@
 - 更细的模块行为、页面交互、专题配置、排障说明、字段契约、实现语义和边界条件，优先更新对应 `docs/*.md` 或专题文档，不写入 README。
 - 变更中英双语文档之一时，需评估另一份是否需要同步；若未同步，交付说明里要写明原因。
 - 注释、docstring、日志文案以清晰准确为准，不强制要求英文，但应与文件语境保持一致。
+- **engine-zero-modification（引擎零改动）：本 fork 的红线，不修改选股/分析引擎本体，新增能力一律从外围接入。**
+  - 禁改：`src/services/screening/`、`src/core/pipeline.py` 及其直接依赖的引擎模块。
+  - 允许：`scripts/` 下的外围脚本（如 `scripts/run_screening.py`）、`.github/workflows/`、独立新增文件。
+  - 手法优先顺序：①外围解析/包装引擎既有输出 ②配置或环境变量注入 ③独立模块旁路。
+  - 典型示例：引擎已把日K采集情况写进 `pipeline.py` 的 degradation 文本但未结构化进 JSON 时，在 `scripts/run_screening.py` 里做纯文本解析，而不是改 `pipeline.py` 的输出结构。
+  - 已批准例外清单（**封闭，不得扩散**）：`src/storage.py`（DailySourcePolicy 表与单源锚定）、`data_provider/base.py`（`DAILY_CANONICAL_SOURCE` 锁源）、`src/services/report_renderer.py`（北京时间）。新增例外必须先取得明确确认。
+  - 理由：本仓库是上游 `ZhuLinsen/daily_stock_analysis` 的 fork，引擎属于上游代码。改动引擎会持续放大与上游的 merge 冲突面，并违背"上游代码原则上不动、定制只落 dev 外围"的协同纪律。
 
 ## 1.1 PR 标题规范（非阻断建议）
 
