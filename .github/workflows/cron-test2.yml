@@ -1,0 +1,13 @@
+name: Cron Test 2
+
+on:
+  schedule:
+    - cron: '40 15 * * *'   # UTC 15:40 = 北京时间 23:40（enable 后留 36 分钟注册窗口，验证新建 workflow 的 schedule）
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo trigger time
+        run: echo "cron-test2 fired at $(date -u '+%Y-%m-%d %H:%M:%S UTC') | event=${{ github.event_name }} | schedule=${{ github.event.schedule }}"
