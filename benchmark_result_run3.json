@@ -1,0 +1,136 @@
+{
+  "codes": [
+    "600519",
+    "000001",
+    "300750",
+    "601318",
+    "002594"
+  ],
+  "chains": {
+    "snapshot": {
+      "recommended": [
+        "em_datacenter",
+        "akshare_em",
+        "efinance",
+        "sina"
+      ],
+      "original_default": [
+        "sina",
+        "efinance",
+        "akshare_em",
+        "em_datacenter"
+      ],
+      "current_env": [
+        "em_datacenter",
+        "akshare_em",
+        "sina",
+        "efinance"
+      ],
+      "detail": [
+        {
+          "source": "sina",
+          "success_rate": 1.0,
+          "mean_ms": 1212.1
+        },
+        {
+          "source": "efinance",
+          "success_rate": 1.0,
+          "mean_ms": 1802.5
+        },
+        {
+          "source": "akshare_em",
+          "success_rate": 1.0,
+          "mean_ms": 1802.5
+        },
+        {
+          "source": "em_datacenter",
+          "success_rate": 1.0,
+          "mean_ms": 1802.5
+        }
+      ]
+    },
+    "realtime": {
+      "recommended": [
+        "tencent",
+        "akshare_sina",
+        "efinance",
+        "akshare_em"
+      ],
+      "original_default": [
+        "tencent",
+        "akshare_sina",
+        "efinance",
+        "akshare_em"
+      ],
+      "current_env": [
+        "akshare_sina",
+        "tencent",
+        "efinance"
+      ],
+      "detail": [
+        {
+          "source": "akshare_sina",
+          "success_rate": 1.0,
+          "mean_ms": 475.9
+        },
+        {
+          "source": "tencent",
+          "success_rate": 1.0,
+          "mean_ms": 627.6
+        },
+        {
+          "source": "efinance",
+          "success_rate": 1.0,
+          "mean_ms": 1802.5
+        },
+        {
+          "source": "akshare_em",
+          "success_rate": 1.0,
+          "mean_ms": 1802.5
+        }
+      ]
+    },
+    "daily": {
+      "recommended": [
+        "tencent",
+        "baostock",
+        "akshare",
+        "sina"
+      ],
+      "original_default": [
+        "tencent",
+        "sina",
+        "akshare",
+        "baostock"
+      ],
+      "current_env": [
+        "tencent",
+        "baostock",
+        "akshare",
+        "em"
+      ],
+      "detail": [
+        {
+          "source": "tencent",
+          "success_rate": 1.0,
+          "mean_ms": 666.8
+        },
+        {
+          "source": "baostock",
+          "success_rate": 1.0,
+          "mean_ms": 751.1
+        },
+        {
+          "source": "sina",
+          "success_rate": 1.0,
+          "mean_ms": 1000.4
+        },
+        {
+          "source": "akshare",
+          "success_rate": 0.333,
+          "mean_ms": 840.7
+        }
+      ]
+    }
+  }
+}
