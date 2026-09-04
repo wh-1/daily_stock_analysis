@@ -1,5 +1,8 @@
 name: 每日选股
 
+permissions:
+  contents: write   # 用于把每日信号归档到独立的 signals 分支（供本地回测消费）
+
 on:
   # 定时触发 - 工作日北京时间 15:10（UTC 07:10，A 股收盘后）
   schedule:
@@ -656,6 +659,43 @@ jobs:
             reports/
             logs/
           retention-days: 30
+
+      # 把每日信号归档到独立的 signals 分支。
+      # Actions 本身无状态，runner 结束即销毁；不归档的话本地永远拿不到历史信号，
+      # 也就无法做任何回测。用独立孤儿分支可避免污染 dev 的提交历史。
+      - name: 归档信号到 signals 分支
+        if: always()
+        run: |
+          DATE=$(TZ='Asia/Shanghai' date '+%Y%m%d')
+          SRC="reports/screening_${DATE}.json"
+          if [ ! -f "$SRC" ]; then
+            echo "⚠️ 无信号文件 $SRC，跳过归档"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git fetch origin signals 2>/dev/null || echo "signals 分支尚不存在，将创建"
+          if git show-ref --verify --quiet refs/remotes/origin/signals; then
+            git checkout -B signals origin/signals
+          else
+            git checkout --orphan signals
+            git rm -rf --cached . >/dev/null 2>&1 || true
+          fi
+
+          mkdir -p signals
+          cp "$SRC" "signals/screening_${DATE}.json"
+          git add "signals/screening_${DATE}.json"
+
+          if git diff --cached --quiet; then
+            echo "信号无变化，跳过提交"
+          else
+            # [skip ci] 避免归档提交反过来触发本 workflow
+            git commit -m "chore(signals): archive screening ${DATE} [skip ci]"
+            git push origin signals
+            echo "✅ 信号已归档：signals/screening_${DATE}.json"
+          fi
 
       - name: 显示选股结果
         if: always()
