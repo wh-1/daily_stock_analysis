@@ -1,0 +1,13 @@
+name: Cron Test
+
+on:
+  schedule:
+    - cron: '50 14 * * *'   # UTC 14:50 = 北京时间 22:50（每5分钟轮询窗口内触发，验证 fork schedule 是否真能武装）
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo trigger time
+        run: echo "cron-test fired at $(date -u '+%Y-%m-%d %H:%M:%S UTC') | event=${{ github.event_name }}"
