@@ -6,7 +6,7 @@ permissions:
 on:
   # 定时触发 - 工作日北京时间 18:10（UTC 10:10，A股收盘后 3 小时，日K数据已完整落定）
   schedule:
-    - cron: '12 14 * * 1-5'    # 临时测试：UTC 14:12 = 北京时间 22:12（验证 push 后 disable→enable 能重新武装 schedule）
+    - cron: '10 10 * * 1-5'    # 北京时间 18:10（已确认 fork 上 schedule 可触发，仅登记延迟约 2-3h；周一到周五）
 
   # 手动触发
   workflow_dispatch:
