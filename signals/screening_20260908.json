@@ -1,0 +1,5136 @@
+{
+  "enabled": true,
+  "candidates": [
+    {
+      "rank": 1,
+      "code": "601318",
+      "name": "中国平安",
+      "score": 88.0,
+      "screen_score": 81.75851091463413,
+      "reason": "流动性因子全场领先，大市值蓝筹属性显著。",
+      "risk_level": "low",
+      "risk_flags": [
+        "资本市场波动风险"
+      ],
+      "llm_score": 88.0,
+      "llm_confidence": 0.9,
+      "llm_sector": "保险",
+      "llm_theme": "大金融龙头及高流动性配置",
+      "llm_tags": [
+        "价值",
+        "流动性",
+        "防守",
+        "sector:保险",
+        "theme:大金融龙头及高流动性配置",
+        "style_fit:完美匹配大市值与高流动性蓝筹偏好"
+      ],
+      "llm_thesis": "兼具极高的流动性和保险核心资产地位，估值未显透支。",
+      "llm_catalysts": [
+        "长端利率企稳回升",
+        "险企负债端持续改善"
+      ],
+      "llm_risks": [
+        "资本市场波动风险"
+      ],
+      "llm_watch_items": [
+        "750日均线及长端国债收益率",
+        "保费收入数据"
+      ],
+      "llm_invalidators": [
+        "权益市场发生超预期单边下跌"
+      ],
+      "llm_style_fit": "完美匹配大市值与高流动性蓝筹偏好",
+      "price": 55.7,
+      "change_pct": -1.17,
+      "amount": 3930272360.0,
+      "industry": "",
+      "factor_scores": {
+        "value": 76.6433,
+        "liquidity": 99.187,
+        "momentum": 52.6975,
+        "reversal": 76.21,
+        "activity": 81.9329,
+        "stability": 74.49,
+        "size": 97.561,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {
+        "enriched": true,
+        "profile": "post_rank_full",
+        "news_included": true,
+        "events_included": true,
+        "quote": {
+          "code": "601318",
+          "name": "中国平安",
+          "source": "akshare_sina",
+          "fetched_at": "2026-09-08T10:48:11.721909+00:00",
+          "price": 55.7,
+          "change_pct": -1.171043293115679,
+          "change_amount": -0.6599999999999966,
+          "volume": 70076818,
+          "amount": 3930272360.0,
+          "volume_ratio": 0.75,
+          "turnover_rate": 0.66,
+          "amplitude": 1.99,
+          "open_price": 56.0,
+          "high": 56.8,
+          "low": 55.68,
+          "pre_close": 56.36,
+          "pe_ratio": 6.33,
+          "pb_ratio": 0.98,
+          "total_mv": 1008595999999.9999,
+          "circ_mv": 593766000000.0
+        },
+        "fundamentals": {
+          "market": "cn",
+          "status": "partial",
+          "coverage": {
+            "valuation": "not_supported",
+            "growth": "failed",
+            "earnings": "failed",
+            "institution": "failed",
+            "capital_flow": "failed",
+            "dragon_tiger": "failed",
+            "boards": "failed"
+          },
+          "valuation": {
+            "status": "not_supported",
+            "data": {
+              "pe_ratio": null,
+              "pb_ratio": null,
+              "total_mv": null,
+              "circ_mv": null
+            }
+          },
+          "growth": {
+            "status": "failed",
+            "data": {}
+          },
+          "earnings": {
+            "status": "failed",
+            "data": {}
+          },
+          "institution": {
+            "status": "failed",
+            "data": {}
+          },
+          "capital_flow": {
+            "status": "failed",
+            "data": {}
+          },
+          "boards": {
+            "status": "failed",
+            "data": {}
+          },
+          "errors": [
+            "fundamental_valuation timeout",
+            "fundamental stage timeout",
+            "fundamental stage timeout"
+          ]
+        },
+        "news": {
+          "query": "中国平安 601318 股票 最新消息",
+          "provider": "Filtered",
+          "success": true,
+          "error": null,
+          "results": []
+        },
+        "events": {
+          "query": "中国平安 (年报预告 OR 减持公告 OR 业绩快报)",
+          "provider": "Tavily",
+          "success": true,
+          "error": null,
+          "results": [
+            {
+              "title": "截至2025年12月31日止年度的經審計業績公告",
+              "snippet": "； Brand Finance 「2026年全球品牌價值500強」 榜單第32位，十度蟬聯中國最具價值保險品牌。 註： (1)上述基於本公司2025年經營成果。 (2)因四捨五入，直接計算未必相等。 99% 持有集團內3類及以上產品 的客戶留存率 董事長致辭 專業，您心中的平安 中國平安保險 （集團） 股份有限公司 8 二零二五年年報 專業所至，心之所向，平安所歸。謹此借業績報告，向所有 關心平安的客戶、股東、員工及社會各界，致以最真摯的感 謝。承蒙您長期以來的信任與支持，平安於變革浪潮中堅定 航向，堅持深化 「綜合金融+醫療養老」 雙輪並行及科技驅動 戰略，以 「省心、省時、又省錢」 的服務，時刻為您送上 「平 安」 。 2025年金秋，與同事們赴潮州鳳凰鎮古茶園，調研平安 「百 千萬工程」 的古樹保護項目，一株穿越600載春秋的單樅樹仍 在綻放新芽，令人讚嘆。企業發展，猶如樹木，根深方可蒂 固。平安之 「根」 ，是堅持以人民為中心，以客戶和社會需求 為核心，與時俱進、推陳出新，以持續創造價值，孕育綿延 不絕的生命力。 當前，中國經濟正步入中高速發展階段，金融保險、醫療與 [...]",
+              "url": "https://www.pingan.com/app_upload/images/info/upload/6ee8f1e3-dc2f-4e6f-a6dd-8052b02969dd.pdf",
+              "source": "pingan.com",
+              "published_date": null
+            },
+            {
+              "title": "财务摘要-业绩及推介-投资者关系-中国平安",
+              "snippet": "| (单位：人民币百万元) | 2023年1-6月 | 2022年1-12月 | 2022年1-6月 | 2021年1-12月 | 2021年1-6月 |\n ---  ---  --- |\n| 总收入 | 488,783 | 1,110,568 | 612,102 | 1,180,444 | 635,649 |\n| 净利润 | 83,426 | 107,432 | 71,676 | 121,802 | 67,963 |\n| 归属于母公司 股东的净利润 | 69,841 | 83,774 | 60,273 | 101,618 | 58,005 |\n| 总资产 | 11,467,577 | 11,137,168 | 10,696,148 | 10,142,026 | 9,887,668 |\n| 权益总额 | 1,239,735 | 1,175,298 | 1,117,263 | 1,077,723 | 1,028,914 |\n| 归属于母公司 股东权益 | 918,145 | 858,675 | 848,719 | 812,405 | 791,836 | [...] | 基本每股收益 (人",
+              "url": "https://www.pingan.cn/m/ir/financial-summary.shtml",
+              "source": "pingan.cn",
+              "published_date": null
+            },
+            {
+              "title": "[PDF] 二零二五年中报 - 中国平安",
+              "snippet": "归属于母公司股东的营运利润777.32 亿元，同比增长3.7%； 归属于母公司股东的净利润680.47 亿元；营业收入5,000.76 亿元； 归属于母公司股东权益9,439.52 亿元，较年初增长1.7%。 777.32亿元 归属于母公司股东的 营运利润 1.集团整体经营稳健 平安注重股东回报，将向股东派发中期股息每股现金人民币0.95 元，同比增长2.2%。 2.现金分红水平稳定增长 2.2% 中期每股股息同比增长 3.寿险及健康险业务经营稳健发展，多渠道高质量发展 寿险及健康险业务新业务价值同比增长39.8%，新业务价值率（按标准保费）同比上升9.0个百分点； 代理人渠道新业务价值同比增长17.0%，人均新业务价值同比增长21.6%； 银保渠道新业务价值同比增长168.6%。 4.财产保险业务规模稳健增长，业务品质持续优化 原保险保费收入1,718.57 亿元，同比增长7.1%； 保险服务收入1,656.61 亿元，同比增长2.3%； 整体综合成本率95.2%，同比优化2.6 个百分点，持续保持良好的盈利能力； 车险综合成本率95.5%，同比优化2.6 [...] 决策部署，坚决",
+              "url": "https://www.pingan.com/app_upload/images/info/upload/4df845bc-895a-43df-a905-3d40e57e9ae9.pdf",
+              "source": "pingan.com",
+              "published_date": null
+            }
+          ]
+        },
+        "warnings": []
+      },
+      "dsa_news": [],
+      "dsa_events": [
+        {
+          "title": "截至2025年12月31日止年度的經審計業績公告",
+          "snippet": "； Brand Finance 「2026年全球品牌價值500強」 榜單第32位，十度蟬聯中國最具價值保險品牌。 註： (1)上述基於本公司2025年經營成果。 (2)因四捨五入，直接計算未必相等。 99% 持有集團內3類及以上產品 的客戶留存率 董事長致辭 專業，您心中的平安 中國平安保險 （集團） 股份有限公司 8 二零二五年年報 專業所至，心之所向，平安所歸。謹此借業績報告，向所有 關心平安的客戶、股東、員工及社會各界，致以最真摯的感 謝。承蒙您長期以來的信任與支持，平安於變革浪潮中堅定 航向，堅持深化 「綜合金融+醫療養老」 雙輪並行及科技驅動 戰略，以 「省心、省時、又省錢」 的服務，時刻為您送上 「平 安」 。 2025年金秋，與同事們赴潮州鳳凰鎮古茶園，調研平安 「百 千萬工程」 的古樹保護項目，一株穿越600載春秋的單樅樹仍 在綻放新芽，令人讚嘆。企業發展，猶如樹木，根深方可蒂 固。平安之 「根」 ，是堅持以人民為中心，以客戶和社會需求 為核心，與時俱進、推陳出新，以持續創造價值，孕育綿延 不絕的生命力。 當前，中國經濟正步入中高速發展階段，金融保險、醫療與 [...]",
+          "url": "https://www.pingan.com/app_upload/images/info/upload/6ee8f1e3-dc2f-4e6f-a6dd-8052b02969dd.pdf",
+          "source": "pingan.com",
+          "published_date": null
+        },
+        {
+          "title": "财务摘要-业绩及推介-投资者关系-中国平安",
+          "snippet": "| (单位：人民币百万元) | 2023年1-6月 | 2022年1-12月 | 2022年1-6月 | 2021年1-12月 | 2021年1-6月 |\n ---  ---  --- |\n| 总收入 | 488,783 | 1,110,568 | 612,102 | 1,180,444 | 635,649 |\n| 净利润 | 83,426 | 107,432 | 71,676 | 121,802 | 67,963 |\n| 归属于母公司 股东的净利润 | 69,841 | 83,774 | 60,273 | 101,618 | 58,005 |\n| 总资产 | 11,467,577 | 11,137,168 | 10,696,148 | 10,142,026 | 9,887,668 |\n| 权益总额 | 1,239,735 | 1,175,298 | 1,117,263 | 1,077,723 | 1,028,914 |\n| 归属于母公司 股东权益 | 918,145 | 858,675 | 848,719 | 812,405 | 791,836 | [...] | 基本每股收益 (人",
+          "url": "https://www.pingan.cn/m/ir/financial-summary.shtml",
+          "source": "pingan.cn",
+          "published_date": null
+        },
+        {
+          "title": "[PDF] 二零二五年中报 - 中国平安",
+          "snippet": "归属于母公司股东的营运利润777.32 亿元，同比增长3.7%； 归属于母公司股东的净利润680.47 亿元；营业收入5,000.76 亿元； 归属于母公司股东权益9,439.52 亿元，较年初增长1.7%。 777.32亿元 归属于母公司股东的 营运利润 1.集团整体经营稳健 平安注重股东回报，将向股东派发中期股息每股现金人民币0.95 元，同比增长2.2%。 2.现金分红水平稳定增长 2.2% 中期每股股息同比增长 3.寿险及健康险业务经营稳健发展，多渠道高质量发展 寿险及健康险业务新业务价值同比增长39.8%，新业务价值率（按标准保费）同比上升9.0个百分点； 代理人渠道新业务价值同比增长17.0%，人均新业务价值同比增长21.6%； 银保渠道新业务价值同比增长168.6%。 4.财产保险业务规模稳健增长，业务品质持续优化 原保险保费收入1,718.57 亿元，同比增长7.1%； 保险服务收入1,656.61 亿元，同比增长2.3%； 整体综合成本率95.2%，同比优化2.6 个百分点，持续保持良好的盈利能力； 车险综合成本率95.5%，同比优化2.6 [...] 决策部署，坚决",
+          "url": "https://www.pingan.com/app_upload/images/info/upload/4df845bc-895a-43df-a905-3d40e57e9ae9.pdf",
+          "source": "pingan.com",
+          "published_date": null
+        }
+      ],
+      "dsa_analysis_summary": "DSA行情：现价 55.7，涨跌幅 -1.171043293115679%；DSA事件：截至2025年12月31日止年度的經審計業績公告；财务摘要-业绩及推介-投资者关系-中国平安",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: value_quality、controlled_reversal；风险: 资本市场波动风险"
+      },
+      "post_analysis_tags": [
+        "value_quality",
+        "controlled_reversal"
+      ],
+      "raw": {
+        "rank": 1,
+        "code": "601318",
+        "name": "中国平安",
+        "final_score": 87.7551,
+        "screen_score": 81.75851091463413,
+        "llm_score": 88.0,
+        "ranking_reason": "流动性因子全场领先，大市值蓝筹属性显著。",
+        "risk_summary": "权益市场波动对投资收益的潜在冲击",
+        "price": 55.7,
+        "change_pct": -1.17,
+        "amount": 3930272360.0,
+        "total_mv": 1008595659122.0,
+        "turnover_rate": 0.66,
+        "volume_ratio": 0.75,
+        "pe_ratio": 6.33078698,
+        "pb_ratio": 0.98104402,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": null,
+        "signal_score": null,
+        "ma_bullish": null,
+        "price_above_ma20": null,
+        "macd_status": "",
+        "rsi_status": "",
+        "breakout_20d_pct": null,
+        "range_20d_pct": null,
+        "volume_ratio_20d": null,
+        "body_pct": null,
+        "pullback_to_ma20_pct": null,
+        "consolidation_days_20d": null,
+        "volatility_20d_pct": null,
+        "max_drawdown_20d_pct": null,
+        "atr_20_pct": null,
+        "daily_quality_score": null,
+        "daily_quality_flags": "",
+        "daily_source": "",
+        "factor_scores": {
+          "value": 76.6433,
+          "liquidity": 99.187,
+          "momentum": 52.6975,
+          "reversal": 76.21,
+          "activity": 81.9329,
+          "stability": 74.49,
+          "size": 97.561,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.9,
+        "llm_sector": "保险",
+        "llm_theme": "大金融龙头及高流动性配置",
+        "llm_tags": [
+          "价值",
+          "流动性",
+          "防守",
+          "sector:保险",
+          "theme:大金融龙头及高流动性配置",
+          "style_fit:完美匹配大市值与高流动性蓝筹偏好"
+        ],
+        "llm_catalysts": [
+          "长端利率企稳回升",
+          "险企负债端持续改善"
+        ],
+        "llm_risks": [
+          "资本市场波动风险"
+        ],
+        "llm_thesis": "兼具极高的流动性和保险核心资产地位，估值未显透支。",
+        "llm_style_fit": "完美匹配大市值与高流动性蓝筹偏好",
+        "llm_watch_items": [
+          "750日均线及长端国债收益率",
+          "保费收入数据"
+        ],
+        "llm_invalidators": [
+          "权益市场发生超预期单边下跌"
+        ],
+        "risk_score": 10.0,
+        "risk_level": "low",
+        "risk_penalty": 1.2,
+        "risk_flags": [
+          "资本市场波动风险"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 0.0,
+        "portfolio_flags": [],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: value_quality、controlled_reversal；风险: 资本市场波动风险"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": 4.7
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "资本市场波动风险"
+            ],
+            "tags": [
+              "value_quality",
+              "controlled_reversal"
+            ]
+          }
+        },
+        "post_analysis_tags": [
+          "value_quality",
+          "controlled_reversal"
+        ],
+        "dsa_context": {
+          "enriched": true,
+          "profile": "pre_rank_light",
+          "news_included": false,
+          "events_included": false,
+          "quote": {
+            "code": "601318",
+            "name": "中国平安",
+            "source": "akshare_sina",
+            "fetched_at": "2026-09-08T10:48:11.721909+00:00",
+            "price": 55.7,
+            "change_pct": -1.171043293115679,
+            "change_amount": -0.6599999999999966,
+            "volume": 70076818,
+            "amount": 3930272360.0,
+            "volume_ratio": 0.75,
+            "turnover_rate": 0.66,
+            "amplitude": 1.99,
+            "open_price": 56.0,
+            "high": 56.8,
+            "low": 55.68,
+            "pre_close": 56.36,
+            "pe_ratio": 6.33,
+            "pb_ratio": 0.98,
+            "total_mv": 1008595999999.9999,
+            "circ_mv": 593766000000.0
+          },
+          "fundamentals": {
+            "market": "cn",
+            "status": "partial",
+            "coverage": {
+              "valuation": "not_supported",
+              "growth": "failed",
+              "earnings": "failed",
+              "institution": "failed",
+              "capital_flow": "failed",
+              "dragon_tiger": "failed",
+              "boards": "failed"
+            },
+            "valuation": {
+              "status": "not_supported",
+              "data": {
+                "pe_ratio": null,
+                "pb_ratio": null,
+                "total_mv": null,
+                "circ_mv": null
+              }
+            },
+            "growth": {
+              "status": "failed",
+              "data": {}
+            },
+            "earnings": {
+              "status": "failed",
+              "data": {}
+            },
+            "institution": {
+              "status": "failed",
+              "data": {}
+            },
+            "capital_flow": {
+              "status": "failed",
+              "data": {}
+            },
+            "boards": {
+              "status": "failed",
+              "data": {}
+            },
+            "errors": [
+              "fundamental_valuation timeout",
+              "fundamental stage timeout",
+              "fundamental stage timeout"
+            ]
+          },
+          "news": {
+            "success": false,
+            "skipped": true,
+            "reason": "pre_rank_light_context",
+            "results": []
+          },
+          "events": {
+            "success": false,
+            "skipped": true,
+            "reason": "pre_rank_light_context",
+            "results": []
+          },
+          "warnings": []
+        },
+        "dsa_news": [],
+        "dsa_analysis_summary": "DSA行情: 现价 55.7, 涨跌幅 -1.171043293115679%",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "blue_chip_income",
+        "low_volatility_quality"
+      ],
+      "merge_score": 88.0
+    },
+    {
+      "rank": 2,
+      "code": "601939",
+      "name": "建设银行",
+      "score": 85.0,
+      "screen_score": 79.85818853658537,
+      "reason": "市值容量与稳定性因子顶配，防守属性极强。",
+      "risk_level": "low",
+      "risk_flags": [
+        "息差下行风险"
+      ],
+      "llm_score": 85.0,
+      "llm_confidence": 0.88,
+      "llm_sector": "银行",
+      "llm_theme": "国有大行稳健红利资产",
+      "llm_tags": [
+        "价值",
+        "防守",
+        "sector:银行",
+        "theme:国有大行稳健红利资产",
+        "style_fit:高度契合红利与防守偏好"
+      ],
+      "llm_thesis": "极致的市值规模与高稳定性，红利与低估值属性凸显。",
+      "llm_catalysts": [
+        "分红比例维持高位",
+        "资产质量持续保持优异"
+      ],
+      "llm_risks": [
+        "息差下行风险"
+      ],
+      "llm_watch_items": [
+        "净息差变动",
+        "不良贷款率"
+      ],
+      "llm_invalidators": [
+        "宏观经济大幅下行导致资产质量恶化"
+      ],
+      "llm_style_fit": "高度契合红利与防守偏好",
+      "price": 10.68,
+      "change_pct": -0.28,
+      "amount": 1047423761.0,
+      "industry": "",
+      "factor_scores": {
+        "value": 80.4624,
+        "liquidity": 77.2358,
+        "momentum": 55.59,
+        "reversal": 64.64,
+        "activity": 83.9455,
+        "stability": 77.16,
+        "size": 100.0,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {
+        "enriched": true,
+        "profile": "post_rank_full",
+        "news_included": true,
+        "events_included": true,
+        "quote": {
+          "code": "601939",
+          "name": "建设银行",
+          "source": "akshare_sina",
+          "fetched_at": "2026-09-08T10:48:53.485070+00:00",
+          "price": 10.68,
+          "change_pct": -0.2801120448179378,
+          "change_amount": -0.030000000000001137,
+          "volume": 98475744,
+          "amount": 1047423761.0,
+          "volume_ratio": 0.9,
+          "turnover_rate": 1.03,
+          "amplitude": 1.96,
+          "open_price": 10.66,
+          "high": 10.76,
+          "low": 10.55,
+          "pre_close": 10.71,
+          "pe_ratio": 8.07,
+          "pb_ratio": 0.78,
+          "total_mv": 2793892000000.0,
+          "circ_mv": 102459999999.99998
+        },
+        "fundamentals": {
+          "market": "cn",
+          "status": "partial",
+          "coverage": {
+            "valuation": "not_supported",
+            "growth": "failed",
+            "earnings": "failed",
+            "institution": "failed",
+            "capital_flow": "failed",
+            "dragon_tiger": "failed",
+            "boards": "failed"
+          },
+          "valuation": {
+            "status": "not_supported",
+            "data": {
+              "pe_ratio": null,
+              "pb_ratio": null,
+              "total_mv": null,
+              "circ_mv": null
+            }
+          },
+          "growth": {
+            "status": "failed",
+            "data": {}
+          },
+          "earnings": {
+            "status": "failed",
+            "data": {}
+          },
+          "institution": {
+            "status": "failed",
+            "data": {}
+          },
+          "capital_flow": {
+            "status": "failed",
+            "data": {}
+          },
+          "boards": {
+            "status": "failed",
+            "data": {}
+          },
+          "errors": [
+            "fundamental_valuation timeout",
+            "fundamental stage timeout",
+            "fundamental stage timeout"
+          ]
+        },
+        "news": {
+          "query": "建设银行 601939 股票 最新消息",
+          "provider": "Tavily",
+          "success": true,
+          "error": null,
+          "results": [
+            {
+              "title": "按揭退潮，银行零售 “换挡”",
+              "snippet": "新浪财经APP\n\n 宏观经济\n A股\n 港股\n 美股\n 基金\n 理财\n 黄金\n 期货\n 能源\n 互联网金融\n 房地产\n 更多\n\n  外汇 管理 消费 科技 互联网 手机\n\n  保险 数码 科普 创业 银行 新三板 其他\n\n# 按揭退潮，银行零售 “换挡”\n\n按揭退潮，银行零售 “换挡”\n\n2026年09月07日 19:18 界面新闻\n\n语音播报 缩小字体 放大字体 微博 微信 分享 0 \n\n腾讯QQ QQ空间\n\n界面新闻记者 | 安震\n\n银行业零售业务正在经历结构性变化。\n\n界面新闻记者梳理上市银行半年报发现，A股六大行及9家股份制银行中，只有建设银行（601939.SH）、农业银行（601288.SH）和邮储银行（601658.SH）零售贷款余额保持了增长，其余银行零售贷款均有不同程度收缩。\n\n变化趋势是，一方面，传统零售资产仍然承压，住房按揭贷款延续收缩态势，信用卡贷款普遍下降。另一方面，个人经营贷、消费贷等新型零售资产正在接棒，同时银行业普遍面临资产质量压力。随着银行管理的个人客户金融资产（AUM）的较快增长，财富管理逐渐成为更加重要的增长来源。 [...] 对于银行业而言，零售",
+              "url": "https://cj.sina.cn/articles/view/5182171545/134e1a99902002jcyk",
+              "source": "cj.sina.cn",
+              "published_date": "2026-09-07"
+            }
+          ]
+        },
+        "events": {
+          "query": "建设银行 (年报预告 OR 减持公告 OR 业绩快报)",
+          "provider": "Tavily",
+          "success": true,
+          "error": null,
+          "results": [
+            {
+              "title": "[PDF] 2025年年度報告",
+              "snippet": "强领导下，我们深刻把握金融工作的政治性、人民性，以增强 “三个能力” 为根本遵循，坚定服务金融强 国建设，坚定不移走好中国特色金融发展之路，本集团 “十四五” 实现圆满收官，内涵式高质量发展迈上新 台阶。2025年末，集团资产总额突破45万亿元，实现营业收入7,610.49亿元，净利润3,397.90亿元； ROA、 ROE、净息差、资本充足率、成本收入比等关键指标稳健均衡协调。顺利完成向财政部发行A股股票1,050亿 元，有力补充核心一级资本。MSCI ESG评级保持最高等级AAA。 面对成绩，我们循迹溯源、继往开来。2025年是建设银行成立71周年、股改上市20周年。七十余年的发展 史，是一部因建而生、因建而兴的奋进史。历经国家财政投资拨款、国家专业银行、国有商业银行的跨越式 发展，我们从 “机构跟着项目走、服务跟着需求走” “运用银行的办法办银行” ，到 “一心一意办银行” ，再到股 改上市开启现代公司治理，每一次转型都深深扎根于国家经济建设的壮阔实践、生动镌刻着改革发展的鲜明 印记。七十余载筚路蓝缕风雨兼程，我们的诞生、成长与蜕变，始终与党和国家事业发展同频共振。于变局 [..",
+              "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0327/2026032702172_c.pdf",
+              "source": "hkexnews.hk",
+              "published_date": null
+            },
+            {
+              "title": "财务摘要_投资者关系_建设银行",
+              "snippet": "| 基本和稀释每股收益 | 1.28 | 1.19 | 7.56 |\n| 于报告期后每股宣派末期现金股息 | 0.389 | 0.364 | 6.87 |\n| 归属于本行普通股股东的每股净资产 | 10.87 | 9.95 | 9.25 |\n|  | | | |\n| 财务比率(%) |  | | 变化+/(-) |\n| 盈利能力指标 |  |  |  |\n| 平均资产回报率1 | 1.00 | 1.04 | (0.04) |\n| 加权平均净资产收益率 | 12.27 | 12.55 | (0.28) |\n| 净利差 | 1.82 | 1.94 | (0.12) |\n| 净利息收益率 | 2.02 | 2.13 | (0.11) |\n| 手续费及佣金净收入对经营收入比率 | 15.31 | 15.89 | (0.58) |\n| 成本对收入比率2 | 28.25 | 27.64 | 0.61 |\n|  | | | |\n| 资本充足指标(%) |  | |  |\n| 核心一级资本充足率3 | 13.69 | 13.59 | 0.10 | [...] |  |  |  |  |\n ---  -",
+              "url": "https://www.ccb.com/cn/investor/summaryv3.html",
+              "source": "ccb.com",
+              "published_date": null
+            },
+            {
+              "title": "建设银行(601939)公司公告",
+              "snippet": "2026-04-30 建设银行：H股公告-2026年第一季度报告 2026-04-30 建设银行：2026年第一次临时股东会会议的法律意见书 2026-04-30 建设银行：2026年第一次临时股东会会议决议公告 2026-04-30 建设银行：2026年第一季度资本管理第三支柱信息披露报告 2026-04-30 建设银行：2026年第一季度报告 2026-04-30 建设银行：董事会会议决议公告 2026-04-28 建设银行：H股公告-2025年年度报告 2026-04-18 建设银行：董事会会议通告 2026-04-11 建设银行：2026年第一次临时股东会会议资料 2026-04-11 建设银行：关于召开2026年第一次临时股东会会议的通知 2026-04-10 建设银行：董事会会议决议公告 2026-04-01 建设银行：关于生柳荣首席财务官辞任的公告 2026-03-28 建设银行：H股公告-2025年度业绩公告 2026-03-28 建设银行：董事会会议决议公告 2026-03-28 建设银行：2025年度募集资金存放、管理与实际使用情况鉴证报告 2026-03-28 [",
+              "url": "https://money.finance.sina.com.cn/corp/go.php/vCB_AllBulletin/stockid/601939.phtml",
+              "source": "money.finance.sina.com.cn",
+              "published_date": null
+            }
+          ]
+        },
+        "warnings": []
+      },
+      "dsa_news": [
+        {
+          "title": "按揭退潮，银行零售 “换挡”",
+          "snippet": "新浪财经APP\n\n 宏观经济\n A股\n 港股\n 美股\n 基金\n 理财\n 黄金\n 期货\n 能源\n 互联网金融\n 房地产\n 更多\n\n  外汇 管理 消费 科技 互联网 手机\n\n  保险 数码 科普 创业 银行 新三板 其他\n\n# 按揭退潮，银行零售 “换挡”\n\n按揭退潮，银行零售 “换挡”\n\n2026年09月07日 19:18 界面新闻\n\n语音播报 缩小字体 放大字体 微博 微信 分享 0 \n\n腾讯QQ QQ空间\n\n界面新闻记者 | 安震\n\n银行业零售业务正在经历结构性变化。\n\n界面新闻记者梳理上市银行半年报发现，A股六大行及9家股份制银行中，只有建设银行（601939.SH）、农业银行（601288.SH）和邮储银行（601658.SH）零售贷款余额保持了增长，其余银行零售贷款均有不同程度收缩。\n\n变化趋势是，一方面，传统零售资产仍然承压，住房按揭贷款延续收缩态势，信用卡贷款普遍下降。另一方面，个人经营贷、消费贷等新型零售资产正在接棒，同时银行业普遍面临资产质量压力。随着银行管理的个人客户金融资产（AUM）的较快增长，财富管理逐渐成为更加重要的增长来源。 [...] 对于银行业而言，零售",
+          "url": "https://cj.sina.cn/articles/view/5182171545/134e1a99902002jcyk",
+          "source": "cj.sina.cn",
+          "published_date": "2026-09-07"
+        }
+      ],
+      "dsa_events": [
+        {
+          "title": "[PDF] 2025年年度報告",
+          "snippet": "强领导下，我们深刻把握金融工作的政治性、人民性，以增强 “三个能力” 为根本遵循，坚定服务金融强 国建设，坚定不移走好中国特色金融发展之路，本集团 “十四五” 实现圆满收官，内涵式高质量发展迈上新 台阶。2025年末，集团资产总额突破45万亿元，实现营业收入7,610.49亿元，净利润3,397.90亿元； ROA、 ROE、净息差、资本充足率、成本收入比等关键指标稳健均衡协调。顺利完成向财政部发行A股股票1,050亿 元，有力补充核心一级资本。MSCI ESG评级保持最高等级AAA。 面对成绩，我们循迹溯源、继往开来。2025年是建设银行成立71周年、股改上市20周年。七十余年的发展 史，是一部因建而生、因建而兴的奋进史。历经国家财政投资拨款、国家专业银行、国有商业银行的跨越式 发展，我们从 “机构跟着项目走、服务跟着需求走” “运用银行的办法办银行” ，到 “一心一意办银行” ，再到股 改上市开启现代公司治理，每一次转型都深深扎根于国家经济建设的壮阔实践、生动镌刻着改革发展的鲜明 印记。七十余载筚路蓝缕风雨兼程，我们的诞生、成长与蜕变，始终与党和国家事业发展同频共振。于变局 [..",
+          "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0327/2026032702172_c.pdf",
+          "source": "hkexnews.hk",
+          "published_date": null
+        },
+        {
+          "title": "财务摘要_投资者关系_建设银行",
+          "snippet": "| 基本和稀释每股收益 | 1.28 | 1.19 | 7.56 |\n| 于报告期后每股宣派末期现金股息 | 0.389 | 0.364 | 6.87 |\n| 归属于本行普通股股东的每股净资产 | 10.87 | 9.95 | 9.25 |\n|  | | | |\n| 财务比率(%) |  | | 变化+/(-) |\n| 盈利能力指标 |  |  |  |\n| 平均资产回报率1 | 1.00 | 1.04 | (0.04) |\n| 加权平均净资产收益率 | 12.27 | 12.55 | (0.28) |\n| 净利差 | 1.82 | 1.94 | (0.12) |\n| 净利息收益率 | 2.02 | 2.13 | (0.11) |\n| 手续费及佣金净收入对经营收入比率 | 15.31 | 15.89 | (0.58) |\n| 成本对收入比率2 | 28.25 | 27.64 | 0.61 |\n|  | | | |\n| 资本充足指标(%) |  | |  |\n| 核心一级资本充足率3 | 13.69 | 13.59 | 0.10 | [...] |  |  |  |  |\n ---  -",
+          "url": "https://www.ccb.com/cn/investor/summaryv3.html",
+          "source": "ccb.com",
+          "published_date": null
+        },
+        {
+          "title": "建设银行(601939)公司公告",
+          "snippet": "2026-04-30 建设银行：H股公告-2026年第一季度报告 2026-04-30 建设银行：2026年第一次临时股东会会议的法律意见书 2026-04-30 建设银行：2026年第一次临时股东会会议决议公告 2026-04-30 建设银行：2026年第一季度资本管理第三支柱信息披露报告 2026-04-30 建设银行：2026年第一季度报告 2026-04-30 建设银行：董事会会议决议公告 2026-04-28 建设银行：H股公告-2025年年度报告 2026-04-18 建设银行：董事会会议通告 2026-04-11 建设银行：2026年第一次临时股东会会议资料 2026-04-11 建设银行：关于召开2026年第一次临时股东会会议的通知 2026-04-10 建设银行：董事会会议决议公告 2026-04-01 建设银行：关于生柳荣首席财务官辞任的公告 2026-03-28 建设银行：H股公告-2025年度业绩公告 2026-03-28 建设银行：董事会会议决议公告 2026-03-28 建设银行：2025年度募集资金存放、管理与实际使用情况鉴证报告 2026-03-28 [",
+          "url": "https://money.finance.sina.com.cn/corp/go.php/vCB_AllBulletin/stockid/601939.phtml",
+          "source": "money.finance.sina.com.cn",
+          "published_date": null
+        }
+      ],
+      "dsa_analysis_summary": "DSA行情：现价 10.68，涨跌幅 -0.2801120448179378%；DSA新闻：按揭退潮，银行零售 “换挡”；DSA事件：[PDF] 2025年年度報告；财务摘要_投资者关系_建设银行",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: value_quality；风险: 息差下行风险"
+      },
+      "post_analysis_tags": [
+        "value_quality"
+      ],
+      "raw": {
+        "rank": 2,
+        "code": "601939",
+        "name": "建设银行",
+        "final_score": 84.2149,
+        "screen_score": 79.85818853658537,
+        "llm_score": 85.0,
+        "ranking_reason": "市值容量与稳定性因子顶配，防守属性极强。",
+        "risk_summary": "息差收窄对净利息收入的侵蚀",
+        "price": 10.68,
+        "change_pct": -0.28,
+        "amount": 1047423761.0,
+        "total_mv": 2793892073982.0,
+        "turnover_rate": 1.03,
+        "volume_ratio": 0.9,
+        "pe_ratio": 8.065648,
+        "pb_ratio": 0.78037209,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": null,
+        "signal_score": null,
+        "ma_bullish": null,
+        "price_above_ma20": null,
+        "macd_status": "",
+        "rsi_status": "",
+        "breakout_20d_pct": null,
+        "range_20d_pct": null,
+        "volume_ratio_20d": null,
+        "body_pct": null,
+        "pullback_to_ma20_pct": null,
+        "consolidation_days_20d": null,
+        "volatility_20d_pct": null,
+        "max_drawdown_20d_pct": null,
+        "atr_20_pct": null,
+        "daily_quality_score": null,
+        "daily_quality_flags": "",
+        "daily_source": "",
+        "factor_scores": {
+          "value": 80.4624,
+          "liquidity": 77.2358,
+          "momentum": 55.59,
+          "reversal": 64.64,
+          "activity": 83.9455,
+          "stability": 77.16,
+          "size": 100.0,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.88,
+        "llm_sector": "银行",
+        "llm_theme": "国有大行稳健红利资产",
+        "llm_tags": [
+          "价值",
+          "防守",
+          "sector:银行",
+          "theme:国有大行稳健红利资产",
+          "style_fit:高度契合红利与防守偏好"
+        ],
+        "llm_catalysts": [
+          "分红比例维持高位",
+          "资产质量持续保持优异"
+        ],
+        "llm_risks": [
+          "息差下行风险"
+        ],
+        "llm_thesis": "极致的市值规模与高稳定性，红利与低估值属性凸显。",
+        "llm_style_fit": "高度契合红利与防守偏好",
+        "llm_watch_items": [
+          "净息差变动",
+          "不良贷款率"
+        ],
+        "llm_invalidators": [
+          "宏观经济大幅下行导致资产质量恶化"
+        ],
+        "risk_score": 10.0,
+        "risk_level": "low",
+        "risk_penalty": 1.2,
+        "risk_flags": [
+          "息差下行风险"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 0.0,
+        "portfolio_flags": [],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: value_quality；风险: 息差下行风险"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": 3.5
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "息差下行风险"
+            ],
+            "tags": [
+              "value_quality"
+            ]
+          }
+        },
+        "post_analysis_tags": [
+          "value_quality"
+        ],
+        "dsa_context": {
+          "enriched": true,
+          "profile": "pre_rank_light",
+          "news_included": false,
+          "events_included": false,
+          "quote": {
+            "code": "601939",
+            "name": "建设银行",
+            "source": "akshare_sina",
+            "fetched_at": "2026-09-08T10:48:53.485070+00:00",
+            "price": 10.68,
+            "change_pct": -0.2801120448179378,
+            "change_amount": -0.030000000000001137,
+            "volume": 98475744,
+            "amount": 1047423761.0,
+            "volume_ratio": 0.9,
+            "turnover_rate": 1.03,
+            "amplitude": 1.96,
+            "open_price": 10.66,
+            "high": 10.76,
+            "low": 10.55,
+            "pre_close": 10.71,
+            "pe_ratio": 8.07,
+            "pb_ratio": 0.78,
+            "total_mv": 2793892000000.0,
+            "circ_mv": 102459999999.99998
+          },
+          "fundamentals": {
+            "market": "cn",
+            "status": "partial",
+            "coverage": {
+              "valuation": "not_supported",
+              "growth": "failed",
+              "earnings": "failed",
+              "institution": "failed",
+              "capital_flow": "failed",
+              "dragon_tiger": "failed",
+              "boards": "failed"
+            },
+            "valuation": {
+              "status": "not_supported",
+              "data": {
+                "pe_ratio": null,
+                "pb_ratio": null,
+                "total_mv": null,
+                "circ_mv": null
+              }
+            },
+            "growth": {
+              "status": "failed",
+              "data": {}
+            },
+            "earnings": {
+              "status": "failed",
+              "data": {}
+            },
+            "institution": {
+              "status": "failed",
+              "data": {}
+            },
+            "capital_flow": {
+              "status": "failed",
+              "data": {}
+            },
+            "boards": {
+              "status": "failed",
+              "data": {}
+            },
+            "errors": [
+              "fundamental_valuation timeout",
+              "fundamental stage timeout",
+              "fundamental stage timeout"
+            ]
+          },
+          "news": {
+            "success": false,
+            "skipped": true,
+            "reason": "pre_rank_light_context",
+            "results": []
+          },
+          "events": {
+            "success": false,
+            "skipped": true,
+            "reason": "pre_rank_light_context",
+            "results": []
+          },
+          "warnings": []
+        },
+        "dsa_news": [],
+        "dsa_analysis_summary": "DSA行情: 现价 10.68, 涨跌幅 -0.2801120448179378%",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "blue_chip_income",
+        "low_volatility_quality"
+      ],
+      "merge_score": 85.0
+    },
+    {
+      "rank": 3,
+      "code": "601601",
+      "name": "中国太保",
+      "score": 83.0,
+      "screen_score": 80.1209062195122,
+      "reason": "兼具估值优势与稳健的流动性指标。",
+      "risk_level": "low",
+      "risk_flags": [
+        "投资端波动",
+        "portfolio_sector_concentration:金融"
+      ],
+      "llm_score": 83.0,
+      "llm_confidence": 0.85,
+      "llm_sector": "保险",
+      "llm_theme": "综合金融及优质险企",
+      "llm_tags": [
+        "价值",
+        "流动性",
+        "sector:保险",
+        "theme:综合金融及优质险企",
+        "style_fit:符合大市值蓝筹及估值未透支要求"
+      ],
+      "llm_thesis": "估值安全边际较好，流动性与动量表现均衡。",
+      "llm_catalysts": [
+        "NBV（新业务价值）正增长超预期"
+      ],
+      "llm_risks": [
+        "投资端波动"
+      ],
+      "llm_watch_items": [
+        "险企半年报或三季报投资收益率"
+      ],
+      "llm_invalidators": [
+        "长期投资回报率显著低于预期"
+      ],
+      "llm_style_fit": "符合大市值蓝筹及估值未透支要求",
+      "price": 33.56,
+      "change_pct": 1.02,
+      "amount": 1579631493.0,
+      "industry": "",
+      "factor_scores": {
+        "value": 77.2896,
+        "liquidity": 92.6829,
+        "momentum": 59.815,
+        "reversal": 47.58,
+        "activity": 82.2318,
+        "stability": 74.94,
+        "size": 95.122,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {
+        "enriched": true,
+        "profile": "post_rank_full",
+        "news_included": true,
+        "events_included": true,
+        "quote": {
+          "code": "601601",
+          "name": "中国太保",
+          "source": "akshare_sina",
+          "fetched_at": "2026-09-08T10:48:32.663889+00:00",
+          "price": 33.56,
+          "change_pct": 1.0234798314268616,
+          "change_amount": 0.3400000000000034,
+          "volume": 46829042,
+          "amount": 1579631493.0,
+          "volume_ratio": 0.8,
+          "turnover_rate": 0.68,
+          "amplitude": 3.1,
+          "open_price": 33.13,
+          "high": 34.16,
+          "low": 33.13,
+          "pre_close": 33.22,
+          "pe_ratio": 5.72,
+          "pb_ratio": 1.01,
+          "total_mv": 322859000000.0,
+          "circ_mv": 229719999999.99997
+        },
+        "fundamentals": {
+          "market": "cn",
+          "status": "partial",
+          "coverage": {
+            "valuation": "not_supported",
+            "growth": "failed",
+            "earnings": "failed",
+            "institution": "failed",
+            "capital_flow": "failed",
+            "dragon_tiger": "failed",
+            "boards": "failed"
+          },
+          "valuation": {
+            "status": "not_supported",
+            "data": {
+              "pe_ratio": null,
+              "pb_ratio": null,
+              "total_mv": null,
+              "circ_mv": null
+            }
+          },
+          "growth": {
+            "status": "failed",
+            "data": {}
+          },
+          "earnings": {
+            "status": "failed",
+            "data": {}
+          },
+          "institution": {
+            "status": "failed",
+            "data": {}
+          },
+          "capital_flow": {
+            "status": "failed",
+            "data": {}
+          },
+          "boards": {
+            "status": "failed",
+            "data": {}
+          },
+          "errors": [
+            "fundamental_valuation timeout",
+            "fundamental stage timeout",
+            "fundamental stage timeout"
+          ]
+        },
+        "news": {
+          "query": "中国太保 601601 股票 最新消息",
+          "provider": "Tavily",
+          "success": true,
+          "error": null,
+          "results": [
+            {
+              "title": "中国太保(SH601601)股票股价_股价行情_讨论",
+              "snippet": "今年和同行相比之下，增速略低。 比净利润更能反映真实经营情况的营运利润211.49亿，同比增长6.23%。 每股净资产33.18元，相",
+              "url": "https://xueqiu.com/S/SH601601",
+              "source": "xueqiu.com",
+              "published_date": "2026-09-08"
+            }
+          ]
+        },
+        "events": {
+          "query": "中国太保 (年报预告 OR 减持公告 OR 业绩快报)",
+          "provider": "Tavily",
+          "success": true,
+          "error": null,
+          "results": [
+            {
+              "title": "中国太保(601601)",
+              "snippet": "| 概览  行情首页  财务分析指标  业绩预告  业绩快报  申购状况  重要信息  月报  减持  回购  质押  中标竞拍  版块分析  同行业板块  同地区板块  同概念板块  财报分析  研报一览  资产负债表  利润分配表  现金流量表  非经常性损益合计  经营情况  公司档案  主营分布  高管一览  资本运作  北上资金  沪股通成交榜  沪股通持股统计  主力动向  交易异动  大宗交易  融资融券  大股东增减持  股东统计  股本结构  股东名单  股东户数  限售解禁  持仓分析  基金持仓  基金持仓变动  基金重仓  基金重仓变动  分红扩股  分红派息  配股增发  管理层报告  经营总结  公开信息  财报全文  公告全文 |  | |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | [",
+              "url": "https://quote.cfi.cn/quote8788_601601.html",
+              "source": "quote.cfi.cn",
+              "published_date": null
+            },
+            {
+              "title": "中国太保(601601)_公司公告_中国太保：2025年半年度报告新浪财经_新浪网",
+              "snippet": "????  ч??????????  ч??????????  中国太平洋保险（集团）股份有限公司  经营业绩  会计数据和业务数据摘要  单位：人民币百万元主要会计数据  2025年1-6月  2024年  1-6月  本报告期比上年  同期增减(%)营业收入200,496194,6343.0利润总额32,25929,3959.7净利润注  27,88525,13211.0扣除非经常性损益的 净利润注  26,22425,1424.3经营活动产生的现金流 量净额  120,50389,92534.0  2025年6月30日  2024年12月31日  本期末比上年末  增减(%)  总资产3,030,1002,834,9076.9股东权益  注  281,871291,417(3.3)注：以归属于本公司股东的数据填列。  单位：人民币元  主要财务指标  2025年  1-6月  2024年  1-6月  本报告期比上年  同期增减(%)  基本每股收益  注1  2.902.6111.0  扣除非经常性损益后的 基本每股收益  注1  2.732.614.3  稀释每股收益 [..",
+              "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=601601&id=11408951",
+              "source": "money.finance.sina.com.cn",
+              "published_date": null
+            },
+            {
+              "title": "投资者首页——中国太平洋保险官网入口可查看重要公告、定期报告、公开信息披露、股票走势及投资者服务等信息页",
+              "snippet": "更多公告>>\n\n （2026-08-20）中国太保关于召开2026年中期业绩说明会的公告  xiazai 点击下载 點撃下載\n （2026-08-14）中国太保H股公告  xiazai 点击下载 點撃下載\n （2026-08-12）中国太保关于董事离任的公告  xiazai 点击下载 點撃下載\n （2026-08-04）中国太保H股公告  xiazai 点击下载 點撃下載\n （2026-07-20）中国太保关于坚定支持资本市场发展与提升股东回报的公告  xiazai 点击下载 點撃下載\n （2026-07-09）中国太保2025年年度分红派息实施公告  xiazai 点击下载 點撃下載\n （2026-07-07）中国太保第十届董事会第二十四次会议决议公告  xiazai 点击下载 點撃下載\n （2026-07-04）中国太保关于高级管理人员任职资格获核准的公告  xiazai 点击下载 點撃下載\n （2026-07-03）中国太保H股公告  xiazai 点击下载 點撃下載\n （2026-06-11）中国太保2025年度股东会的法律意见书  xiazai 点击下载 點撃下載 [...]",
+              "url": "https://www.cpic.com.cn/ir",
+              "source": "cpic.com.cn",
+              "published_date": null
+            }
+          ]
+        },
+        "warnings": []
+      },
+      "dsa_news": [
+        {
+          "title": "中国太保(SH601601)股票股价_股价行情_讨论",
+          "snippet": "今年和同行相比之下，增速略低。 比净利润更能反映真实经营情况的营运利润211.49亿，同比增长6.23%。 每股净资产33.18元，相",
+          "url": "https://xueqiu.com/S/SH601601",
+          "source": "xueqiu.com",
+          "published_date": "2026-09-08"
+        }
+      ],
+      "dsa_events": [
+        {
+          "title": "中国太保(601601)",
+          "snippet": "| 概览  行情首页  财务分析指标  业绩预告  业绩快报  申购状况  重要信息  月报  减持  回购  质押  中标竞拍  版块分析  同行业板块  同地区板块  同概念板块  财报分析  研报一览  资产负债表  利润分配表  现金流量表  非经常性损益合计  经营情况  公司档案  主营分布  高管一览  资本运作  北上资金  沪股通成交榜  沪股通持股统计  主力动向  交易异动  大宗交易  融资融券  大股东增减持  股东统计  股本结构  股东名单  股东户数  限售解禁  持仓分析  基金持仓  基金持仓变动  基金重仓  基金重仓变动  分红扩股  分红派息  配股增发  管理层报告  经营总结  公开信息  财报全文  公告全文 |  | |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | [",
+          "url": "https://quote.cfi.cn/quote8788_601601.html",
+          "source": "quote.cfi.cn",
+          "published_date": null
+        },
+        {
+          "title": "中国太保(601601)_公司公告_中国太保：2025年半年度报告新浪财经_新浪网",
+          "snippet": "????  ч??????????  ч??????????  中国太平洋保险（集团）股份有限公司  经营业绩  会计数据和业务数据摘要  单位：人民币百万元主要会计数据  2025年1-6月  2024年  1-6月  本报告期比上年  同期增减(%)营业收入200,496194,6343.0利润总额32,25929,3959.7净利润注  27,88525,13211.0扣除非经常性损益的 净利润注  26,22425,1424.3经营活动产生的现金流 量净额  120,50389,92534.0  2025年6月30日  2024年12月31日  本期末比上年末  增减(%)  总资产3,030,1002,834,9076.9股东权益  注  281,871291,417(3.3)注：以归属于本公司股东的数据填列。  单位：人民币元  主要财务指标  2025年  1-6月  2024年  1-6月  本报告期比上年  同期增减(%)  基本每股收益  注1  2.902.6111.0  扣除非经常性损益后的 基本每股收益  注1  2.732.614.3  稀释每股收益 [..",
+          "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=601601&id=11408951",
+          "source": "money.finance.sina.com.cn",
+          "published_date": null
+        },
+        {
+          "title": "投资者首页——中国太平洋保险官网入口可查看重要公告、定期报告、公开信息披露、股票走势及投资者服务等信息页",
+          "snippet": "更多公告>>\n\n （2026-08-20）中国太保关于召开2026年中期业绩说明会的公告  xiazai 点击下载 點撃下載\n （2026-08-14）中国太保H股公告  xiazai 点击下载 點撃下載\n （2026-08-12）中国太保关于董事离任的公告  xiazai 点击下载 點撃下載\n （2026-08-04）中国太保H股公告  xiazai 点击下载 點撃下載\n （2026-07-20）中国太保关于坚定支持资本市场发展与提升股东回报的公告  xiazai 点击下载 點撃下載\n （2026-07-09）中国太保2025年年度分红派息实施公告  xiazai 点击下载 點撃下載\n （2026-07-07）中国太保第十届董事会第二十四次会议决议公告  xiazai 点击下载 點撃下載\n （2026-07-04）中国太保关于高级管理人员任职资格获核准的公告  xiazai 点击下载 點撃下載\n （2026-07-03）中国太保H股公告  xiazai 点击下载 點撃下載\n （2026-06-11）中国太保2025年度股东会的法律意见书  xiazai 点击下载 點撃下載 [...]",
+          "url": "https://www.cpic.com.cn/ir",
+          "source": "cpic.com.cn",
+          "published_date": null
+        }
+      ],
+      "dsa_analysis_summary": "DSA行情：现价 33.56，涨跌幅 1.0234798314268616%；DSA新闻：中国太保(SH601601)股票股价_股价行情_讨论；DSA事件：中国太保(601601)；中国太保(601601)_公司公告_中国太保：2025年半年度报告新浪财经_新浪网",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: value_quality；风险: 投资端波动"
+      },
+      "post_analysis_tags": [
+        "value_quality"
+      ],
+      "raw": {
+        "rank": 3,
+        "code": "601601",
+        "name": "中国太保",
+        "final_score": 80.0725,
+        "screen_score": 80.1209062195122,
+        "llm_score": 83.0,
+        "ranking_reason": "兼具估值优势与稳健的流动性指标。",
+        "risk_summary": "新会计准则下的业绩波动",
+        "price": 33.56,
+        "change_pct": 1.02,
+        "amount": 1579631493.0,
+        "total_mv": 322858659230.0,
+        "turnover_rate": 0.68,
+        "volume_ratio": 0.8,
+        "pe_ratio": 5.72495184,
+        "pb_ratio": 1.01147464,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": null,
+        "signal_score": null,
+        "ma_bullish": null,
+        "price_above_ma20": null,
+        "macd_status": "",
+        "rsi_status": "",
+        "breakout_20d_pct": null,
+        "range_20d_pct": null,
+        "volume_ratio_20d": null,
+        "body_pct": null,
+        "pullback_to_ma20_pct": null,
+        "consolidation_days_20d": null,
+        "volatility_20d_pct": null,
+        "max_drawdown_20d_pct": null,
+        "atr_20_pct": null,
+        "daily_quality_score": null,
+        "daily_quality_flags": "",
+        "daily_source": "",
+        "factor_scores": {
+          "value": 77.2896,
+          "liquidity": 92.6829,
+          "momentum": 59.815,
+          "reversal": 47.58,
+          "activity": 82.2318,
+          "stability": 74.94,
+          "size": 95.122,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.85,
+        "llm_sector": "保险",
+        "llm_theme": "综合金融及优质险企",
+        "llm_tags": [
+          "价值",
+          "流动性",
+          "sector:保险",
+          "theme:综合金融及优质险企",
+          "style_fit:符合大市值蓝筹及估值未透支要求"
+        ],
+        "llm_catalysts": [
+          "NBV（新业务价值）正增长超预期"
+        ],
+        "llm_risks": [
+          "投资端波动"
+        ],
+        "llm_thesis": "估值安全边际较好，流动性与动量表现均衡。",
+        "llm_style_fit": "符合大市值蓝筹及估值未透支要求",
+        "llm_watch_items": [
+          "险企半年报或三季报投资收益率"
+        ],
+        "llm_invalidators": [
+          "长期投资回报率显著低于预期"
+        ],
+        "risk_score": 10.0,
+        "risk_level": "low",
+        "risk_penalty": 1.2,
+        "risk_flags": [
+          "投资端波动",
+          "portfolio_sector_concentration:金融"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 3.0,
+        "portfolio_flags": [
+          "portfolio_sector_concentration:金融"
+        ],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: value_quality；风险: 投资端波动"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": 3.0
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "投资端波动"
+            ],
+            "tags": [
+              "value_quality"
+            ]
+          }
+        },
+        "post_analysis_tags": [
+          "value_quality"
+        ],
+        "dsa_context": {
+          "enriched": true,
+          "profile": "pre_rank_light",
+          "news_included": false,
+          "events_included": false,
+          "quote": {
+            "code": "601601",
+            "name": "中国太保",
+            "source": "akshare_sina",
+            "fetched_at": "2026-09-08T10:48:32.663889+00:00",
+            "price": 33.56,
+            "change_pct": 1.0234798314268616,
+            "change_amount": 0.3400000000000034,
+            "volume": 46829042,
+            "amount": 1579631493.0,
+            "volume_ratio": 0.8,
+            "turnover_rate": 0.68,
+            "amplitude": 3.1,
+            "open_price": 33.13,
+            "high": 34.16,
+            "low": 33.13,
+            "pre_close": 33.22,
+            "pe_ratio": 5.72,
+            "pb_ratio": 1.01,
+            "total_mv": 322859000000.0,
+            "circ_mv": 229719999999.99997
+          },
+          "fundamentals": {
+            "market": "cn",
+            "status": "partial",
+            "coverage": {
+              "valuation": "not_supported",
+              "growth": "failed",
+              "earnings": "failed",
+              "institution": "failed",
+              "capital_flow": "failed",
+              "dragon_tiger": "failed",
+              "boards": "failed"
+            },
+            "valuation": {
+              "status": "not_supported",
+              "data": {
+                "pe_ratio": null,
+                "pb_ratio": null,
+                "total_mv": null,
+                "circ_mv": null
+              }
+            },
+            "growth": {
+              "status": "failed",
+              "data": {}
+            },
+            "earnings": {
+              "status": "failed",
+              "data": {}
+            },
+            "institution": {
+              "status": "failed",
+              "data": {}
+            },
+            "capital_flow": {
+              "status": "failed",
+              "data": {}
+            },
+            "boards": {
+              "status": "failed",
+              "data": {}
+            },
+            "errors": [
+              "fundamental_valuation timeout",
+              "fundamental stage timeout",
+              "fundamental stage timeout"
+            ]
+          },
+          "news": {
+            "success": false,
+            "skipped": true,
+            "reason": "pre_rank_light_context",
+            "results": []
+          },
+          "events": {
+            "success": false,
+            "skipped": true,
+            "reason": "pre_rank_light_context",
+            "results": []
+          },
+          "warnings": []
+        },
+        "dsa_news": [],
+        "dsa_analysis_summary": "DSA行情: 现价 33.56, 涨跌幅 1.0234798314268616%",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "blue_chip_income",
+        "low_volatility_quality"
+      ],
+      "merge_score": 83.0
+    },
+    {
+      "rank": 6,
+      "code": "601328",
+      "name": "交通银行",
+      "score": 83.0,
+      "screen_score": 79.4447681707317,
+      "reason": "价值因子得分优秀，估值处于极低分位。",
+      "risk_level": "low",
+      "risk_flags": [
+        "估值长期滞涨",
+        "portfolio_sector_concentration:金融"
+      ],
+      "llm_score": 80.0,
+      "llm_confidence": 0.82,
+      "llm_sector": "银行",
+      "llm_theme": "低估值交通交运特色银行",
+      "llm_tags": [
+        "价值",
+        "防守",
+        "sector:银行",
+        "theme:低估值交通交运特色银行",
+        "style_fit:符合高股息防守偏好"
+      ],
+      "llm_thesis": "PB处于极低水平，股息率稳定，安全垫充足。",
+      "llm_catalysts": [
+        "红利资产配置需求外溢"
+      ],
+      "llm_risks": [
+        "估值长期滞涨"
+      ],
+      "llm_watch_items": [
+        "信贷投放景气度"
+      ],
+      "llm_invalidators": [
+        "资产质量出现突发性恶化"
+      ],
+      "llm_style_fit": "符合高股息防守偏好",
+      "price": 7.28,
+      "change_pct": -0.55,
+      "amount": 961444871.0,
+      "industry": "",
+      "factor_scores": {
+        "value": 84.4014,
+        "liquidity": 72.3577,
+        "momentum": 54.7125,
+        "reversal": 68.15,
+        "activity": 80.9845,
+        "stability": 76.35,
+        "size": 96.748,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {},
+      "dsa_news": [],
+      "dsa_events": [],
+      "dsa_analysis_summary": "",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: value_quality；风险: 估值长期滞涨"
+      },
+      "post_analysis_tags": [
+        "value_quality"
+      ],
+      "raw": {
+        "rank": 6,
+        "code": "601328",
+        "name": "交通银行",
+        "final_score": 75.4669,
+        "screen_score": 79.4447681707317,
+        "llm_score": 80.0,
+        "ranking_reason": "价值因子得分优秀，估值处于极低分位。",
+        "risk_summary": "区域或特定行业信贷风险",
+        "price": 7.28,
+        "change_pct": -0.55,
+        "amount": 961444871.0,
+        "total_mv": 643288349143.0,
+        "turnover_rate": 0.51,
+        "volume_ratio": 0.66,
+        "pe_ratio": 6.5991829,
+        "pb_ratio": 0.55083603,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": null,
+        "signal_score": null,
+        "ma_bullish": null,
+        "price_above_ma20": null,
+        "macd_status": "",
+        "rsi_status": "",
+        "breakout_20d_pct": null,
+        "range_20d_pct": null,
+        "volume_ratio_20d": null,
+        "body_pct": null,
+        "pullback_to_ma20_pct": null,
+        "consolidation_days_20d": null,
+        "volatility_20d_pct": null,
+        "max_drawdown_20d_pct": null,
+        "atr_20_pct": null,
+        "daily_quality_score": null,
+        "daily_quality_flags": "",
+        "daily_source": "",
+        "factor_scores": {
+          "value": 84.4014,
+          "liquidity": 72.3577,
+          "momentum": 54.7125,
+          "reversal": 68.15,
+          "activity": 80.9845,
+          "stability": 76.35,
+          "size": 96.748,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.82,
+        "llm_sector": "银行",
+        "llm_theme": "低估值交通交运特色银行",
+        "llm_tags": [
+          "价值",
+          "防守",
+          "sector:银行",
+          "theme:低估值交通交运特色银行",
+          "style_fit:符合高股息防守偏好"
+        ],
+        "llm_catalysts": [
+          "红利资产配置需求外溢"
+        ],
+        "llm_risks": [
+          "估值长期滞涨"
+        ],
+        "llm_thesis": "PB处于极低水平，股息率稳定，安全垫充足。",
+        "llm_style_fit": "符合高股息防守偏好",
+        "llm_watch_items": [
+          "信贷投放景气度"
+        ],
+        "llm_invalidators": [
+          "资产质量出现突发性恶化"
+        ],
+        "risk_score": 10.0,
+        "risk_level": "low",
+        "risk_penalty": 1.2,
+        "risk_flags": [
+          "估值长期滞涨",
+          "portfolio_sector_concentration:金融"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 6.0,
+        "portfolio_flags": [
+          "portfolio_sector_concentration:金融"
+        ],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: value_quality；风险: 估值长期滞涨"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": 3.0
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "估值长期滞涨"
+            ],
+            "tags": [
+              "value_quality"
+            ]
+          }
+        },
+        "post_analysis_tags": [
+          "value_quality"
+        ],
+        "dsa_context": {},
+        "dsa_news": [],
+        "dsa_analysis_summary": "",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "blue_chip_income",
+        "low_volatility_quality"
+      ],
+      "merge_score": 83.0
+    },
+    {
+      "rank": 11,
+      "code": "601169",
+      "name": "北京银行",
+      "score": 76.0,
+      "screen_score": 76.86452829268293,
+      "reason": "动量因子在银行板块中相对领先。",
+      "risk_level": "low",
+      "risk_flags": [
+        "息差持续承压",
+        "portfolio_sector_concentration:金融"
+      ],
+      "llm_score": 76.0,
+      "llm_confidence": 0.77,
+      "llm_sector": "银行",
+      "llm_theme": "高股息地方银行",
+      "llm_tags": [
+        "价值",
+        "趋势",
+        "sector:银行",
+        "theme:高股息地方银行",
+        "style_fit:符合红利和低估值偏好"
+      ],
+      "llm_thesis": "动量及价值因子表现较好，具备估值修复空间。",
+      "llm_catalysts": [
+        "地方财政化债进展顺利"
+      ],
+      "llm_risks": [
+        "息差持续承压"
+      ],
+      "llm_watch_items": [
+        "息差走势及非息收入占比"
+      ],
+      "llm_invalidators": [
+        "业绩增速持续低于同业平均"
+      ],
+      "llm_style_fit": "符合红利和低估值偏好",
+      "price": 5.54,
+      "change_pct": 1.09,
+      "amount": 951549287.0,
+      "industry": "",
+      "factor_scores": {
+        "value": 88.1148,
+        "liquidity": 70.7317,
+        "momentum": 60.0425,
+        "reversal": 46.11,
+        "activity": 81.7922,
+        "stability": 74.73,
+        "size": 74.7967,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {},
+      "dsa_news": [],
+      "dsa_events": [],
+      "dsa_analysis_summary": "",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: value_quality；风险: 息差持续承压"
+      },
+      "post_analysis_tags": [
+        "value_quality"
+      ],
+      "raw": {
+        "rank": 11,
+        "code": "601169",
+        "name": "北京银行",
+        "final_score": 69.3187,
+        "screen_score": 76.86452829268293,
+        "llm_score": 76.0,
+        "ranking_reason": "动量因子在银行板块中相对领先。",
+        "risk_summary": "资产端收益率下行压力",
+        "price": 5.54,
+        "change_pct": 1.09,
+        "amount": 951549287.0,
+        "total_mv": 117132132867.0,
+        "turnover_rate": 0.81,
+        "volume_ratio": 0.6,
+        "pe_ratio": 5.59557316,
+        "pb_ratio": 0.41089479,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": null,
+        "signal_score": null,
+        "ma_bullish": null,
+        "price_above_ma20": null,
+        "macd_status": "",
+        "rsi_status": "",
+        "breakout_20d_pct": null,
+        "range_20d_pct": null,
+        "volume_ratio_20d": null,
+        "body_pct": null,
+        "pullback_to_ma20_pct": null,
+        "consolidation_days_20d": null,
+        "volatility_20d_pct": null,
+        "max_drawdown_20d_pct": null,
+        "atr_20_pct": null,
+        "daily_quality_score": null,
+        "daily_quality_flags": "",
+        "daily_source": "",
+        "factor_scores": {
+          "value": 88.1148,
+          "liquidity": 70.7317,
+          "momentum": 60.0425,
+          "reversal": 46.11,
+          "activity": 81.7922,
+          "stability": 74.73,
+          "size": 74.7967,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.77,
+        "llm_sector": "银行",
+        "llm_theme": "高股息地方银行",
+        "llm_tags": [
+          "价值",
+          "趋势",
+          "sector:银行",
+          "theme:高股息地方银行",
+          "style_fit:符合红利和低估值偏好"
+        ],
+        "llm_catalysts": [
+          "地方财政化债进展顺利"
+        ],
+        "llm_risks": [
+          "息差持续承压"
+        ],
+        "llm_thesis": "动量及价值因子表现较好，具备估值修复空间。",
+        "llm_style_fit": "符合红利和低估值偏好",
+        "llm_watch_items": [
+          "息差走势及非息收入占比"
+        ],
+        "llm_invalidators": [
+          "业绩增速持续低于同业平均"
+        ],
+        "risk_score": 10.0,
+        "risk_level": "low",
+        "risk_penalty": 1.2,
+        "risk_flags": [
+          "息差持续承压",
+          "portfolio_sector_concentration:金融"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 9.0,
+        "portfolio_flags": [
+          "portfolio_sector_concentration:金融"
+        ],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: value_quality；风险: 息差持续承压"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": 3.0
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "息差持续承压"
+            ],
+            "tags": [
+              "value_quality"
+            ]
+          }
+        },
+        "post_analysis_tags": [
+          "value_quality"
+        ],
+        "dsa_context": {},
+        "dsa_news": [],
+        "dsa_analysis_summary": "",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "blue_chip_income",
+        "low_volatility_quality"
+      ],
+      "merge_score": 76.0
+    },
+    {
+      "rank": 1,
+      "code": "601398",
+      "name": "工商银行",
+      "score": 88.0,
+      "screen_score": 77.85912281890909,
+      "reason": "综合评分最高，波动极低且20日横盘整理充分，为防守型观察仓首选。",
+      "risk_level": "low",
+      "risk_flags": [
+        "增长放缓",
+        "息差收窄"
+      ],
+      "llm_score": 88.0,
+      "llm_confidence": 0.92,
+      "llm_sector": "银行",
+      "llm_theme": "国有大行防守配置与高股息",
+      "llm_tags": [
+        "防守",
+        "价值",
+        "流动性",
+        "sector:银行",
+        "theme:国有大行防守配置与高股息",
+        "style_fit:完美契合低波动、控回撤的防守型观察仓需求。"
+      ],
+      "llm_thesis": "超大市值底仓，20日振幅适中且平台整理达20天，极高稳定性与充沛流动性保障了防守安全性。",
+      "llm_catalysts": [
+        "息差企稳信号",
+        "高股息分红预案落地"
+      ],
+      "llm_risks": [
+        "增长放缓",
+        "息差收窄"
+      ],
+      "llm_watch_items": [
+        "20日均线支撑力度",
+        "机构资金净流入趋势"
+      ],
+      "llm_invalidators": [
+        "放量跌破20日均线支撑位"
+      ],
+      "llm_style_fit": "完美契合低波动、控回撤的防守型观察仓需求。",
+      "price": 7.94,
+      "change_pct": -0.38,
+      "amount": 2245910881.0,
+      "industry": "",
+      "factor_scores": {
+        "value": 63.9705,
+        "liquidity": 94.5455,
+        "momentum": 71.2832,
+        "reversal": 65.94,
+        "activity": 76.5708,
+        "stability": 81.2826,
+        "size": 100.0,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {
+        "enriched": true,
+        "profile": "post_rank_full",
+        "news_included": true,
+        "events_included": true,
+        "quote": {
+          "code": "601398",
+          "name": "工商银行",
+          "source": "akshare_sina",
+          "fetched_at": "2026-09-08T10:50:50.615069+00:00",
+          "price": 7.94,
+          "change_pct": -0.37641154328731946,
+          "change_amount": -0.02999999999999936,
+          "volume": 283569164,
+          "amount": 2245910881.0,
+          "volume_ratio": 0.86,
+          "turnover_rate": 0.11,
+          "amplitude": 2.13,
+          "open_price": 7.97,
+          "high": 8.02,
+          "low": 7.85,
+          "pre_close": 7.97,
+          "pe_ratio": 7.56,
+          "pb_ratio": 0.71,
+          "total_mv": 2829866000000.0,
+          "circ_mv": 2140721000000.0
+        },
+        "fundamentals": {
+          "market": "cn",
+          "status": "partial",
+          "coverage": {
+            "valuation": "not_supported",
+            "growth": "failed",
+            "earnings": "failed",
+            "institution": "failed",
+            "capital_flow": "failed",
+            "dragon_tiger": "failed",
+            "boards": "failed"
+          },
+          "valuation": {
+            "status": "not_supported",
+            "data": {
+              "pe_ratio": null,
+              "pb_ratio": null,
+              "total_mv": null,
+              "circ_mv": null
+            }
+          },
+          "growth": {
+            "status": "failed",
+            "data": {}
+          },
+          "earnings": {
+            "status": "failed",
+            "data": {}
+          },
+          "institution": {
+            "status": "failed",
+            "data": {}
+          },
+          "capital_flow": {
+            "status": "failed",
+            "data": {}
+          },
+          "boards": {
+            "status": "failed",
+            "data": {}
+          },
+          "errors": [
+            "fundamental_valuation timeout",
+            "fundamental stage timeout",
+            "fundamental stage timeout"
+          ]
+        },
+        "news": {
+          "query": "工商银行 601398 股票 最新消息",
+          "provider": "Tavily",
+          "success": true,
+          "error": null,
+          "results": [
+            {
+              "title": "工商银行(601398.SH)拟向财政部、中国烟草等定增募资不超1000亿元 提供者 智通财经",
+              "snippet": "#### 热门搜索\n\n##### 请尝试其他搜索\n\n美伊油轮冲突升级，霍尔木兹海峡局势持续恶化\n\n五大分析师AI动态：iPhone发布或成苹果股票利空催化剂\n\n乌克兰考虑将色情业合法化以增加税收，支援战时军费开支\n\n摩根士丹利：微软(MSFT.US)为AI时代重塑业务架构 重申“增持“评级\n\n# 工商银行(601398.SH)拟向财政部、中国烟草等定增募资不超1000亿元\n\n智通财经\n&copy; Reuters.\n\n© Reuters.\n\n智通财经APP讯，工商银行(601398.SH)披露向特定对象发行A股股票预案，发行对象为财政部、中国烟草、上海烟草、云南中烟、湖南中烟和湖南烟草。财政部拟认购金额为人民币700亿元，中国烟草拟认购金额为人民币100亿元，上海烟草拟认购金额为人民币50亿元，云南中烟拟认购金额为人民币50亿元，湖南中烟拟认购金额为人民币50亿元，湖南烟草拟认购金额为人民币50亿元。\n\n本次发行的募集资金规模不超过人民币1000亿元(含本数)，在扣除相关发行费用后将全部用于补充公司的核心一级资本。\n\n## 最新评论 [...] ## 最新评论\n\n| 名称 | 最新价 ",
+              "url": "https://cn.investing.com/news/stock-market-news/article-3553750",
+              "source": "cn.investing.com",
+              "published_date": "2026-09-06"
+            },
+            {
+              "title": "工商银行(601398.SH)拟募资不超1000亿元用于补充资本",
+              "snippet": "GelonghuiGelonghui\n\n# 工商银行(601398.SH)拟募资不超1000亿元用于补充资本\n\n601398\n\n格隆汇9月6日丨工商银行601398公告，向特定对象发行A股股票预案。本次发行的募集资金规模不超过人民币1000亿元(含本数)，在扣除相关发行费用后将全部用于补充本行的核心一级资本。募集资金规模以经相关监管机构最终审核批准的发行方案为准。\n\nAcciones chinasGelonghui\n\nObtener más información de Gelonghui\n\n## Más noticias de Gelonghui",
+              "url": "https://es.tradingview.com/news/gelonghui:fa3cb5468e3f9:0",
+              "source": "es.tradingview.com",
+              "published_date": "2026-09-06"
+            },
+            {
+              "title": "工商银行(601398.SH)拟募资不超1000亿元用于补充资本",
+              "snippet": "新浪财经APP\n\n 宏观经济\n A股\n 港股\n 美股\n 基金\n 理财\n 黄金\n 期货\n 能源\n 互联网金融\n 房地产\n 更多\n\n  外汇 管理 消费 科技 互联网 手机\n\n  保险 数码 科普 创业 银行 新三板 其他\n\n# 工商银行(601398.SH)拟募资不超1000亿元用于补充资本\n\n工商银行(601398.SH)拟募资不超1000亿元用于补充资本\n\n2026年09月06日 15:43 格隆汇APP\n\n语音播报 缩小字体 放大字体 微博 微信 分享 0 \n\n腾讯QQ QQ空间\n\n格隆汇9月6日丨工商银行(601398.SH)公告，向特定对象发行A股股票预案。本次发行的募集资金规模不超过人民币1000亿元(含本数)，在扣除相关发行费用后将全部用于补充本行的核心一级资本。募集资金规模以经相关监管机构最终审核批准的发行方案为准。\n\n相关新闻\n\n加载中\n\n点击加载更多\n\n## 头条号入驻\n\n\n\n格隆汇APP 中国领先的全球投资研究平台 [...] ## 研报掘金丨中信建投：维持长江电力“买入”评级，股息红利价值有望持续凸显\n ## 五矿资源(01208.HK)附属获授3.5亿美元循环融",
+              "url": "https://cj.sina.cn/articles/view/5115326071/130e5ae77020030o8q?from=finance",
+              "source": "cj.sina.cn",
+              "published_date": "2026-09-06"
+            }
+          ]
+        },
+        "events": {
+          "query": "工商银行 (年报预告 OR 减持公告 OR 业绩快报)",
+          "provider": "Tavily",
+          "success": true,
+          "error": null,
+          "results": [
+            {
+              "title": "中国工商银行股份有限公司2025 年度报告",
+              "snippet": "中国工商银行股份有限公司 （股票代码：601398） 2025 年度报告 中国工商银行股份有限公司2025 年度报告（A 股） 1 公司简介 中国工商银行成立于1984 年1 月1 日。2005 年10 月28 日，本行整体改制 为股份有限公司。2006 年10 月27 日，本行成功在上交所和香港联交所同日挂 牌上市。 本行致力于建设中国特色世界一流现代金融机构， 拥有优质的客户基础、 多 元的业务结构、强劲的创新能力和市场竞争力。本行将服务作为立行之本，坚持 以服务创造价值，向全球超1,400 万对公客户和超7.8 亿个人客户提供丰富的金 融产品和优质的金融服务， 以自身高质量发展服务经济社会高质量发展。 本行自 觉将社会责任融入发展战略和经营管理活动，在服务制造业、发展普惠金融、支 持乡村振兴、发展绿色金融、支持公益事业等方面受到广泛赞誉。 本行始终聚焦主业，坚持服务实体经济的本源，与实体经济共荣共存、共担 风雨、共同成长；始终坚持风险为本，牢牢守住底线，不断提高控制和化解风险 的能力； 始终坚持对商业银行经营规律的把握与遵循， 致力于成为基业长青的银 行； 始终坚持稳中求进、 [",
+              "url": "https://v.icbc.com.cn/userfiles/resources/icbcltd/download/2026/2026032706.pdf",
+              "source": "v.icbc.com.cn",
+              "published_date": null
+            },
+            {
+              "title": "[PDF] 年度報告",
+              "snippet": "出量與質的同步躍升。從量看，本行總資產躍上50萬億元的新台階，達53.48萬億元。淨利潤增至 3,707.66億元，保持同業領先。營收再超8,000億元且實現正增長，其中非息收入增長11.8%，佔營 收比重同比上升1.8個百分點。從質看，不良貸款率同比下降3BP，資本充足率保持在較高水平，各 類風險總體可控。這些核心經營指標的改善，顯示出傳統與新興動能的協同轉換、發展韌性與活力的 持續增強，也為股東創造了更多價值。預計在中期分紅約503.96億元的基礎上，年度末期再分紅約 601.97億元。 這一年，我們扛牢使命、加力服務實體，大行擔當更加彰顯。經濟是肌體，金融是血脈，兩者 共生共榮。我們着眼於助力經濟穩中向好，統籌發展和安全，靠前對接各項政策，支持穩就業、穩企 業、穩市場、穩預期，更好發揮了主力軍和壓艙石作用。全力服務高質量發展，全年新增貸款投放、 債券投資4.8萬億元，創歷史新高；扎實做好金融 「五篇大文章」 ，相關領域貸款增速均高於全部貸款 平均增速；主責主業在支持因地制宜發展新質生產力中更為突出，投向製造業貸款超5萬億元，科技 [...] 股份代號: 1398 中國工商銀行股份",
+              "url": "https://v.icbc.com.cn/userfiles/resources/icbcltd/download/2026/2025AnnualReportH.pdf",
+              "source": "v.icbc.com.cn",
+              "published_date": null
+            },
+            {
+              "title": "[PDF] 2025年度業績公告1. 公司基本情況簡介",
+              "snippet": "1 香港交易及結算所有限公司及香港聯合交易所有限公司對本公告之內容概不負責，對其準確性或完整性亦不發表 任何聲明，並明確表示，概不就因本公告全部或任何部份內容而產生或因倚賴該等內容而引致之任何損失承擔任 何責任。 中國工商銀行股份有限公司 INDUSTRIAL AND COMMERCIAL BANK OF CHINA LIMITED （於中華人民共和國註冊成立的股份有限公司） 股份代號：1398 2025 年度業績公告 中國工商銀行股份有限公司 （以下簡稱 「本行」 ） 董事會宣佈本行及其子公司截至2025年12月 31日止經審計的年度業績。本行董事會及董事會審計委員會已審閱並確認經審計的年度業績。 1. 公司基本情況簡介 1.1 基本情況簡介 證券簡稱 證券代碼 上市交易所 A股 工商銀行 601398 上海證券交易所 H股 工商銀行 1398 香港聯合交易所有限公司 境內優先股 工行優1 360011 上海證券交易所 工行優2 360036 1.2 聯繫人和聯繫方式 董事會秘書、公司秘書 姓名 田楓林 聯繫地址 中國北京市西城區復興門內大街55號 電話 86-10-66108608",
+              "url": "https://v.icbc.com.cn/userfiles/resources/icbcltd/download/2026/2026032701.pdf",
+              "source": "v.icbc.com.cn",
+              "published_date": null
+            }
+          ]
+        },
+        "warnings": []
+      },
+      "dsa_news": [
+        {
+          "title": "工商银行(601398.SH)拟向财政部、中国烟草等定增募资不超1000亿元 提供者 智通财经",
+          "snippet": "#### 热门搜索\n\n##### 请尝试其他搜索\n\n美伊油轮冲突升级，霍尔木兹海峡局势持续恶化\n\n五大分析师AI动态：iPhone发布或成苹果股票利空催化剂\n\n乌克兰考虑将色情业合法化以增加税收，支援战时军费开支\n\n摩根士丹利：微软(MSFT.US)为AI时代重塑业务架构 重申“增持“评级\n\n# 工商银行(601398.SH)拟向财政部、中国烟草等定增募资不超1000亿元\n\n智通财经\n&copy; Reuters.\n\n© Reuters.\n\n智通财经APP讯，工商银行(601398.SH)披露向特定对象发行A股股票预案，发行对象为财政部、中国烟草、上海烟草、云南中烟、湖南中烟和湖南烟草。财政部拟认购金额为人民币700亿元，中国烟草拟认购金额为人民币100亿元，上海烟草拟认购金额为人民币50亿元，云南中烟拟认购金额为人民币50亿元，湖南中烟拟认购金额为人民币50亿元，湖南烟草拟认购金额为人民币50亿元。\n\n本次发行的募集资金规模不超过人民币1000亿元(含本数)，在扣除相关发行费用后将全部用于补充公司的核心一级资本。\n\n## 最新评论 [...] ## 最新评论\n\n| 名称 | 最新价 ",
+          "url": "https://cn.investing.com/news/stock-market-news/article-3553750",
+          "source": "cn.investing.com",
+          "published_date": "2026-09-06"
+        },
+        {
+          "title": "工商银行(601398.SH)拟募资不超1000亿元用于补充资本",
+          "snippet": "GelonghuiGelonghui\n\n# 工商银行(601398.SH)拟募资不超1000亿元用于补充资本\n\n601398\n\n格隆汇9月6日丨工商银行601398公告，向特定对象发行A股股票预案。本次发行的募集资金规模不超过人民币1000亿元(含本数)，在扣除相关发行费用后将全部用于补充本行的核心一级资本。募集资金规模以经相关监管机构最终审核批准的发行方案为准。\n\nAcciones chinasGelonghui\n\nObtener más información de Gelonghui\n\n## Más noticias de Gelonghui",
+          "url": "https://es.tradingview.com/news/gelonghui:fa3cb5468e3f9:0",
+          "source": "es.tradingview.com",
+          "published_date": "2026-09-06"
+        },
+        {
+          "title": "工商银行(601398.SH)拟募资不超1000亿元用于补充资本",
+          "snippet": "新浪财经APP\n\n 宏观经济\n A股\n 港股\n 美股\n 基金\n 理财\n 黄金\n 期货\n 能源\n 互联网金融\n 房地产\n 更多\n\n  外汇 管理 消费 科技 互联网 手机\n\n  保险 数码 科普 创业 银行 新三板 其他\n\n# 工商银行(601398.SH)拟募资不超1000亿元用于补充资本\n\n工商银行(601398.SH)拟募资不超1000亿元用于补充资本\n\n2026年09月06日 15:43 格隆汇APP\n\n语音播报 缩小字体 放大字体 微博 微信 分享 0 \n\n腾讯QQ QQ空间\n\n格隆汇9月6日丨工商银行(601398.SH)公告，向特定对象发行A股股票预案。本次发行的募集资金规模不超过人民币1000亿元(含本数)，在扣除相关发行费用后将全部用于补充本行的核心一级资本。募集资金规模以经相关监管机构最终审核批准的发行方案为准。\n\n相关新闻\n\n加载中\n\n点击加载更多\n\n## 头条号入驻\n\n\n\n格隆汇APP 中国领先的全球投资研究平台 [...] ## 研报掘金丨中信建投：维持长江电力“买入”评级，股息红利价值有望持续凸显\n ## 五矿资源(01208.HK)附属获授3.5亿美元循环融",
+          "url": "https://cj.sina.cn/articles/view/5115326071/130e5ae77020030o8q?from=finance",
+          "source": "cj.sina.cn",
+          "published_date": "2026-09-06"
+        }
+      ],
+      "dsa_events": [
+        {
+          "title": "中国工商银行股份有限公司2025 年度报告",
+          "snippet": "中国工商银行股份有限公司 （股票代码：601398） 2025 年度报告 中国工商银行股份有限公司2025 年度报告（A 股） 1 公司简介 中国工商银行成立于1984 年1 月1 日。2005 年10 月28 日，本行整体改制 为股份有限公司。2006 年10 月27 日，本行成功在上交所和香港联交所同日挂 牌上市。 本行致力于建设中国特色世界一流现代金融机构， 拥有优质的客户基础、 多 元的业务结构、强劲的创新能力和市场竞争力。本行将服务作为立行之本，坚持 以服务创造价值，向全球超1,400 万对公客户和超7.8 亿个人客户提供丰富的金 融产品和优质的金融服务， 以自身高质量发展服务经济社会高质量发展。 本行自 觉将社会责任融入发展战略和经营管理活动，在服务制造业、发展普惠金融、支 持乡村振兴、发展绿色金融、支持公益事业等方面受到广泛赞誉。 本行始终聚焦主业，坚持服务实体经济的本源，与实体经济共荣共存、共担 风雨、共同成长；始终坚持风险为本，牢牢守住底线，不断提高控制和化解风险 的能力； 始终坚持对商业银行经营规律的把握与遵循， 致力于成为基业长青的银 行； 始终坚持稳中求进、 [",
+          "url": "https://v.icbc.com.cn/userfiles/resources/icbcltd/download/2026/2026032706.pdf",
+          "source": "v.icbc.com.cn",
+          "published_date": null
+        },
+        {
+          "title": "[PDF] 年度報告",
+          "snippet": "出量與質的同步躍升。從量看，本行總資產躍上50萬億元的新台階，達53.48萬億元。淨利潤增至 3,707.66億元，保持同業領先。營收再超8,000億元且實現正增長，其中非息收入增長11.8%，佔營 收比重同比上升1.8個百分點。從質看，不良貸款率同比下降3BP，資本充足率保持在較高水平，各 類風險總體可控。這些核心經營指標的改善，顯示出傳統與新興動能的協同轉換、發展韌性與活力的 持續增強，也為股東創造了更多價值。預計在中期分紅約503.96億元的基礎上，年度末期再分紅約 601.97億元。 這一年，我們扛牢使命、加力服務實體，大行擔當更加彰顯。經濟是肌體，金融是血脈，兩者 共生共榮。我們着眼於助力經濟穩中向好，統籌發展和安全，靠前對接各項政策，支持穩就業、穩企 業、穩市場、穩預期，更好發揮了主力軍和壓艙石作用。全力服務高質量發展，全年新增貸款投放、 債券投資4.8萬億元，創歷史新高；扎實做好金融 「五篇大文章」 ，相關領域貸款增速均高於全部貸款 平均增速；主責主業在支持因地制宜發展新質生產力中更為突出，投向製造業貸款超5萬億元，科技 [...] 股份代號: 1398 中國工商銀行股份",
+          "url": "https://v.icbc.com.cn/userfiles/resources/icbcltd/download/2026/2025AnnualReportH.pdf",
+          "source": "v.icbc.com.cn",
+          "published_date": null
+        },
+        {
+          "title": "[PDF] 2025年度業績公告1. 公司基本情況簡介",
+          "snippet": "1 香港交易及結算所有限公司及香港聯合交易所有限公司對本公告之內容概不負責，對其準確性或完整性亦不發表 任何聲明，並明確表示，概不就因本公告全部或任何部份內容而產生或因倚賴該等內容而引致之任何損失承擔任 何責任。 中國工商銀行股份有限公司 INDUSTRIAL AND COMMERCIAL BANK OF CHINA LIMITED （於中華人民共和國註冊成立的股份有限公司） 股份代號：1398 2025 年度業績公告 中國工商銀行股份有限公司 （以下簡稱 「本行」 ） 董事會宣佈本行及其子公司截至2025年12月 31日止經審計的年度業績。本行董事會及董事會審計委員會已審閱並確認經審計的年度業績。 1. 公司基本情況簡介 1.1 基本情況簡介 證券簡稱 證券代碼 上市交易所 A股 工商銀行 601398 上海證券交易所 H股 工商銀行 1398 香港聯合交易所有限公司 境內優先股 工行優1 360011 上海證券交易所 工行優2 360036 1.2 聯繫人和聯繫方式 董事會秘書、公司秘書 姓名 田楓林 聯繫地址 中國北京市西城區復興門內大街55號 電話 86-10-66108608",
+          "url": "https://v.icbc.com.cn/userfiles/resources/icbcltd/download/2026/2026032701.pdf",
+          "source": "v.icbc.com.cn",
+          "published_date": null
+        }
+      ],
+      "dsa_analysis_summary": "DSA行情：现价 7.94，涨跌幅 -0.37641154328731946%；DSA新闻：工商银行(601398.SH)拟向财政部、中国烟草等定增募资不超1000亿元 提供者 智通财经；工商银行(601398.SH)拟募资不超1000亿元用于补充资本；DSA事件：中国工商银行股份有限公司2025 年度报告；[PDF] 年度報告",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: 未发现额外加分项；风险: 增长放缓、息差收窄"
+      },
+      "post_analysis_tags": [],
+      "raw": {
+        "rank": 1,
+        "code": "601398",
+        "name": "工商银行",
+        "final_score": 79.7155,
+        "screen_score": 77.85912281890909,
+        "llm_score": 88.0,
+        "ranking_reason": "综合评分最高，波动极低且20日横盘整理充分，为防守型观察仓首选。",
+        "risk_summary": "板块整体受净息差收窄压力影响，短期缺乏爆发性上升动能。",
+        "price": 7.94,
+        "change_pct": -0.38,
+        "amount": 2245910881.0,
+        "total_mv": 2829865681287.0,
+        "turnover_rate": 0.11,
+        "volume_ratio": 0.86,
+        "pe_ratio": 7.56363425,
+        "pb_ratio": 0.71419269,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": 2.4422,
+        "signal_score": 86.8548,
+        "ma_bullish": true,
+        "price_above_ma20": true,
+        "macd_status": "bullish",
+        "rsi_status": "neutral",
+        "breakout_20d_pct": -3.8601,
+        "range_20d_pct": 11.126,
+        "volume_ratio_20d": 1.0447,
+        "body_pct": -2.2086,
+        "pullback_to_ma20_pct": 1.5998,
+        "consolidation_days_20d": 20,
+        "volatility_20d_pct": 18.951,
+        "max_drawdown_20d_pct": -3.0414,
+        "atr_20_pct": 1.8005,
+        "daily_quality_score": 100.0,
+        "daily_quality_flags": "",
+        "daily_source": "dsa:TencentFetcher",
+        "factor_scores": {
+          "value": 63.9705,
+          "liquidity": 94.5455,
+          "momentum": 71.2832,
+          "reversal": 65.94,
+          "activity": 76.5708,
+          "stability": 81.2826,
+          "size": 100.0,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.92,
+        "llm_sector": "银行",
+        "llm_theme": "国有大行防守配置与高股息",
+        "llm_tags": [
+          "防守",
+          "价值",
+          "流动性",
+          "sector:银行",
+          "theme:国有大行防守配置与高股息",
+          "style_fit:完美契合低波动、控回撤的防守型观察仓需求。"
+        ],
+        "llm_catalysts": [
+          "息差企稳信号",
+          "高股息分红预案落地"
+        ],
+        "llm_risks": [
+          "增长放缓",
+          "息差收窄"
+        ],
+        "llm_thesis": "超大市值底仓，20日振幅适中且平台整理达20天，极高稳定性与充沛流动性保障了防守安全性。",
+        "llm_style_fit": "完美契合低波动、控回撤的防守型观察仓需求。",
+        "llm_watch_items": [
+          "20日均线支撑力度",
+          "机构资金净流入趋势"
+        ],
+        "llm_invalidators": [
+          "放量跌破20日均线支撑位"
+        ],
+        "risk_score": 20.0,
+        "risk_level": "low",
+        "risk_penalty": 2.4,
+        "risk_flags": [
+          "增长放缓",
+          "息差收窄"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 0.0,
+        "portfolio_flags": [],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: 未发现额外加分项；风险: 增长放缓、息差收窄"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": 0.2
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "增长放缓",
+              "息差收窄"
+            ],
+            "tags": []
+          }
+        },
+        "post_analysis_tags": [],
+        "dsa_context": {
+          "enriched": true,
+          "profile": "pre_rank_light",
+          "news_included": false,
+          "events_included": false,
+          "quote": {
+            "code": "601398",
+            "name": "工商银行",
+            "source": "akshare_sina",
+            "fetched_at": "2026-09-08T10:50:50.615069+00:00",
+            "price": 7.94,
+            "change_pct": -0.37641154328731946,
+            "change_amount": -0.02999999999999936,
+            "volume": 283569164,
+            "amount": 2245910881.0,
+            "volume_ratio": 0.86,
+            "turnover_rate": 0.11,
+            "amplitude": 2.13,
+            "open_price": 7.97,
+            "high": 8.02,
+            "low": 7.85,
+            "pre_close": 7.97,
+            "pe_ratio": 7.56,
+            "pb_ratio": 0.71,
+            "total_mv": 2829866000000.0,
+            "circ_mv": 2140721000000.0
+          },
+          "fundamentals": {
+            "market": "cn",
+            "status": "partial",
+            "coverage": {
+              "valuation": "not_supported",
+              "growth": "failed",
+              "earnings": "failed",
+              "institution": "failed",
+              "capital_flow": "failed",
+              "dragon_tiger": "failed",
+              "boards": "failed"
+            },
+            "valuation": {
+              "status": "not_supported",
+              "data": {
+                "pe_ratio": null,
+                "pb_ratio": null,
+                "total_mv": null,
+                "circ_mv": null
+              }
+            },
+            "growth": {
+              "status": "failed",
+              "data": {}
+            },
+            "earnings": {
+              "status": "failed",
+              "data": {}
+            },
+            "institution": {
+              "status": "failed",
+              "data": {}
+            },
+            "capital_flow": {
+              "status": "failed",
+              "data": {}
+            },
+            "boards": {
+              "status": "failed",
+              "data": {}
+            },
+            "errors": [
+              "fundamental_valuation timeout",
+              "fundamental stage timeout",
+              "fundamental stage timeout"
+            ]
+          },
+          "news": {
+            "success": false,
+            "skipped": true,
+            "reason": "pre_rank_light_context",
+            "results": []
+          },
+          "events": {
+            "success": false,
+            "skipped": true,
+            "reason": "pre_rank_light_context",
+            "results": []
+          },
+          "warnings": []
+        },
+        "dsa_news": [],
+        "dsa_analysis_summary": "DSA行情: 现价 7.94, 涨跌幅 -0.37641154328731946%",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "low_volatility_quality"
+      ],
+      "merge_score": 88.0
+    },
+    {
+      "rank": 2,
+      "code": "601288",
+      "name": "农业银行",
+      "score": 86.0,
+      "screen_score": 74.92298594036363,
+      "reason": "距离20日均线极近且振幅控制优异，回撤风险极小。",
+      "risk_level": "low",
+      "risk_flags": [
+        "成交量萎缩",
+        "portfolio_sector_concentration:金融"
+      ],
+      "llm_score": 86.0,
+      "llm_confidence": 0.9,
+      "llm_sector": "银行",
+      "llm_theme": "大行高稳定性与低回撤",
+      "llm_tags": [
+        "防守",
+        "稳定性",
+        "价值",
+        "sector:银行",
+        "theme:大行高稳定性与低回撤",
+        "style_fit:极高匹配度，波动低且企稳迹象明显。"
+      ],
+      "llm_thesis": "回调至MA20仅0.73%，稳定性因子达80.1，防守属性极强且K线结构完整。",
+      "llm_catalysts": [
+        "长期资金配置再平衡",
+        "防御性抱团加仓"
+      ],
+      "llm_risks": [
+        "成交量萎缩"
+      ],
+      "llm_watch_items": [
+        "成交量能变化",
+        "日线MACD指标状态"
+      ],
+      "llm_invalidators": [
+        "日线级别下破平台震荡下沿"
+      ],
+      "llm_style_fit": "极高匹配度，波动低且企稳迹象明显。",
+      "price": 6.76,
+      "change_pct": -0.73,
+      "amount": 1875729575.0,
+      "industry": "",
+      "factor_scores": {
+        "value": 56.9432,
+        "liquidity": 89.0909,
+        "momentum": 69.9861,
+        "reversal": 70.49,
+        "activity": 76.408,
+        "stability": 80.1362,
+        "size": 96.3636,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {
+        "enriched": true,
+        "profile": "post_rank_full",
+        "news_included": true,
+        "events_included": true,
+        "quote": {
+          "code": "601288",
+          "name": "农业银行",
+          "source": "akshare_sina",
+          "fetched_at": "2026-09-08T10:51:30.365094+00:00",
+          "price": 6.76,
+          "change_pct": -0.7342143906020533,
+          "change_amount": -0.04999999999999982,
+          "volume": 277554000,
+          "amount": 1875729575.0,
+          "volume_ratio": 0.84,
+          "turnover_rate": 0.09,
+          "amplitude": 1.91,
+          "open_price": 6.79,
+          "high": 6.83,
+          "low": 6.7,
+          "pre_close": 6.81,
+          "pe_ratio": 7.94,
+          "pb_ratio": 0.83,
+          "total_mv": 2365885000000.0,
+          "circ_mv": 2158091000000.0
+        },
+        "fundamentals": {
+          "market": "cn",
+          "status": "partial",
+          "coverage": {
+            "valuation": "not_supported",
+            "growth": "failed",
+            "earnings": "failed",
+            "institution": "failed",
+            "capital_flow": "failed",
+            "dragon_tiger": "failed",
+            "boards": "failed"
+          },
+          "valuation": {
+            "status": "not_supported",
+            "data": {
+              "pe_ratio": null,
+              "pb_ratio": null,
+              "total_mv": null,
+              "circ_mv": null
+            }
+          },
+          "growth": {
+            "status": "failed",
+            "data": {}
+          },
+          "earnings": {
+            "status": "failed",
+            "data": {}
+          },
+          "institution": {
+            "status": "failed",
+            "data": {}
+          },
+          "capital_flow": {
+            "status": "failed",
+            "data": {}
+          },
+          "boards": {
+            "status": "failed",
+            "data": {}
+          },
+          "errors": [
+            "fundamental_valuation timeout",
+            "fundamental stage timeout",
+            "fundamental stage timeout"
+          ]
+        },
+        "news": {
+          "query": "农业银行 601288 股票 最新消息",
+          "provider": "Tavily",
+          "success": true,
+          "error": null,
+          "results": [
+            {
+              "title": "农业银行(601288.SH)拟向财政部、中国烟草等定增募资不超1600亿元 提供者 智通财经",
+              "snippet": "## 热门股票\n\n| 名称 | 最新价 | 涨跌幅 | 交易量 |  |\n ---  --- \n| 创值科技Addvalue Tech | 0.198 | +2.59% | 1.84亿 |  |\n| Malayan Banking | 10.56 | -0.19% | 1,168.24万 |  |\n| 马来西亚大众银行 | 4.98 | -0.40% | 1,876.40万 |  |\n| 顶级手套 | 0.64 | -1.55% | 927.91万 |  |\n| Zetrix AI Bhd | 0.255 | +6.25% | 13.80亿 |  | [...] ## 最新评论\n\n| 名称 | 最新价 | 涨跌幅 | 交易量 |  |\n ---  --- \n| 中际旭创 | 814.00 | +0.12% | 2,110.67万 |  |\n| IEIT SYSTEMS | 77.72 | -9.99% | 1.71亿 |  |\n| 中国船舶 | 37.47 | +9.18% | 3.38亿 |  |\n| 新易盛 | 386.00 | +0.32% | 2,994.05万 |  |\n| ",
+              "url": "https://cn.investing.com/news/stock-market-news/article-3553749",
+              "source": "cn.investing.com",
+              "published_date": "2026-09-06"
+            },
+            {
+              "title": "农业银行(601288.SH)拟募资不超1600亿元用于补充资本",
+              "snippet": "微信 腾讯QQ QQ空间\n\n格隆汇9月6日丨农业银行(601288.SH)公告，向特定对象发行A股股票预案。按照国家稳妥有序支持国有大型商业银行进一步增加核心一级资本的相关安排，本行合理使用外源性融资工具，及时补充核心一级资本，进一步夯实本行资本实力，深入践行本行服务乡村振兴的领军银行、服务实体经济的主力银行、服务美好生活的百姓银行三大定位，提高风险抵御能力。本行将以本次发行为契机，立足主责主业，提升服务实体经济质效，持续打造差异化竞争优势，以高质量金融服务为社会主义现代化强国建设提供有力支撑。\n\n本次发行拟募集资金总额不超过人民币1,600亿元(含本数，下同)，扣除相关发行费用后将全部用于补充本行的核心一级资本。募集资金规模以经相关监管机构最终批复的发行方案为准。\n\n海量资讯、精准解读，尽在新浪财经APP\n\n[](   [](\n\n## VIP课程推荐\n\n加载中...\n\n## 新浪直播\n\n百位牛人在线解读股市热点，带你挖掘板块龙头  收起\n\n@@title@@\n\n### @@title@@\n\n @@status\\_text@@@@program\\_title@@ [...] ## AP",
+              "url": "https://finance.sina.com.cn/stock/bxjj/2026-09-06/doc-iniqwnkx0135910.shtml",
+              "source": "finance.sina.com.cn",
+              "published_date": "2026-09-06"
+            },
+            {
+              "title": "农业银行(601288.SH)拟募资不超1600亿元用于补充资本",
+              "snippet": "GelonghuiGelonghui\n\n# 农业银行(601288.SH)拟募资不超1600亿元用于补充资本\n\n601288\n\n格隆汇9月6日丨农业银行601288公告，向特定对象发行A股股票预案。按照国家稳妥有序支持国有大型商业银行进一步增加核心一级资本的相关安排，本行合理使用外源性融资工具，及时补充核心一级资本，进一步夯实本行资本实力，深入践行本行服务乡村振兴的领军银行、服务实体经济的主力银行、服务美好生活的百姓银行三大定位，提高风险抵御能力。本行将以本次发行为契机，立足主责主业，提升服务实体经济质效，持续打造差异化竞争优势，以高质量金融服务为社会主义现代化强国建设提供有力支撑。\n\n本次发行拟募集资金总额不超过人民币1,600亿元(含本数，下同)，扣除相关发行费用后将全部用于补充本行的核心一级资本。募集资金规模以经相关监管机构最终批复的发行方案为准。\n\nGelonghui中國股票\n\n閱讀更多來自Gelonghui\n\n## 來自 Gelonghui 的更多新聞",
+              "url": "https://tw.tradingview.com/news/gelonghui:92b5bb698e3f9:0",
+              "source": "tw.tradingview.com",
+              "published_date": "2026-09-06"
+            }
+          ]
+        },
+        "events": {
+          "query": "农业银行 (年报预告 OR 减持公告 OR 业绩快报)",
+          "provider": "Tavily",
+          "success": true,
+          "error": null,
+          "results": [
+            {
+              "title": "年报资料_中国农业银行",
+              "snippet": "您现在的位置：首页 > 关于农行 > 投资者关系 > 业绩报告 > 年报资料\n\n业绩报告\n\n 年报资料\n 中报资料\n 季报资料\n\n营业网点查询\n\n营业机构查询\n\n客户服务中心\n\n# 年报资料\n\n 2025年度报告（A股）\n\n  2026-03-30\n 2025年度报告（H股）\n\n  2026-03-30\n 2024年度报告（A股）\n\n  2025-03-28\n 2024年度报告（H股）\n\n  2025-03-28\n 2023年度报告（A股）\n\n  2024-04-01\n 2023年度报告（H股）\n\n  2024-03-28\n 2022年度报告（A股）\n\n  2023-04-25\n 2022年度报告（H股）\n\n  2023-04-25\n 2021年度报告（H股）\n\n  2022-04-27\n 2021年度报告（A股）\n\n  2022-04-27\n\n1/4共4页去第页GO)\n\n 网站声明\n |\n 网站地图\n |\n 联系我们\n |\n 隐私政策\n |\n 客服热线：95599 [...] 中国农业银行版权所有 | 京ICP备05049539号-1 | 京ICP备05049539号-5 | 京公网",
+              "url": "https://www.abchina.com/cn/aboutabc/investor_relations/report",
+              "source": "abchina.com",
+              "published_date": null
+            },
+            {
+              "title": "年報資料_中國農業銀行",
+              "snippet": "無障礙瀏覽\n 關懷版\n 官網首頁\n 分支機構\n 繁體\n |\n English\n\n 官網首頁\n 分支機構\n 在線客服\n 簡體\n |\n English\n\n\n\n 投資者關係\n 投資價值\n 公司公告\n 業績報告\n 第三支柱\n 股票及分紅\n 公司治理\n 業績推介\n 投資者服務\n 信用評級\n\n您現在的位置：首頁 > 關於農行 > 投資者關係 > 業績報告 > 年報資料\n\n業績報告\n\n 年報資料\n 中報資料\n 季報資料\n\n營業網點查詢\n\n營業機構查詢\n\n客戶服務中心\n\n# 年報資料\n\n 2025年度報告（A股）\n\n  2026-03-30\n 2025年度報告（H股）\n\n  2026-03-30\n 2024年度報告（A股）\n\n  2025-03-28\n 2024年度報告（H股）\n\n  2025-03-28\n 2023年度報告（A股）\n\n  2024-04-01\n 2023年度報告（H股）\n\n  2024-03-28\n 2022年度報告（A股）\n\n  2023-04-25\n 2022年度報告（H股）\n\n  2023-04-25\n 2021年度報告（H股） [...] 2022-04-27\n 2021年度",
+              "url": "https://www.abchina.com/zt/aboutabc/investor_relations/report/am",
+              "source": "abchina.com",
+              "published_date": null
+            },
+            {
+              "title": "季報資料_中國農業銀行",
+              "snippet": "無障礙瀏覽\n 關懷版\n 官網首頁\n 分支機構\n 繁體\n |\n English\n\n 官網首頁\n 分支機構\n 在線客服\n 簡體\n |\n English\n\n\n\n 投資者關係\n 投資價值\n 公司公告\n 業績報告\n 第三支柱\n 股票及分紅\n 公司治理\n 業績推介\n 投資者服務\n 信用評級\n\n您現在的位置：首頁 > 關於農行 > 投資者關係 > 業績報告 > 季報資料\n\n業績報告\n\n 年報資料\n 中報資料\n 季報資料\n\n營業網點查詢\n\n營業機構查詢\n\n客戶服務中心\n\n# 季報資料\n\n 2026年第一季度報告（A股）\n\n  2026-04-29\n 2026年第一季度報告（H股）\n\n  2026-04-29\n 2025年第三季度報告（H股）\n\n  2025-10-30\n 2025年第三季度報告（A股）\n\n  2025-10-30\n 2025年第一季度報告（A股）\n\n  2025-04-29\n 2025年第一季度報告（H股）\n\n  2025-04-29\n 2024年第三季度報告（A股）\n\n  2024-10-30\n 2024年第三季度報告（H股） [...] 2024-10-30\n 2024年第一季度報",
+              "url": "https://www.abchina.com/zt/aboutabc/investor_relations/report/qm",
+              "source": "abchina.com",
+              "published_date": null
+            }
+          ]
+        },
+        "warnings": []
+      },
+      "dsa_news": [
+        {
+          "title": "农业银行(601288.SH)拟向财政部、中国烟草等定增募资不超1600亿元 提供者 智通财经",
+          "snippet": "## 热门股票\n\n| 名称 | 最新价 | 涨跌幅 | 交易量 |  |\n ---  --- \n| 创值科技Addvalue Tech | 0.198 | +2.59% | 1.84亿 |  |\n| Malayan Banking | 10.56 | -0.19% | 1,168.24万 |  |\n| 马来西亚大众银行 | 4.98 | -0.40% | 1,876.40万 |  |\n| 顶级手套 | 0.64 | -1.55% | 927.91万 |  |\n| Zetrix AI Bhd | 0.255 | +6.25% | 13.80亿 |  | [...] ## 最新评论\n\n| 名称 | 最新价 | 涨跌幅 | 交易量 |  |\n ---  --- \n| 中际旭创 | 814.00 | +0.12% | 2,110.67万 |  |\n| IEIT SYSTEMS | 77.72 | -9.99% | 1.71亿 |  |\n| 中国船舶 | 37.47 | +9.18% | 3.38亿 |  |\n| 新易盛 | 386.00 | +0.32% | 2,994.05万 |  |\n| ",
+          "url": "https://cn.investing.com/news/stock-market-news/article-3553749",
+          "source": "cn.investing.com",
+          "published_date": "2026-09-06"
+        },
+        {
+          "title": "农业银行(601288.SH)拟募资不超1600亿元用于补充资本",
+          "snippet": "微信 腾讯QQ QQ空间\n\n格隆汇9月6日丨农业银行(601288.SH)公告，向特定对象发行A股股票预案。按照国家稳妥有序支持国有大型商业银行进一步增加核心一级资本的相关安排，本行合理使用外源性融资工具，及时补充核心一级资本，进一步夯实本行资本实力，深入践行本行服务乡村振兴的领军银行、服务实体经济的主力银行、服务美好生活的百姓银行三大定位，提高风险抵御能力。本行将以本次发行为契机，立足主责主业，提升服务实体经济质效，持续打造差异化竞争优势，以高质量金融服务为社会主义现代化强国建设提供有力支撑。\n\n本次发行拟募集资金总额不超过人民币1,600亿元(含本数，下同)，扣除相关发行费用后将全部用于补充本行的核心一级资本。募集资金规模以经相关监管机构最终批复的发行方案为准。\n\n海量资讯、精准解读，尽在新浪财经APP\n\n[](   [](\n\n## VIP课程推荐\n\n加载中...\n\n## 新浪直播\n\n百位牛人在线解读股市热点，带你挖掘板块龙头  收起\n\n@@title@@\n\n### @@title@@\n\n @@status\\_text@@@@program\\_title@@ [...] ## AP",
+          "url": "https://finance.sina.com.cn/stock/bxjj/2026-09-06/doc-iniqwnkx0135910.shtml",
+          "source": "finance.sina.com.cn",
+          "published_date": "2026-09-06"
+        },
+        {
+          "title": "农业银行(601288.SH)拟募资不超1600亿元用于补充资本",
+          "snippet": "GelonghuiGelonghui\n\n# 农业银行(601288.SH)拟募资不超1600亿元用于补充资本\n\n601288\n\n格隆汇9月6日丨农业银行601288公告，向特定对象发行A股股票预案。按照国家稳妥有序支持国有大型商业银行进一步增加核心一级资本的相关安排，本行合理使用外源性融资工具，及时补充核心一级资本，进一步夯实本行资本实力，深入践行本行服务乡村振兴的领军银行、服务实体经济的主力银行、服务美好生活的百姓银行三大定位，提高风险抵御能力。本行将以本次发行为契机，立足主责主业，提升服务实体经济质效，持续打造差异化竞争优势，以高质量金融服务为社会主义现代化强国建设提供有力支撑。\n\n本次发行拟募集资金总额不超过人民币1,600亿元(含本数，下同)，扣除相关发行费用后将全部用于补充本行的核心一级资本。募集资金规模以经相关监管机构最终批复的发行方案为准。\n\nGelonghui中國股票\n\n閱讀更多來自Gelonghui\n\n## 來自 Gelonghui 的更多新聞",
+          "url": "https://tw.tradingview.com/news/gelonghui:92b5bb698e3f9:0",
+          "source": "tw.tradingview.com",
+          "published_date": "2026-09-06"
+        }
+      ],
+      "dsa_events": [
+        {
+          "title": "年报资料_中国农业银行",
+          "snippet": "您现在的位置：首页 > 关于农行 > 投资者关系 > 业绩报告 > 年报资料\n\n业绩报告\n\n 年报资料\n 中报资料\n 季报资料\n\n营业网点查询\n\n营业机构查询\n\n客户服务中心\n\n# 年报资料\n\n 2025年度报告（A股）\n\n  2026-03-30\n 2025年度报告（H股）\n\n  2026-03-30\n 2024年度报告（A股）\n\n  2025-03-28\n 2024年度报告（H股）\n\n  2025-03-28\n 2023年度报告（A股）\n\n  2024-04-01\n 2023年度报告（H股）\n\n  2024-03-28\n 2022年度报告（A股）\n\n  2023-04-25\n 2022年度报告（H股）\n\n  2023-04-25\n 2021年度报告（H股）\n\n  2022-04-27\n 2021年度报告（A股）\n\n  2022-04-27\n\n1/4共4页去第页GO)\n\n 网站声明\n |\n 网站地图\n |\n 联系我们\n |\n 隐私政策\n |\n 客服热线：95599 [...] 中国农业银行版权所有 | 京ICP备05049539号-1 | 京ICP备05049539号-5 | 京公网",
+          "url": "https://www.abchina.com/cn/aboutabc/investor_relations/report",
+          "source": "abchina.com",
+          "published_date": null
+        },
+        {
+          "title": "年報資料_中國農業銀行",
+          "snippet": "無障礙瀏覽\n 關懷版\n 官網首頁\n 分支機構\n 繁體\n |\n English\n\n 官網首頁\n 分支機構\n 在線客服\n 簡體\n |\n English\n\n\n\n 投資者關係\n 投資價值\n 公司公告\n 業績報告\n 第三支柱\n 股票及分紅\n 公司治理\n 業績推介\n 投資者服務\n 信用評級\n\n您現在的位置：首頁 > 關於農行 > 投資者關係 > 業績報告 > 年報資料\n\n業績報告\n\n 年報資料\n 中報資料\n 季報資料\n\n營業網點查詢\n\n營業機構查詢\n\n客戶服務中心\n\n# 年報資料\n\n 2025年度報告（A股）\n\n  2026-03-30\n 2025年度報告（H股）\n\n  2026-03-30\n 2024年度報告（A股）\n\n  2025-03-28\n 2024年度報告（H股）\n\n  2025-03-28\n 2023年度報告（A股）\n\n  2024-04-01\n 2023年度報告（H股）\n\n  2024-03-28\n 2022年度報告（A股）\n\n  2023-04-25\n 2022年度報告（H股）\n\n  2023-04-25\n 2021年度報告（H股） [...] 2022-04-27\n 2021年度",
+          "url": "https://www.abchina.com/zt/aboutabc/investor_relations/report/am",
+          "source": "abchina.com",
+          "published_date": null
+        },
+        {
+          "title": "季報資料_中國農業銀行",
+          "snippet": "無障礙瀏覽\n 關懷版\n 官網首頁\n 分支機構\n 繁體\n |\n English\n\n 官網首頁\n 分支機構\n 在線客服\n 簡體\n |\n English\n\n\n\n 投資者關係\n 投資價值\n 公司公告\n 業績報告\n 第三支柱\n 股票及分紅\n 公司治理\n 業績推介\n 投資者服務\n 信用評級\n\n您現在的位置：首頁 > 關於農行 > 投資者關係 > 業績報告 > 季報資料\n\n業績報告\n\n 年報資料\n 中報資料\n 季報資料\n\n營業網點查詢\n\n營業機構查詢\n\n客戶服務中心\n\n# 季報資料\n\n 2026年第一季度報告（A股）\n\n  2026-04-29\n 2026年第一季度報告（H股）\n\n  2026-04-29\n 2025年第三季度報告（H股）\n\n  2025-10-30\n 2025年第三季度報告（A股）\n\n  2025-10-30\n 2025年第一季度報告（A股）\n\n  2025-04-29\n 2025年第一季度報告（H股）\n\n  2025-04-29\n 2024年第三季度報告（A股）\n\n  2024-10-30\n 2024年第三季度報告（H股） [...] 2024-10-30\n 2024年第一季度報",
+          "url": "https://www.abchina.com/zt/aboutabc/investor_relations/report/qm",
+          "source": "abchina.com",
+          "published_date": null
+        }
+      ],
+      "dsa_analysis_summary": "DSA行情：现价 6.76，涨跌幅 -0.7342143906020533%；DSA新闻：农业银行(601288.SH)拟向财政部、中国烟草等定增募资不超1600亿元 提供者 智通财经；农业银行(601288.SH)拟募资不超1600亿元用于补充资本；DSA事件：年报资料_中国农业银行；年報資料_中國農業銀行",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: 未发现额外加分项；风险: 成交量萎缩"
+      },
+      "post_analysis_tags": [],
+      "raw": {
+        "rank": 2,
+        "code": "601288",
+        "name": "农业银行",
+        "final_score": 75.6538,
+        "screen_score": 74.92298594036363,
+        "llm_score": 86.0,
+        "ranking_reason": "距离20日均线极近且振幅控制优异，回撤风险极小。",
+        "risk_summary": "短线成交量能偏弱，上涨空间受限于资金风格切换。",
+        "price": 6.76,
+        "change_pct": -0.73,
+        "amount": 1875729575.0,
+        "total_mv": 2365885308981.0,
+        "turnover_rate": 0.09,
+        "volume_ratio": 0.84,
+        "pe_ratio": 7.9415576,
+        "pb_ratio": 0.82780746,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": 0.1471,
+        "signal_score": 86.0515,
+        "ma_bullish": true,
+        "price_above_ma20": true,
+        "macd_status": "bullish",
+        "rsi_status": "neutral",
+        "breakout_20d_pct": -4.0845,
+        "range_20d_pct": 11.6352,
+        "volume_ratio_20d": 0.9539,
+        "body_pct": -2.7143,
+        "pullback_to_ma20_pct": 0.7322,
+        "consolidation_days_20d": 20,
+        "volatility_20d_pct": 22.8817,
+        "max_drawdown_20d_pct": -3.5411,
+        "atr_20_pct": 2.0705,
+        "daily_quality_score": 100.0,
+        "daily_quality_flags": "",
+        "daily_source": "dsa:TencentFetcher",
+        "factor_scores": {
+          "value": 56.9432,
+          "liquidity": 89.0909,
+          "momentum": 69.9861,
+          "reversal": 70.49,
+          "activity": 76.408,
+          "stability": 80.1362,
+          "size": 96.3636,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.9,
+        "llm_sector": "银行",
+        "llm_theme": "大行高稳定性与低回撤",
+        "llm_tags": [
+          "防守",
+          "稳定性",
+          "价值",
+          "sector:银行",
+          "theme:大行高稳定性与低回撤",
+          "style_fit:极高匹配度，波动低且企稳迹象明显。"
+        ],
+        "llm_catalysts": [
+          "长期资金配置再平衡",
+          "防御性抱团加仓"
+        ],
+        "llm_risks": [
+          "成交量萎缩"
+        ],
+        "llm_thesis": "回调至MA20仅0.73%，稳定性因子达80.1，防守属性极强且K线结构完整。",
+        "llm_style_fit": "极高匹配度，波动低且企稳迹象明显。",
+        "llm_watch_items": [
+          "成交量能变化",
+          "日线MACD指标状态"
+        ],
+        "llm_invalidators": [
+          "日线级别下破平台震荡下沿"
+        ],
+        "risk_score": 10.0,
+        "risk_level": "low",
+        "risk_penalty": 1.2,
+        "risk_flags": [
+          "成交量萎缩",
+          "portfolio_sector_concentration:金融"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 3.5,
+        "portfolio_flags": [
+          "portfolio_sector_concentration:金融"
+        ],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: 未发现额外加分项；风险: 成交量萎缩"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": 1.0
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "成交量萎缩"
+            ],
+            "tags": []
+          }
+        },
+        "post_analysis_tags": [],
+        "dsa_context": {
+          "enriched": true,
+          "profile": "pre_rank_light",
+          "news_included": false,
+          "events_included": false,
+          "quote": {
+            "code": "601288",
+            "name": "农业银行",
+            "source": "akshare_sina",
+            "fetched_at": "2026-09-08T10:51:30.365094+00:00",
+            "price": 6.76,
+            "change_pct": -0.7342143906020533,
+            "change_amount": -0.04999999999999982,
+            "volume": 277554000,
+            "amount": 1875729575.0,
+            "volume_ratio": 0.84,
+            "turnover_rate": 0.09,
+            "amplitude": 1.91,
+            "open_price": 6.79,
+            "high": 6.83,
+            "low": 6.7,
+            "pre_close": 6.81,
+            "pe_ratio": 7.94,
+            "pb_ratio": 0.83,
+            "total_mv": 2365885000000.0,
+            "circ_mv": 2158091000000.0
+          },
+          "fundamentals": {
+            "market": "cn",
+            "status": "partial",
+            "coverage": {
+              "valuation": "not_supported",
+              "growth": "failed",
+              "earnings": "failed",
+              "institution": "failed",
+              "capital_flow": "failed",
+              "dragon_tiger": "failed",
+              "boards": "failed"
+            },
+            "valuation": {
+              "status": "not_supported",
+              "data": {
+                "pe_ratio": null,
+                "pb_ratio": null,
+                "total_mv": null,
+                "circ_mv": null
+              }
+            },
+            "growth": {
+              "status": "failed",
+              "data": {}
+            },
+            "earnings": {
+              "status": "failed",
+              "data": {}
+            },
+            "institution": {
+              "status": "failed",
+              "data": {}
+            },
+            "capital_flow": {
+              "status": "failed",
+              "data": {}
+            },
+            "boards": {
+              "status": "failed",
+              "data": {}
+            },
+            "errors": [
+              "fundamental_valuation timeout",
+              "fundamental stage timeout",
+              "fundamental stage timeout"
+            ]
+          },
+          "news": {
+            "success": false,
+            "skipped": true,
+            "reason": "pre_rank_light_context",
+            "results": []
+          },
+          "events": {
+            "success": false,
+            "skipped": true,
+            "reason": "pre_rank_light_context",
+            "results": []
+          },
+          "warnings": []
+        },
+        "dsa_news": [],
+        "dsa_analysis_summary": "DSA行情: 现价 6.76, 涨跌幅 -0.7342143906020533%",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "low_volatility_quality"
+      ],
+      "merge_score": 86.0
+    },
+    {
+      "rank": 8,
+      "code": "600036",
+      "name": "招商银行",
+      "score": 82.0,
+      "screen_score": 74.5722662269091,
+      "reason": "零售龙头基本面扎实，低振幅窄幅震荡提供良好观察点。",
+      "risk_level": "low",
+      "risk_flags": [
+        "rsi_overbought",
+        "RSI超买",
+        "技术面小幅乖离",
+        "portfolio_sector_concentration:金融"
+      ],
+      "llm_score": 82.0,
+      "llm_confidence": 0.86,
+      "llm_sector": "银行",
+      "llm_theme": "零售银行龙头与基本面修复",
+      "llm_tags": [
+        "流动性",
+        "趋势",
+        "价值",
+        "sector:银行",
+        "theme:零售银行龙头与基本面修复",
+        "style_fit:基本面优异，适合作为防守向进攻过渡的配置标的。"
+      ],
+      "llm_thesis": "20日振幅9.86%且整理充分，具备优质的基本面与高流动性，虽RSI处于超买边缘但形态依然稳健。",
+      "llm_catalysts": [
+        "消费复苏驱动零售业务回升",
+        "房地产风险边际出清"
+      ],
+      "llm_risks": [
+        "RSI超买",
+        "技术面小幅乖离"
+      ],
+      "llm_watch_items": [
+        "RSI指标修复情况",
+        "零售信贷投放数据"
+      ],
+      "llm_invalidators": [
+        "资产质量出现超预期恶化信号"
+      ],
+      "llm_style_fit": "基本面优异，适合作为防守向进攻过渡的配置标的。",
+      "price": 40.9,
+      "change_pct": -0.41,
+      "amount": 2021762692.0,
+      "industry": "",
+      "factor_scores": {
+        "value": 57.4023,
+        "liquidity": 92.7273,
+        "momentum": 71.1154,
+        "reversal": 52.33,
+        "activity": 75.8136,
+        "stability": 80.6694,
+        "size": 85.4545,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {},
+      "dsa_news": [],
+      "dsa_events": [],
+      "dsa_analysis_summary": "",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: 未发现额外加分项；风险: RSI超买、技术面小幅乖离"
+      },
+      "post_analysis_tags": [],
+      "raw": {
+        "rank": 8,
+        "code": "600036",
+        "name": "招商银行",
+        "final_score": 63.3434,
+        "screen_score": 74.5722662269091,
+        "llm_score": 82.0,
+        "ranking_reason": "零售龙头基本面扎实，低振幅窄幅震荡提供良好观察点。",
+        "risk_summary": "RSI处于超买区间，短期可能面临小幅技术性回调。",
+        "price": 40.9,
+        "change_pct": -0.41,
+        "amount": 2021762692.0,
+        "total_mv": 1031491685081.0,
+        "turnover_rate": 0.24,
+        "volume_ratio": 0.59,
+        "pe_ratio": 6.79972897,
+        "pb_ratio": 0.90083148,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": 7.1289,
+        "signal_score": 82.4951,
+        "ma_bullish": true,
+        "price_above_ma20": true,
+        "macd_status": "bullish",
+        "rsi_status": "overbought",
+        "breakout_20d_pct": -1.6994,
+        "range_20d_pct": 9.8606,
+        "volume_ratio_20d": 1.0234,
+        "body_pct": -1.3926,
+        "pullback_to_ma20_pct": 3.7422,
+        "consolidation_days_20d": 20,
+        "volatility_20d_pct": 17.5239,
+        "max_drawdown_20d_pct": -1.9255,
+        "atr_20_pct": 1.4305,
+        "daily_quality_score": 100.0,
+        "daily_quality_flags": "",
+        "daily_source": "dsa:TencentFetcher",
+        "factor_scores": {
+          "value": 57.4023,
+          "liquidity": 92.7273,
+          "momentum": 71.1154,
+          "reversal": 52.33,
+          "activity": 75.8136,
+          "stability": 80.6694,
+          "size": 85.4545,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.86,
+        "llm_sector": "银行",
+        "llm_theme": "零售银行龙头与基本面修复",
+        "llm_tags": [
+          "流动性",
+          "趋势",
+          "价值",
+          "sector:银行",
+          "theme:零售银行龙头与基本面修复",
+          "style_fit:基本面优异，适合作为防守向进攻过渡的配置标的。"
+        ],
+        "llm_catalysts": [
+          "消费复苏驱动零售业务回升",
+          "房地产风险边际出清"
+        ],
+        "llm_risks": [
+          "RSI超买",
+          "技术面小幅乖离"
+        ],
+        "llm_thesis": "20日振幅9.86%且整理充分，具备优质的基本面与高流动性，虽RSI处于超买边缘但形态依然稳健。",
+        "llm_style_fit": "基本面优异，适合作为防守向进攻过渡的配置标的。",
+        "llm_watch_items": [
+          "RSI指标修复情况",
+          "零售信贷投放数据"
+        ],
+        "llm_invalidators": [
+          "资产质量出现超预期恶化信号"
+        ],
+        "risk_score": 32.5,
+        "risk_level": "low",
+        "risk_penalty": 3.9,
+        "risk_flags": [
+          "rsi_overbought",
+          "RSI超买",
+          "技术面小幅乖离",
+          "portfolio_sector_concentration:金融"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 10.5,
+        "portfolio_flags": [
+          "portfolio_sector_concentration:金融"
+        ],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: 未发现额外加分项；风险: RSI超买、技术面小幅乖离"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": 0.2
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "RSI超买",
+              "技术面小幅乖离"
+            ],
+            "tags": []
+          }
+        },
+        "post_analysis_tags": [],
+        "dsa_context": {},
+        "dsa_news": [],
+        "dsa_analysis_summary": "",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "low_volatility_quality"
+      ],
+      "merge_score": 82.0
+    },
+    {
+      "rank": 9,
+      "code": "600030",
+      "name": "中信证券",
+      "score": 81.0,
+      "screen_score": 76.26226969512194,
+      "reason": "成交额与流动性评分极高，兼具蓝筹风范。",
+      "risk_level": "low",
+      "risk_flags": [
+        "业绩周期性波动",
+        "portfolio_sector_concentration:金融"
+      ],
+      "llm_score": 81.0,
+      "llm_confidence": 0.82,
+      "llm_sector": "券商",
+      "llm_theme": "龙头券商顺周期弹性",
+      "llm_tags": [
+        "流动性",
+        "趋势",
+        "sector:券商",
+        "theme:龙头券商顺周期弹性",
+        "style_fit:满足高成交额与龙头标准"
+      ],
+      "llm_thesis": "作为证券行业龙头，流动性极佳，受益于市场交投活跃。",
+      "llm_catalysts": [
+        "资本市场改革政策落地",
+        "市场日成交额持续放量"
+      ],
+      "llm_risks": [
+        "业绩周期性波动"
+      ],
+      "llm_watch_items": [
+        "两市日成交额变化",
+        "月度经营数据"
+      ],
+      "llm_invalidators": [
+        "市场成交额长期大幅缩量"
+      ],
+      "llm_style_fit": "满足高成交额与龙头标准",
+      "price": 27.34,
+      "change_pct": -1.19,
+      "amount": 2868942666.0,
+      "industry": "",
+      "factor_scores": {
+        "value": 59.2083,
+        "liquidity": 98.374,
+        "momentum": 52.6325,
+        "reversal": 76.47,
+        "activity": 83.3789,
+        "stability": 74.43,
+        "size": 95.935,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {},
+      "dsa_news": [],
+      "dsa_events": [],
+      "dsa_analysis_summary": "",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: controlled_reversal；风险: 业绩周期性波动"
+      },
+      "post_analysis_tags": [
+        "controlled_reversal"
+      ],
+      "raw": {
+        "rank": 9,
+        "code": "600030",
+        "name": "中信证券",
+        "final_score": 70.1574,
+        "screen_score": 76.26226969512194,
+        "llm_score": 81.0,
+        "ranking_reason": "成交额与流动性评分极高，兼具蓝筹风范。",
+        "risk_summary": "市场成交额萎缩导致经纪和自营业务承压",
+        "price": 27.34,
+        "change_pct": -1.19,
+        "amount": 2868942666.0,
+        "total_mv": 427167602276.0,
+        "turnover_rate": 0.86,
+        "volume_ratio": 0.91,
+        "pe_ratio": 10.77189341,
+        "pb_ratio": 1.44570133,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": null,
+        "signal_score": null,
+        "ma_bullish": null,
+        "price_above_ma20": null,
+        "macd_status": "",
+        "rsi_status": "",
+        "breakout_20d_pct": null,
+        "range_20d_pct": null,
+        "volume_ratio_20d": null,
+        "body_pct": null,
+        "pullback_to_ma20_pct": null,
+        "consolidation_days_20d": null,
+        "volatility_20d_pct": null,
+        "max_drawdown_20d_pct": null,
+        "atr_20_pct": null,
+        "daily_quality_score": null,
+        "daily_quality_flags": "",
+        "daily_source": "",
+        "factor_scores": {
+          "value": 59.2083,
+          "liquidity": 98.374,
+          "momentum": 52.6325,
+          "reversal": 76.47,
+          "activity": 83.3789,
+          "stability": 74.43,
+          "size": 95.935,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.82,
+        "llm_sector": "券商",
+        "llm_theme": "龙头券商顺周期弹性",
+        "llm_tags": [
+          "流动性",
+          "趋势",
+          "sector:券商",
+          "theme:龙头券商顺周期弹性",
+          "style_fit:满足高成交额与龙头标准"
+        ],
+        "llm_catalysts": [
+          "资本市场改革政策落地",
+          "市场日成交额持续放量"
+        ],
+        "llm_risks": [
+          "业绩周期性波动"
+        ],
+        "llm_thesis": "作为证券行业龙头，流动性极佳，受益于市场交投活跃。",
+        "llm_style_fit": "满足高成交额与龙头标准",
+        "llm_watch_items": [
+          "两市日成交额变化",
+          "月度经营数据"
+        ],
+        "llm_invalidators": [
+          "市场成交额长期大幅缩量"
+        ],
+        "risk_score": 10.0,
+        "risk_level": "low",
+        "risk_penalty": 1.2,
+        "risk_flags": [
+          "业绩周期性波动",
+          "portfolio_sector_concentration:金融"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 9.0,
+        "portfolio_flags": [
+          "portfolio_sector_concentration:金融"
+        ],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: controlled_reversal；风险: 业绩周期性波动"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": 2.2
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "业绩周期性波动"
+            ],
+            "tags": [
+              "controlled_reversal"
+            ]
+          }
+        },
+        "post_analysis_tags": [
+          "controlled_reversal"
+        ],
+        "dsa_context": {},
+        "dsa_news": [],
+        "dsa_analysis_summary": "",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "blue_chip_income"
+      ],
+      "merge_score": 81.0
+    },
+    {
+      "rank": 7,
+      "code": "600016",
+      "name": "民生银行",
+      "score": 79.0,
+      "screen_score": 79.19310731707317,
+      "reason": "价值得分最高，防守性价比凸显。",
+      "risk_level": "low",
+      "risk_flags": [
+        "拨备覆盖率波动",
+        "portfolio_sector_concentration:金融"
+      ],
+      "llm_score": 79.0,
+      "llm_confidence": 0.8,
+      "llm_sector": "银行",
+      "llm_theme": "高价值股份制银行",
+      "llm_tags": [
+        "价值",
+        "sector:银行",
+        "theme:高价值股份制银行",
+        "style_fit:契合低估值红利逻辑"
+      ],
+      "llm_thesis": "价值因子在候选池中领先，估值极具吸引力。",
+      "llm_catalysts": [
+        "资产质量出清见底"
+      ],
+      "llm_risks": [
+        "拨备覆盖率波动"
+      ],
+      "llm_watch_items": [
+        "不良生成率"
+      ],
+      "llm_invalidators": [
+        "房地产相关贷款风险再度暴露"
+      ],
+      "llm_style_fit": "契合低估值红利逻辑",
+      "price": 3.63,
+      "change_pct": 0.83,
+      "amount": 988672652.0,
+      "industry": "",
+      "factor_scores": {
+        "value": 89.503,
+        "liquidity": 75.6098,
+        "momentum": 59.1975,
+        "reversal": 50.21,
+        "activity": 82.9188,
+        "stability": 75.51,
+        "size": 80.4878,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {},
+      "dsa_news": [],
+      "dsa_events": [],
+      "dsa_analysis_summary": "",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: value_quality；风险: 拨备覆盖率波动"
+      },
+      "post_analysis_tags": [
+        "value_quality"
+      ],
+      "raw": {
+        "rank": 7,
+        "code": "600016",
+        "name": "民生银行",
+        "final_score": 71.9159,
+        "screen_score": 79.19310731707317,
+        "llm_score": 79.0,
+        "ranking_reason": "价值得分最高，防守性价比凸显。",
+        "risk_summary": "零售及中小微企业信贷风险扰动",
+        "price": 3.63,
+        "change_pct": 0.83,
+        "amount": 988672652.0,
+        "total_mv": 158930179162.0,
+        "turnover_rate": 0.77,
+        "volume_ratio": 0.88,
+        "pe_ratio": 5.53378061,
+        "pb_ratio": 0.27411207,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": null,
+        "signal_score": null,
+        "ma_bullish": null,
+        "price_above_ma20": null,
+        "macd_status": "",
+        "rsi_status": "",
+        "breakout_20d_pct": null,
+        "range_20d_pct": null,
+        "volume_ratio_20d": null,
+        "body_pct": null,
+        "pullback_to_ma20_pct": null,
+        "consolidation_days_20d": null,
+        "volatility_20d_pct": null,
+        "max_drawdown_20d_pct": null,
+        "atr_20_pct": null,
+        "daily_quality_score": null,
+        "daily_quality_flags": "",
+        "daily_source": "",
+        "factor_scores": {
+          "value": 89.503,
+          "liquidity": 75.6098,
+          "momentum": 59.1975,
+          "reversal": 50.21,
+          "activity": 82.9188,
+          "stability": 75.51,
+          "size": 80.4878,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.8,
+        "llm_sector": "银行",
+        "llm_theme": "高价值股份制银行",
+        "llm_tags": [
+          "价值",
+          "sector:银行",
+          "theme:高价值股份制银行",
+          "style_fit:契合低估值红利逻辑"
+        ],
+        "llm_catalysts": [
+          "资产质量出清见底"
+        ],
+        "llm_risks": [
+          "拨备覆盖率波动"
+        ],
+        "llm_thesis": "价值因子在候选池中领先，估值极具吸引力。",
+        "llm_style_fit": "契合低估值红利逻辑",
+        "llm_watch_items": [
+          "不良生成率"
+        ],
+        "llm_invalidators": [
+          "房地产相关贷款风险再度暴露"
+        ],
+        "risk_score": 10.0,
+        "risk_level": "low",
+        "risk_penalty": 1.2,
+        "risk_flags": [
+          "拨备覆盖率波动",
+          "portfolio_sector_concentration:金融"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 9.0,
+        "portfolio_flags": [
+          "portfolio_sector_concentration:金融"
+        ],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: value_quality；风险: 拨备覆盖率波动"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": 3.0
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "拨备覆盖率波动"
+            ],
+            "tags": [
+              "value_quality"
+            ]
+          }
+        },
+        "post_analysis_tags": [
+          "value_quality"
+        ],
+        "dsa_context": {},
+        "dsa_news": [],
+        "dsa_analysis_summary": "",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "blue_chip_income"
+      ],
+      "merge_score": 79.0
+    },
+    {
+      "rank": 6,
+      "code": "601628",
+      "name": "中国人寿",
+      "score": 79.0,
+      "screen_score": 70.51932954472727,
+      "reason": "极低PE配合极致收窄的20日振幅，下行空间有限。",
+      "risk_level": "low",
+      "risk_flags": [
+        "60日涨幅较大",
+        "portfolio_sector_concentration:金融"
+      ],
+      "llm_score": 79.0,
+      "llm_confidence": 0.85,
+      "llm_sector": "保险",
+      "llm_theme": "保险巨头价值重估",
+      "llm_tags": [
+        "价值",
+        "防守",
+        "趋势",
+        "sector:保险",
+        "theme:保险巨头价值重估",
+        "style_fit:低振幅特征符合低风险偏好，但需要消化前期涨幅。"
+      ],
+      "llm_thesis": "PE仅4.34且20日振幅仅9.45%，20天充分整理，具备非常扎实的估值底和技术底部。",
+      "llm_catalysts": [
+        "长端国债收益率止跌回升",
+        "开门红保费数据超预期"
+      ],
+      "llm_risks": [
+        "60日涨幅较大"
+      ],
+      "llm_watch_items": [
+        "长端国债利率走势",
+        "机构资金换手情况"
+      ],
+      "llm_invalidators": [
+        "长端国债收益率持续下行杀估值"
+      ],
+      "llm_style_fit": "低振幅特征符合低风险偏好，但需要消化前期涨幅。",
+      "price": 38.06,
+      "change_pct": -1.01,
+      "amount": 1107241703.0,
+      "industry": "",
+      "factor_scores": {
+        "value": 53.725,
+        "liquidity": 67.2727,
+        "momentum": 72.8564,
+        "reversal": 74.13,
+        "activity": 75.9074,
+        "stability": 79.6788,
+        "size": 87.2727,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {},
+      "dsa_news": [],
+      "dsa_events": [],
+      "dsa_analysis_summary": "",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: capital_confirmed；风险: 60日涨幅较大"
+      },
+      "post_analysis_tags": [
+        "capital_confirmed"
+      ],
+      "raw": {
+        "rank": 6,
+        "code": "601628",
+        "name": "中国人寿",
+        "final_score": 65.0116,
+        "screen_score": 70.51932954472727,
+        "llm_score": 79.0,
+        "ranking_reason": "极低PE配合极致收窄的20日振幅，下行空间有限。",
+        "risk_summary": "PB相对偏高（1.62），60日涨幅较大面临获利回吐压力。",
+        "price": 38.06,
+        "change_pct": -1.01,
+        "amount": 1107241703.0,
+        "total_mv": 1075754672300.0,
+        "turnover_rate": 0.14,
+        "volume_ratio": 0.69,
+        "pe_ratio": 4.34409647,
+        "pb_ratio": 1.6196173,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": 9.2578,
+        "signal_score": 89.2402,
+        "ma_bullish": true,
+        "price_above_ma20": true,
+        "macd_status": "bullish",
+        "rsi_status": "neutral",
+        "breakout_20d_pct": -3.7788,
+        "range_20d_pct": 9.4495,
+        "volume_ratio_20d": 1.3484,
+        "body_pct": -1.8632,
+        "pullback_to_ma20_pct": 1.5316,
+        "consolidation_days_20d": 20,
+        "volatility_20d_pct": 23.7682,
+        "max_drawdown_20d_pct": -2.3547,
+        "atr_20_pct": 2.2601,
+        "daily_quality_score": 100.0,
+        "daily_quality_flags": "",
+        "daily_source": "dsa:TencentFetcher",
+        "factor_scores": {
+          "value": 53.725,
+          "liquidity": 67.2727,
+          "momentum": 72.8564,
+          "reversal": 74.13,
+          "activity": 75.9074,
+          "stability": 79.6788,
+          "size": 87.2727,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.85,
+        "llm_sector": "保险",
+        "llm_theme": "保险巨头价值重估",
+        "llm_tags": [
+          "价值",
+          "防守",
+          "趋势",
+          "sector:保险",
+          "theme:保险巨头价值重估",
+          "style_fit:低振幅特征符合低风险偏好，但需要消化前期涨幅。"
+        ],
+        "llm_catalysts": [
+          "长端国债收益率止跌回升",
+          "开门红保费数据超预期"
+        ],
+        "llm_risks": [
+          "60日涨幅较大"
+        ],
+        "llm_thesis": "PE仅4.34且20日振幅仅9.45%，20天充分整理，具备非常扎实的估值底和技术底部。",
+        "llm_style_fit": "低振幅特征符合低风险偏好，但需要消化前期涨幅。",
+        "llm_watch_items": [
+          "长端国债利率走势",
+          "机构资金换手情况"
+        ],
+        "llm_invalidators": [
+          "长端国债收益率持续下行杀估值"
+        ],
+        "risk_score": 10.0,
+        "risk_level": "low",
+        "risk_penalty": 1.2,
+        "risk_flags": [
+          "60日涨幅较大",
+          "portfolio_sector_concentration:金融"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 10.5,
+        "portfolio_flags": [
+          "portfolio_sector_concentration:金融"
+        ],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: capital_confirmed；风险: 60日涨幅较大"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": 2.8
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "60日涨幅较大"
+            ],
+            "tags": [
+              "capital_confirmed"
+            ]
+          }
+        },
+        "post_analysis_tags": [
+          "capital_confirmed"
+        ],
+        "dsa_context": {},
+        "dsa_news": [],
+        "dsa_analysis_summary": "",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "low_volatility_quality"
+      ],
+      "merge_score": 79.0
+    },
+    {
+      "rank": 4,
+      "code": "601668",
+      "name": "中国建筑",
+      "score": 78.0,
+      "screen_score": 76.7503719512195,
+      "reason": "价值与稳定性因子匹配，现金流支撑分红。",
+      "risk_level": "low",
+      "risk_flags": [
+        "地产链上下游拖累"
+      ],
+      "llm_score": 78.0,
+      "llm_confidence": 0.79,
+      "llm_sector": "建筑",
+      "llm_theme": "基建央企稳增长龙头",
+      "llm_tags": [
+        "价值",
+        "防守",
+        "sector:建筑",
+        "theme:基建央企稳增长龙头",
+        "style_fit:契合低估值蓝筹偏好"
+      ],
+      "llm_thesis": "低估值与高分红底蕴，基建压舱石角色稳固。",
+      "llm_catalysts": [
+        "稳增长政策加码与订单落地"
+      ],
+      "llm_risks": [
+        "地产链上下游拖累"
+      ],
+      "llm_watch_items": [
+        "新签订单公告",
+        "经营性现金流净额"
+      ],
+      "llm_invalidators": [
+        "基建投资增速意外大幅下滑"
+      ],
+      "llm_style_fit": "契合低估值蓝筹偏好",
+      "price": 4.37,
+      "change_pct": 0.46,
+      "amount": 717488771.0,
+      "industry": "",
+      "factor_scores": {
+        "value": 88.19,
+        "liquidity": 60.1626,
+        "momentum": 57.995,
+        "reversal": 55.02,
+        "activity": 80.77,
+        "stability": 76.62,
+        "size": 84.5528,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {},
+      "dsa_news": [],
+      "dsa_events": [],
+      "dsa_analysis_summary": "",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: value_quality；风险: 地产链上下游拖累"
+      },
+      "post_analysis_tags": [
+        "value_quality"
+      ],
+      "raw": {
+        "rank": 4,
+        "code": "601668",
+        "name": "中国建筑",
+        "final_score": 79.0502,
+        "screen_score": 76.7503719512195,
+        "llm_score": 78.0,
+        "ranking_reason": "价值与稳定性因子匹配，现金流支撑分红。",
+        "risk_summary": "应收账款回款周期延长",
+        "price": 4.37,
+        "change_pct": 0.46,
+        "amount": 717488771.0,
+        "total_mv": 180570106240.0,
+        "turnover_rate": 0.4,
+        "volume_ratio": 0.7,
+        "pe_ratio": 5.70172947,
+        "pb_ratio": 0.3648266,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": null,
+        "signal_score": null,
+        "ma_bullish": null,
+        "price_above_ma20": null,
+        "macd_status": "",
+        "rsi_status": "",
+        "breakout_20d_pct": null,
+        "range_20d_pct": null,
+        "volume_ratio_20d": null,
+        "body_pct": null,
+        "pullback_to_ma20_pct": null,
+        "consolidation_days_20d": null,
+        "volatility_20d_pct": null,
+        "max_drawdown_20d_pct": null,
+        "atr_20_pct": null,
+        "daily_quality_score": null,
+        "daily_quality_flags": "",
+        "daily_source": "",
+        "factor_scores": {
+          "value": 88.19,
+          "liquidity": 60.1626,
+          "momentum": 57.995,
+          "reversal": 55.02,
+          "activity": 80.77,
+          "stability": 76.62,
+          "size": 84.5528,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.79,
+        "llm_sector": "建筑",
+        "llm_theme": "基建央企稳增长龙头",
+        "llm_tags": [
+          "价值",
+          "防守",
+          "sector:建筑",
+          "theme:基建央企稳增长龙头",
+          "style_fit:契合低估值蓝筹偏好"
+        ],
+        "llm_catalysts": [
+          "稳增长政策加码与订单落地"
+        ],
+        "llm_risks": [
+          "地产链上下游拖累"
+        ],
+        "llm_thesis": "低估值与高分红底蕴，基建压舱石角色稳固。",
+        "llm_style_fit": "契合低估值蓝筹偏好",
+        "llm_watch_items": [
+          "新签订单公告",
+          "经营性现金流净额"
+        ],
+        "llm_invalidators": [
+          "基建投资增速意外大幅下滑"
+        ],
+        "risk_score": 10.0,
+        "risk_level": "low",
+        "risk_penalty": 1.2,
+        "risk_flags": [
+          "地产链上下游拖累"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 0.0,
+        "portfolio_flags": [],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: value_quality；风险: 地产链上下游拖累"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": 3.0
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "地产链上下游拖累"
+            ],
+            "tags": [
+              "value_quality"
+            ]
+          }
+        },
+        "post_analysis_tags": [
+          "value_quality"
+        ],
+        "dsa_context": {},
+        "dsa_news": [],
+        "dsa_analysis_summary": "",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "blue_chip_income"
+      ],
+      "merge_score": 78.0
+    },
+    {
+      "rank": 9,
+      "code": "000001",
+      "name": "平安银行",
+      "score": 78.0,
+      "screen_score": 71.6272449090909,
+      "reason": "估值安全垫极厚，20日振幅低，但反转因子偏弱且RSI偏高。",
+      "risk_level": "low",
+      "risk_flags": [
+        "rsi_overbought",
+        "RSI超买",
+        "反转因子偏弱",
+        "portfolio_sector_concentration:金融"
+      ],
+      "llm_score": 78.0,
+      "llm_confidence": 0.84,
+      "llm_sector": "银行",
+      "llm_theme": "破净修复与低估值反弹",
+      "llm_tags": [
+        "价值",
+        "防守",
+        "sector:银行",
+        "theme:破净修复与低估值反弹",
+        "style_fit:符合低估值防守逻辑，但技术面需等待超买修复。"
+      ],
+      "llm_thesis": "价值因子得分高居第一（85.8），PE 5.26，PB仅0.49，20日振幅9.52%，安全边际极高。",
+      "llm_catalysts": [
+        "破净股市值管理政策细则落地",
+        "信贷结构优化"
+      ],
+      "llm_risks": [
+        "RSI超买",
+        "反转因子偏弱"
+      ],
+      "llm_watch_items": [
+        "估值修复持续性",
+        "超买指标回落情况"
+      ],
+      "llm_invalidators": [
+        "业绩不及预期导致破净加剧"
+      ],
+      "llm_style_fit": "符合低估值防守逻辑，但技术面需等待超买修复。",
+      "price": 11.78,
+      "change_pct": 0.68,
+      "amount": 870361064.17,
+      "industry": "",
+      "factor_scores": {
+        "value": 85.8023,
+        "liquidity": 52.7273,
+        "momentum": 71.5192,
+        "reversal": 38.16,
+        "activity": 76.726,
+        "stability": 79.7319,
+        "size": 58.1818,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {},
+      "dsa_news": [],
+      "dsa_events": [],
+      "dsa_analysis_summary": "",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: value_quality；风险: RSI超买、反转因子偏弱"
+      },
+      "post_analysis_tags": [
+        "value_quality"
+      ],
+      "raw": {
+        "rank": 9,
+        "code": "000001",
+        "name": "平安银行",
+        "final_score": 62.1763,
+        "screen_score": 71.6272449090909,
+        "llm_score": 78.0,
+        "ranking_reason": "估值安全垫极厚，20日振幅低，但反转因子偏弱且RSI偏高。",
+        "risk_summary": "RSI处于超买状态，流动性分位数较低。",
+        "price": 11.78,
+        "change_pct": 0.68,
+        "amount": 870361064.17,
+        "total_mv": 228601716372.0,
+        "turnover_rate": 0.38,
+        "volume_ratio": 0.68,
+        "pe_ratio": 5.26016973,
+        "pb_ratio": 0.48824195,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": 4.0925,
+        "signal_score": 81.4324,
+        "ma_bullish": true,
+        "price_above_ma20": true,
+        "macd_status": "bullish",
+        "rsi_status": "overbought",
+        "breakout_20d_pct": -3.1457,
+        "range_20d_pct": 9.5195,
+        "volume_ratio_20d": 1.1203,
+        "body_pct": -1.4322,
+        "pullback_to_ma20_pct": 1.6331,
+        "consolidation_days_20d": 20,
+        "volatility_20d_pct": 15.4777,
+        "max_drawdown_20d_pct": -1.865,
+        "atr_20_pct": 1.5128,
+        "daily_quality_score": 100.0,
+        "daily_quality_flags": "",
+        "daily_source": "dsa:TencentFetcher",
+        "factor_scores": {
+          "value": 85.8023,
+          "liquidity": 52.7273,
+          "momentum": 71.5192,
+          "reversal": 38.16,
+          "activity": 76.726,
+          "stability": 79.7319,
+          "size": 58.1818,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.84,
+        "llm_sector": "银行",
+        "llm_theme": "破净修复与低估值反弹",
+        "llm_tags": [
+          "价值",
+          "防守",
+          "sector:银行",
+          "theme:破净修复与低估值反弹",
+          "style_fit:符合低估值防守逻辑，但技术面需等待超买修复。"
+        ],
+        "llm_catalysts": [
+          "破净股市值管理政策细则落地",
+          "信贷结构优化"
+        ],
+        "llm_risks": [
+          "RSI超买",
+          "反转因子偏弱"
+        ],
+        "llm_thesis": "价值因子得分高居第一（85.8），PE 5.26，PB仅0.49，20日振幅9.52%，安全边际极高。",
+        "llm_style_fit": "符合低估值防守逻辑，但技术面需等待超买修复。",
+        "llm_watch_items": [
+          "估值修复持续性",
+          "超买指标回落情况"
+        ],
+        "llm_invalidators": [
+          "业绩不及预期导致破净加剧"
+        ],
+        "risk_score": 32.5,
+        "risk_level": "low",
+        "risk_penalty": 3.9,
+        "risk_flags": [
+          "rsi_overbought",
+          "RSI超买",
+          "反转因子偏弱",
+          "portfolio_sector_concentration:金融"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 10.5,
+        "portfolio_flags": [
+          "portfolio_sector_concentration:金融"
+        ],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: value_quality；风险: RSI超买、反转因子偏弱"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": 2.4
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "RSI超买",
+              "反转因子偏弱"
+            ],
+            "tags": [
+              "value_quality"
+            ]
+          }
+        },
+        "post_analysis_tags": [
+          "value_quality"
+        ],
+        "dsa_context": {},
+        "dsa_news": [],
+        "dsa_analysis_summary": "",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "low_volatility_quality"
+      ],
+      "merge_score": 78.0
+    },
+    {
+      "rank": 10,
+      "code": "600919",
+      "name": "江苏银行",
+      "score": 77.0,
+      "screen_score": 76.77390012195121,
+      "reason": "各项因子表现均衡，规模与成长兼备。",
+      "risk_level": "low",
+      "risk_flags": [
+        "城投债化债压力",
+        "portfolio_sector_concentration:金融"
+      ],
+      "llm_score": 77.0,
+      "llm_confidence": 0.78,
+      "llm_sector": "银行",
+      "llm_theme": "优质城商行成长标杆",
+      "llm_tags": [
+        "价值",
+        "趋势",
+        "sector:银行",
+        "theme:优质城商行成长标杆",
+        "style_fit:符合稳健配置需求"
+      ],
+      "llm_thesis": "基本面质地在城商行中领先，估值与成长性平衡。",
+      "llm_catalysts": [
+        "零售业务与财富管理转型见效"
+      ],
+      "llm_risks": [
+        "城投债化债压力"
+      ],
+      "llm_watch_items": [
+        "营收与归母净利润增速"
+      ],
+      "llm_invalidators": [
+        "区域信用风险超预期爆发"
+      ],
+      "llm_style_fit": "符合稳健配置需求",
+      "price": 12.26,
+      "change_pct": 0.91,
+      "amount": 930124758.0,
+      "industry": "",
+      "factor_scores": {
+        "value": 82.3465,
+        "liquidity": 69.1057,
+        "momentum": 59.4575,
+        "reversal": 49.17,
+        "activity": 81.3505,
+        "stability": 75.27,
+        "size": 89.4309,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {},
+      "dsa_news": [],
+      "dsa_events": [],
+      "dsa_analysis_summary": "",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: value_quality；风险: 城投债化债压力"
+      },
+      "post_analysis_tags": [
+        "value_quality"
+      ],
+      "raw": {
+        "rank": 10,
+        "code": "600919",
+        "name": "江苏银行",
+        "final_score": 69.6643,
+        "screen_score": 76.77390012195121,
+        "llm_score": 77.0,
+        "ranking_reason": "各项因子表现均衡，规模与成长兼备。",
+        "risk_summary": "江浙地区实体经济增速波动",
+        "price": 12.26,
+        "change_pct": 0.91,
+        "amount": 930124758.0,
+        "total_mv": 224987237916.0,
+        "turnover_rate": 0.41,
+        "volume_ratio": 0.82,
+        "pe_ratio": 6.22574693,
+        "pb_ratio": 0.82911429,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": null,
+        "signal_score": null,
+        "ma_bullish": null,
+        "price_above_ma20": null,
+        "macd_status": "",
+        "rsi_status": "",
+        "breakout_20d_pct": null,
+        "range_20d_pct": null,
+        "volume_ratio_20d": null,
+        "body_pct": null,
+        "pullback_to_ma20_pct": null,
+        "consolidation_days_20d": null,
+        "volatility_20d_pct": null,
+        "max_drawdown_20d_pct": null,
+        "atr_20_pct": null,
+        "daily_quality_score": null,
+        "daily_quality_flags": "",
+        "daily_source": "",
+        "factor_scores": {
+          "value": 82.3465,
+          "liquidity": 69.1057,
+          "momentum": 59.4575,
+          "reversal": 49.17,
+          "activity": 81.3505,
+          "stability": 75.27,
+          "size": 89.4309,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.78,
+        "llm_sector": "银行",
+        "llm_theme": "优质城商行成长标杆",
+        "llm_tags": [
+          "价值",
+          "趋势",
+          "sector:银行",
+          "theme:优质城商行成长标杆",
+          "style_fit:符合稳健配置需求"
+        ],
+        "llm_catalysts": [
+          "零售业务与财富管理转型见效"
+        ],
+        "llm_risks": [
+          "城投债化债压力"
+        ],
+        "llm_thesis": "基本面质地在城商行中领先，估值与成长性平衡。",
+        "llm_style_fit": "符合稳健配置需求",
+        "llm_watch_items": [
+          "营收与归母净利润增速"
+        ],
+        "llm_invalidators": [
+          "区域信用风险超预期爆发"
+        ],
+        "risk_score": 10.0,
+        "risk_level": "low",
+        "risk_penalty": 1.2,
+        "risk_flags": [
+          "城投债化债压力",
+          "portfolio_sector_concentration:金融"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 9.0,
+        "portfolio_flags": [
+          "portfolio_sector_concentration:金融"
+        ],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: value_quality；风险: 城投债化债压力"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": 3.0
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "城投债化债压力"
+            ],
+            "tags": [
+              "value_quality"
+            ]
+          }
+        },
+        "post_analysis_tags": [
+          "value_quality"
+        ],
+        "dsa_context": {},
+        "dsa_news": [],
+        "dsa_analysis_summary": "",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "blue_chip_income"
+      ],
+      "merge_score": 77.0
+    },
+    {
+      "rank": 7,
+      "code": "601988",
+      "name": "中国银行",
+      "score": 77.0,
+      "screen_score": 73.87111932654544,
+      "reason": "大行底仓选择之一，但近期波动与振幅相对较大。",
+      "risk_level": "low",
+      "risk_flags": [
+        "振幅偏大",
+        "portfolio_sector_concentration:金融"
+      ],
+      "llm_score": 77.0,
+      "llm_confidence": 0.83,
+      "llm_sector": "银行",
+      "llm_theme": "国有大行与跨境业务优势",
+      "llm_tags": [
+        "防守",
+        "流动性",
+        "sector:银行",
+        "theme:国有大行与跨境业务优势",
+        "style_fit:基本匹配防守策略，但短线波动控制稍逊。"
+      ],
+      "llm_thesis": "稳定性和综合评分尚可，但20日振幅达到16.23%，整理天数仅11天，防守性略逊于工农建。",
+      "llm_catalysts": [
+        "人民币国际化加速",
+        "海外业务息差走阔"
+      ],
+      "llm_risks": [
+        "振幅偏大"
+      ],
+      "llm_watch_items": [
+        "20日振幅收窄情况",
+        "平台筑底形态"
+      ],
+      "llm_invalidators": [
+        "放量破位跌穿整理平台"
+      ],
+      "llm_style_fit": "基本匹配防守策略，但短线波动控制稍逊。",
+      "price": 6.39,
+      "change_pct": -0.78,
+      "amount": 1462047228.0,
+      "industry": "",
+      "factor_scores": {
+        "value": 59.7341,
+        "liquidity": 80.0,
+        "momentum": 71.4094,
+        "reversal": 71.14,
+        "activity": 76.3892,
+        "stability": 80.1617,
+        "size": 90.9091,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {},
+      "dsa_news": [],
+      "dsa_events": [],
+      "dsa_analysis_summary": "",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: 未发现额外加分项；风险: 振幅偏大"
+      },
+      "post_analysis_tags": [],
+      "raw": {
+        "rank": 7,
+        "code": "601988",
+        "name": "中国银行",
+        "final_score": 64.4227,
+        "screen_score": 73.87111932654544,
+        "llm_score": 77.0,
+        "ranking_reason": "大行底仓选择之一，但近期波动与振幅相对较大。",
+        "risk_summary": "振幅较大，近期价格拉离MA20偏离度达3.99%。",
+        "price": 6.39,
+        "change_pct": -0.78,
+        "amount": 1462047228.0,
+        "total_mv": 2058937311491.0,
+        "turnover_rate": 0.11,
+        "volume_ratio": 0.82,
+        "pe_ratio": 8.26802763,
+        "pb_ratio": 0.7485164,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": 4.3253,
+        "signal_score": 87.5139,
+        "ma_bullish": true,
+        "price_above_ma20": true,
+        "macd_status": "bullish",
+        "rsi_status": "neutral",
+        "breakout_20d_pct": -4.3091,
+        "range_20d_pct": 16.2349,
+        "volume_ratio_20d": 1.0863,
+        "body_pct": -2.2762,
+        "pullback_to_ma20_pct": 3.9884,
+        "consolidation_days_20d": 11,
+        "volatility_20d_pct": 27.3036,
+        "max_drawdown_20d_pct": -3.5928,
+        "atr_20_pct": 2.0264,
+        "daily_quality_score": 100.0,
+        "daily_quality_flags": "",
+        "daily_source": "dsa:TencentFetcher",
+        "factor_scores": {
+          "value": 59.7341,
+          "liquidity": 80.0,
+          "momentum": 71.4094,
+          "reversal": 71.14,
+          "activity": 76.3892,
+          "stability": 80.1617,
+          "size": 90.9091,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.83,
+        "llm_sector": "银行",
+        "llm_theme": "国有大行与跨境业务优势",
+        "llm_tags": [
+          "防守",
+          "流动性",
+          "sector:银行",
+          "theme:国有大行与跨境业务优势",
+          "style_fit:基本匹配防守策略，但短线波动控制稍逊。"
+        ],
+        "llm_catalysts": [
+          "人民币国际化加速",
+          "海外业务息差走阔"
+        ],
+        "llm_risks": [
+          "振幅偏大"
+        ],
+        "llm_thesis": "稳定性和综合评分尚可，但20日振幅达到16.23%，整理天数仅11天，防守性略逊于工农建。",
+        "llm_style_fit": "基本匹配防守策略，但短线波动控制稍逊。",
+        "llm_watch_items": [
+          "20日振幅收窄情况",
+          "平台筑底形态"
+        ],
+        "llm_invalidators": [
+          "放量破位跌穿整理平台"
+        ],
+        "risk_score": 10.0,
+        "risk_level": "low",
+        "risk_penalty": 1.2,
+        "risk_flags": [
+          "振幅偏大",
+          "portfolio_sector_concentration:金融"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 10.5,
+        "portfolio_flags": [
+          "portfolio_sector_concentration:金融"
+        ],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: 未发现额外加分项；风险: 振幅偏大"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": 1.0
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "振幅偏大"
+            ],
+            "tags": []
+          }
+        },
+        "post_analysis_tags": [],
+        "dsa_context": {},
+        "dsa_news": [],
+        "dsa_analysis_summary": "",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "low_volatility_quality"
+      ],
+      "merge_score": 77.0
+    },
+    {
+      "rank": 5,
+      "code": "000651",
+      "name": "格力电器",
+      "score": 75.0,
+      "screen_score": 76.26904878048781,
+      "reason": "反转与流动性因子表现突出，契合白马防守逻辑。",
+      "risk_level": "low",
+      "risk_flags": [
+        "原材料价格波动"
+      ],
+      "llm_score": 75.0,
+      "llm_confidence": 0.75,
+      "llm_sector": "家电",
+      "llm_theme": "白电龙头高分红消费",
+      "llm_tags": [
+        "价值",
+        "防守",
+        "sector:家电",
+        "theme:白电龙头高分红消费",
+        "style_fit:符合高股息与消费蓝筹风格"
+      ],
+      "llm_thesis": "家电行业格局稳定，现金流充沛且分红意愿极强。",
+      "llm_catalysts": [
+        "家电以旧换新政策刺激",
+        "海外出口超预期"
+      ],
+      "llm_risks": [
+        "原材料价格波动"
+      ],
+      "llm_watch_items": [
+        "内销零售数据与出口数据",
+        "原材料铜铝价格"
+      ],
+      "llm_invalidators": [
+        "内需消费出现断崖式萎缩"
+      ],
+      "llm_style_fit": "符合高股息与消费蓝筹风格",
+      "price": 38.29,
+      "change_pct": -1.57,
+      "amount": 1743924326.88,
+      "industry": "",
+      "factor_scores": {
+        "value": 65.6778,
+        "liquidity": 94.3089,
+        "momentum": 51.3975,
+        "reversal": 81.41,
+        "activity": 83.0988,
+        "stability": 73.29,
+        "size": 87.8049,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {},
+      "dsa_news": [],
+      "dsa_events": [],
+      "dsa_analysis_summary": "",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: controlled_reversal；风险: 原材料价格波动"
+      },
+      "post_analysis_tags": [
+        "controlled_reversal"
+      ],
+      "raw": {
+        "rank": 5,
+        "code": "000651",
+        "name": "格力电器",
+        "final_score": 76.7614,
+        "screen_score": 76.26904878048781,
+        "llm_score": 75.0,
+        "ranking_reason": "反转与流动性因子表现突出，契合白马防守逻辑。",
+        "risk_summary": "地产周期低迷对耐用消费品需求的抑制",
+        "price": 38.29,
+        "change_pct": -1.57,
+        "amount": 1743924326.88,
+        "total_mv": 214477825823.0,
+        "turnover_rate": 0.82,
+        "volume_ratio": 1.32,
+        "pe_ratio": 7.69612515,
+        "pb_ratio": 1.44421658,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": null,
+        "signal_score": null,
+        "ma_bullish": null,
+        "price_above_ma20": null,
+        "macd_status": "",
+        "rsi_status": "",
+        "breakout_20d_pct": null,
+        "range_20d_pct": null,
+        "volume_ratio_20d": null,
+        "body_pct": null,
+        "pullback_to_ma20_pct": null,
+        "consolidation_days_20d": null,
+        "volatility_20d_pct": null,
+        "max_drawdown_20d_pct": null,
+        "atr_20_pct": null,
+        "daily_quality_score": null,
+        "daily_quality_flags": "",
+        "daily_source": "",
+        "factor_scores": {
+          "value": 65.6778,
+          "liquidity": 94.3089,
+          "momentum": 51.3975,
+          "reversal": 81.41,
+          "activity": 83.0988,
+          "stability": 73.29,
+          "size": 87.8049,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.75,
+        "llm_sector": "家电",
+        "llm_theme": "白电龙头高分红消费",
+        "llm_tags": [
+          "价值",
+          "防守",
+          "sector:家电",
+          "theme:白电龙头高分红消费",
+          "style_fit:符合高股息与消费蓝筹风格"
+        ],
+        "llm_catalysts": [
+          "家电以旧换新政策刺激",
+          "海外出口超预期"
+        ],
+        "llm_risks": [
+          "原材料价格波动"
+        ],
+        "llm_thesis": "家电行业格局稳定，现金流充沛且分红意愿极强。",
+        "llm_style_fit": "符合高股息与消费蓝筹风格",
+        "llm_watch_items": [
+          "内销零售数据与出口数据",
+          "原材料铜铝价格"
+        ],
+        "llm_invalidators": [
+          "内需消费出现断崖式萎缩"
+        ],
+        "risk_score": 10.0,
+        "risk_level": "low",
+        "risk_penalty": 1.2,
+        "risk_flags": [
+          "原材料价格波动"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 0.0,
+        "portfolio_flags": [],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: controlled_reversal；风险: 原材料价格波动"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": 2.2
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "原材料价格波动"
+            ],
+            "tags": [
+              "controlled_reversal"
+            ]
+          }
+        },
+        "post_analysis_tags": [
+          "controlled_reversal"
+        ],
+        "dsa_context": {},
+        "dsa_news": [],
+        "dsa_analysis_summary": "",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "blue_chip_income"
+      ],
+      "merge_score": 75.0
+    },
+    {
+      "rank": 12,
+      "code": "601336",
+      "name": "新华保险",
+      "score": 74.0,
+      "screen_score": 74.07875408536586,
+      "reason": "反转因子较高，具备一定的弹性空间。",
+      "risk_level": "low",
+      "risk_flags": [
+        "退保率波动",
+        "portfolio_sector_concentration:金融"
+      ],
+      "llm_score": 74.0,
+      "llm_confidence": 0.74,
+      "llm_sector": "保险",
+      "llm_theme": "弹性险企价值重估",
+      "llm_tags": [
+        "价值",
+        "事件",
+        "sector:保险",
+        "theme:弹性险企价值重估",
+        "style_fit:符合大市值低估值特征"
+      ],
+      "llm_thesis": "估值相对便宜，弹性在权益市场回暖时表现较好。",
+      "llm_catalysts": [
+        "代理人渠道改革成效显现"
+      ],
+      "llm_risks": [
+        "退保率波动"
+      ],
+      "llm_watch_items": [
+        "新单保费与价值率"
+      ],
+      "llm_invalidators": [
+        "投资端出现重大踩雷或亏损"
+      ],
+      "llm_style_fit": "符合大市值低估值特征",
+      "price": 60.06,
+      "change_pct": -1.02,
+      "amount": 1110036439.0,
+      "industry": "",
+      "factor_scores": {
+        "value": 66.9604,
+        "liquidity": 79.6748,
+        "momentum": 53.185,
+        "reversal": 74.26,
+        "activity": 82.2711,
+        "stability": 74.94,
+        "size": 86.1789,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {},
+      "dsa_news": [],
+      "dsa_events": [],
+      "dsa_analysis_summary": "",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: 未发现额外加分项；风险: 退保率波动"
+      },
+      "post_analysis_tags": [],
+      "raw": {
+        "rank": 12,
+        "code": "601336",
+        "name": "新华保险",
+        "final_score": 63.5473,
+        "screen_score": 74.07875408536586,
+        "llm_score": 74.0,
+        "ranking_reason": "反转因子较高，具备一定的弹性空间。",
+        "risk_summary": "寿险转型阵痛期负债端增速放缓",
+        "price": 60.06,
+        "change_pct": -1.02,
+        "amount": 1110036439.0,
+        "total_mv": 187359968796.0,
+        "turnover_rate": 0.88,
+        "volume_ratio": 0.65,
+        "pe_ratio": 4.23144606,
+        "pb_ratio": 1.51612721,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": null,
+        "signal_score": null,
+        "ma_bullish": null,
+        "price_above_ma20": null,
+        "macd_status": "",
+        "rsi_status": "",
+        "breakout_20d_pct": null,
+        "range_20d_pct": null,
+        "volume_ratio_20d": null,
+        "body_pct": null,
+        "pullback_to_ma20_pct": null,
+        "consolidation_days_20d": null,
+        "volatility_20d_pct": null,
+        "max_drawdown_20d_pct": null,
+        "atr_20_pct": null,
+        "daily_quality_score": null,
+        "daily_quality_flags": "",
+        "daily_source": "",
+        "factor_scores": {
+          "value": 66.9604,
+          "liquidity": 79.6748,
+          "momentum": 53.185,
+          "reversal": 74.26,
+          "activity": 82.2711,
+          "stability": 74.94,
+          "size": 86.1789,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.74,
+        "llm_sector": "保险",
+        "llm_theme": "弹性险企价值重估",
+        "llm_tags": [
+          "价值",
+          "事件",
+          "sector:保险",
+          "theme:弹性险企价值重估",
+          "style_fit:符合大市值低估值特征"
+        ],
+        "llm_catalysts": [
+          "代理人渠道改革成效显现"
+        ],
+        "llm_risks": [
+          "退保率波动"
+        ],
+        "llm_thesis": "估值相对便宜，弹性在权益市场回暖时表现较好。",
+        "llm_style_fit": "符合大市值低估值特征",
+        "llm_watch_items": [
+          "新单保费与价值率"
+        ],
+        "llm_invalidators": [
+          "投资端出现重大踩雷或亏损"
+        ],
+        "risk_score": 10.0,
+        "risk_level": "low",
+        "risk_penalty": 1.2,
+        "risk_flags": [
+          "退保率波动",
+          "portfolio_sector_concentration:金融"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 9.0,
+        "portfolio_flags": [
+          "portfolio_sector_concentration:金融"
+        ],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: 未发现额外加分项；风险: 退保率波动"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": -0.3
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "退保率波动"
+            ],
+            "tags": []
+          }
+        },
+        "post_analysis_tags": [],
+        "dsa_context": {},
+        "dsa_news": [],
+        "dsa_analysis_summary": "",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "blue_chip_income"
+      ],
+      "merge_score": 74.0
+    },
+    {
+      "rank": 8,
+      "code": "601919",
+      "name": "中远海控",
+      "score": 73.0,
+      "screen_score": 73.51113213414635,
+      "reason": "市值容量与稳定性良好，但受制于周期波动属性。",
+      "risk_level": "low",
+      "risk_flags": [
+        "BDI及SCFI指数剧烈波动"
+      ],
+      "llm_score": 73.0,
+      "llm_confidence": 0.72,
+      "llm_sector": "航运",
+      "llm_theme": "周期航运高股息龙头",
+      "llm_tags": [
+        "价值",
+        "防守",
+        "sector:航运",
+        "theme:周期航运高股息龙头",
+        "style_fit:兼具高股息与周期属性"
+      ],
+      "llm_thesis": "账面现金充裕，长协运价提供较强业绩安全垫。",
+      "llm_catalysts": [
+        "地缘政治导致的航线绕行推高运价"
+      ],
+      "llm_risks": [
+        "BDI及SCFI指数剧烈波动"
+      ],
+      "llm_watch_items": [
+        "SCFI（上海出口集装箱运价指数）",
+        "主要航线供需格局"
+      ],
+      "llm_invalidators": [
+        "全球经济衰退导致集装箱需求骤降"
+      ],
+      "llm_style_fit": "兼具高股息与周期属性",
+      "price": 16.14,
+      "change_pct": 0.88,
+      "amount": 937857388.0,
+      "industry": "",
+      "factor_scores": {
+        "value": 70.3791,
+        "liquidity": 69.9187,
+        "momentum": 59.36,
+        "reversal": 49.56,
+        "activity": 80.6136,
+        "stability": 75.36,
+        "size": 91.0569,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {},
+      "dsa_news": [],
+      "dsa_events": [],
+      "dsa_analysis_summary": "",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: 未发现额外加分项；风险: BDI及SCFI指数剧烈波动"
+      },
+      "post_analysis_tags": [],
+      "raw": {
+        "rank": 8,
+        "code": "601919",
+        "name": "中远海控",
+        "final_score": 71.8067,
+        "screen_score": 73.51113213414635,
+        "llm_score": 73.0,
+        "ranking_reason": "市值容量与稳定性良好，但受制于周期波动属性。",
+        "risk_summary": "全球贸易摩擦与运力过剩风险",
+        "price": 16.14,
+        "change_pct": 0.88,
+        "amount": 937857388.0,
+        "total_mv": 246427504655.0,
+        "turnover_rate": 0.47,
+        "volume_ratio": 0.61,
+        "pe_ratio": 9.21190694,
+        "pb_ratio": 1.05418027,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": null,
+        "signal_score": null,
+        "ma_bullish": null,
+        "price_above_ma20": null,
+        "macd_status": "",
+        "rsi_status": "",
+        "breakout_20d_pct": null,
+        "range_20d_pct": null,
+        "volume_ratio_20d": null,
+        "body_pct": null,
+        "pullback_to_ma20_pct": null,
+        "consolidation_days_20d": null,
+        "volatility_20d_pct": null,
+        "max_drawdown_20d_pct": null,
+        "atr_20_pct": null,
+        "daily_quality_score": null,
+        "daily_quality_flags": "",
+        "daily_source": "",
+        "factor_scores": {
+          "value": 70.3791,
+          "liquidity": 69.9187,
+          "momentum": 59.36,
+          "reversal": 49.56,
+          "activity": 80.6136,
+          "stability": 75.36,
+          "size": 91.0569,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.72,
+        "llm_sector": "航运",
+        "llm_theme": "周期航运高股息龙头",
+        "llm_tags": [
+          "价值",
+          "防守",
+          "sector:航运",
+          "theme:周期航运高股息龙头",
+          "style_fit:兼具高股息与周期属性"
+        ],
+        "llm_catalysts": [
+          "地缘政治导致的航线绕行推高运价"
+        ],
+        "llm_risks": [
+          "BDI及SCFI指数剧烈波动"
+        ],
+        "llm_thesis": "账面现金充裕，长协运价提供较强业绩安全垫。",
+        "llm_style_fit": "兼具高股息与周期属性",
+        "llm_watch_items": [
+          "SCFI（上海出口集装箱运价指数）",
+          "主要航线供需格局"
+        ],
+        "llm_invalidators": [
+          "全球经济衰退导致集装箱需求骤降"
+        ],
+        "risk_score": 10.0,
+        "risk_level": "low",
+        "risk_penalty": 1.2,
+        "risk_flags": [
+          "BDI及SCFI指数剧烈波动"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 0.0,
+        "portfolio_flags": [],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: 未发现额外加分项；风险: BDI及SCFI指数剧烈波动"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": -0.3
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "BDI及SCFI指数剧烈波动"
+            ],
+            "tags": []
+          }
+        },
+        "post_analysis_tags": [],
+        "dsa_context": {},
+        "dsa_news": [],
+        "dsa_analysis_summary": "",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "blue_chip_income"
+      ],
+      "merge_score": 73.0
+    },
+    {
+      "rank": 12,
+      "code": "601658",
+      "name": "邮储银行",
+      "score": 70.0,
+      "screen_score": 68.84511078109091,
+      "reason": "筛选评分最低，均线偏离度高且整理期不足，防守安全性受限。",
+      "risk_level": "low",
+      "risk_flags": [
+        "rsi_overbought",
+        "偏离度过高",
+        "整理天数短",
+        "portfolio_sector_concentration:金融"
+      ],
+      "llm_score": 70.0,
+      "llm_confidence": 0.79,
+      "llm_sector": "银行",
+      "llm_theme": "零售大行成长潜能",
+      "llm_tags": [
+        "趋势",
+        "价值",
+        "sector:银行",
+        "theme:零售大行成长潜能",
+        "style_fit:防守属性暂时弱化，需等待技术回调充分后观察。"
+      ],
+      "llm_thesis": "基本面扎实，但整理天数仅5天，RSI超买且拉离MA20达到5.44%，短线需等待筹码充分交换。",
+      "llm_catalysts": [
+        "网络下沉渠道优势变现",
+        "代理财富管理业务回暖"
+      ],
+      "llm_risks": [
+        "偏离度过高",
+        "整理天数短"
+      ],
+      "llm_watch_items": [
+        "向MA20均线回归过程",
+        "量能配合情况"
+      ],
+      "llm_invalidators": [
+        "加速赶顶后快速破位回调"
+      ],
+      "llm_style_fit": "防守属性暂时弱化，需等待技术回调充分后观察。",
+      "price": 5.42,
+      "change_pct": 0.56,
+      "amount": 835355988.0,
+      "industry": "",
+      "factor_scores": {
+        "value": 66.9068,
+        "liquidity": 49.0909,
+        "momentum": 71.8875,
+        "reversal": 39.72,
+        "activity": 75.2973,
+        "stability": 80.1545,
+        "size": 76.3636,
+        "theme_heat": 50.0,
+        "topic_alignment": 50.0
+      },
+      "dsa_context": {},
+      "dsa_news": [],
+      "dsa_events": [],
+      "dsa_analysis_summary": "",
+      "post_analysis_summaries": {
+        "scorecard": "本地后置评分: 未发现额外加分项；风险: 偏离度过高、整理天数短"
+      },
+      "post_analysis_tags": [],
+      "raw": {
+        "rank": 12,
+        "code": "601658",
+        "name": "邮储银行",
+        "final_score": 55.1071,
+        "screen_score": 68.84511078109091,
+        "llm_score": 70.0,
+        "ranking_reason": "筛选评分最低，均线偏离度高且整理期不足，防守安全性受限。",
+        "risk_summary": "技术偏离度较大，流动性分位数偏低。",
+        "price": 5.42,
+        "change_pct": 0.56,
+        "amount": 835355988.0,
+        "total_mv": 650915189927.0,
+        "turnover_rate": 0.21,
+        "volume_ratio": 0.5,
+        "pe_ratio": 7.25827886,
+        "pb_ratio": 0.62208824,
+        "industry": "",
+        "concepts": "",
+        "industry_rank": null,
+        "industry_change_pct": null,
+        "industry_heat_score": null,
+        "concept_heat_score": null,
+        "board_heat_score": null,
+        "board_heat_latest_score": null,
+        "board_heat_trend_score": null,
+        "board_heat_persistence_score": null,
+        "board_heat_cooling_score": null,
+        "board_heat_observations": null,
+        "board_heat_state": "",
+        "board_heat_summary": "",
+        "change_60d": 5.5828,
+        "signal_score": 81.954,
+        "ma_bullish": true,
+        "price_above_ma20": true,
+        "macd_status": "bullish",
+        "rsi_status": "overbought",
+        "breakout_20d_pct": -3.9216,
+        "range_20d_pct": 14.4898,
+        "volume_ratio_20d": 1.4647,
+        "body_pct": -0.7366,
+        "pullback_to_ma20_pct": 5.4382,
+        "consolidation_days_20d": 5,
+        "volatility_20d_pct": 28.0851,
+        "max_drawdown_20d_pct": -3.0576,
+        "atr_20_pct": 1.6327,
+        "daily_quality_score": 100.0,
+        "daily_quality_flags": "",
+        "daily_source": "dsa:TencentFetcher",
+        "factor_scores": {
+          "value": 66.9068,
+          "liquidity": 49.0909,
+          "momentum": 71.8875,
+          "reversal": 39.72,
+          "activity": 75.2973,
+          "stability": 80.1545,
+          "size": 76.3636,
+          "theme_heat": 50.0,
+          "topic_alignment": 50.0
+        },
+        "llm_confidence": 0.79,
+        "llm_sector": "银行",
+        "llm_theme": "零售大行成长潜能",
+        "llm_tags": [
+          "趋势",
+          "价值",
+          "sector:银行",
+          "theme:零售大行成长潜能",
+          "style_fit:防守属性暂时弱化，需等待技术回调充分后观察。"
+        ],
+        "llm_catalysts": [
+          "网络下沉渠道优势变现",
+          "代理财富管理业务回暖"
+        ],
+        "llm_risks": [
+          "偏离度过高",
+          "整理天数短"
+        ],
+        "llm_thesis": "基本面扎实，但整理天数仅5天，RSI超买且拉离MA20达到5.44%，短线需等待筹码充分交换。",
+        "llm_style_fit": "防守属性暂时弱化，需等待技术回调充分后观察。",
+        "llm_watch_items": [
+          "向MA20均线回归过程",
+          "量能配合情况"
+        ],
+        "llm_invalidators": [
+          "加速赶顶后快速破位回调"
+        ],
+        "risk_score": 32.5,
+        "risk_level": "low",
+        "risk_penalty": 3.9,
+        "risk_flags": [
+          "rsi_overbought",
+          "偏离度过高",
+          "整理天数短",
+          "portfolio_sector_concentration:金融"
+        ],
+        "excluded_by_risk": false,
+        "portfolio_penalty": 10.5,
+        "portfolio_flags": [
+          "portfolio_sector_concentration:金融"
+        ],
+        "post_analysis_status": {
+          "scorecard": "completed"
+        },
+        "post_analysis_summaries": {
+          "scorecard": "本地后置评分: 未发现额外加分项；风险: 偏离度过高、整理天数短"
+        },
+        "post_analysis_score_deltas": {
+          "scorecard": 0.2
+        },
+        "post_analysis_results": {
+          "scorecard": {
+            "risk_flags": [
+              "偏离度过高",
+              "整理天数短"
+            ],
+            "tags": []
+          }
+        },
+        "post_analysis_tags": [],
+        "dsa_context": {},
+        "dsa_news": [],
+        "dsa_analysis_summary": "",
+        "deep_analysis_status": "not_requested",
+        "deep_analysis_query_id": "",
+        "deep_analysis_summary": "",
+        "deep_analysis_error": "",
+        "deep_analysis_result": null,
+        "deep_analysis_signal_score": null,
+        "deep_analysis_sentiment_score": null,
+        "deep_analysis_operation_advice": "",
+        "deep_analysis_trend_prediction": "",
+        "deep_analysis_risk_flags": []
+      },
+      "source_strategies": [
+        "low_volatility_quality"
+      ],
+      "merge_score": 70.0
+    }
+  ],
+  "candidate_count": 12,
+  "run_id": "966b371d7183",
+  "strategy": "blue_chip_income",
+  "market": "cn",
+  "snapshot_count": 5209,
+  "snapshot_source": "em_datacenter",
+  "after_filter_count": 123,
+  "llm_ranked": true,
+  "llm_market_view": "当前市场整体温和上涨，候选池以高流动性、大市值蓝筹及红利资产为主，高度契合防守与价值投资偏好。",
+  "llm_selection_logic": "重点考量资产的市值规模、流动性支撑、估值安全边际及现金流或分红稳定性。",
+  "llm_portfolio_risk": "组合集中于金融、地产基建与传统周期板块，存在宏观经济波动及系统性beta同向波动的集中风险。",
+  "llm_coverage": 1.0,
+  "llm_parse_errors": [],
+  "llm_model_used": "gemini/gemini-3.5-flash-lite",
+  "llm_attempted_models": [
+    "gemini/gemini-3.6-flash",
+    "gemini/gemini-3.5-flash-lite"
+  ],
+  "llm_failure_reason": "",
+  "ranking_mode": "llm",
+  "degradation": [
+    "DSA provider context applied 3 of 3 candidates"
+  ],
+  "warnings": [
+    "DSA provider context applied 3 of 3 candidates"
+  ],
+  "source_errors": [],
+  "dsa_enrichment": {
+    "enabled": true,
+    "max_candidates": 3,
+    "requested_count": 3,
+    "enriched_count": 3,
+    "warnings": []
+  },
+  "deep_analysis_requested": false,
+  "post_analyzers": [
+    "scorecard"
+  ],
+  "daily_enriched": false,
+  "daily_enrich_count": 0,
+  "risk_enabled": true,
+  "portfolio_diversity_enabled": true,
+  "portfolio_concentration_notes": [
+    "Portfolio concentration bucket=金融: penalized=7, codes=601601:保险(-3.0),601328:银行(-6.0),600016:银行(-9.0),600030:券商(-9.0),600919:银行(-9.0),+2 more"
+  ],
+  "result_variant_applied": false,
+  "result_variant_pool_size": 0,
+  "result_variant_rotated_slots": 0,
+  "strategies_used": [
+    "blue_chip_income",
+    "low_volatility_quality"
+  ],
+  "resonance_count": 5,
+  "market_state": "BEAR",
+  "data_sources": {
+    "snapshot": {
+      "source": "em_datacenter",
+      "count": 5209,
+      "errors": []
+    },
+    "daily_kline": {
+      "requested": true,
+      "attempted": 100,
+      "succeeded": 100,
+      "sources": {
+        "dsa:TencentFetcher": 100
+      },
+      "primary": "dsa:TencentFetcher",
+      "quality_flags": {},
+      "source_order_notes": [],
+      "health_notes": [],
+      "error_samples": [],
+      "skipped_reason": "",
+      "status": "ok",
+      "per_strategy": {
+        "blue_chip_income": {
+          "requested": false,
+          "attempted": 0,
+          "succeeded": 0,
+          "sources": {},
+          "primary": "",
+          "quality_flags": {},
+          "source_order_notes": [],
+          "health_notes": [],
+          "error_samples": [],
+          "skipped_reason": "",
+          "status": "not_requested"
+        },
+        "low_volatility_quality": {
+          "requested": true,
+          "attempted": 100,
+          "succeeded": 100,
+          "sources": {
+            "dsa:TencentFetcher": 100
+          },
+          "primary": "dsa:TencentFetcher",
+          "quality_flags": {},
+          "source_order_notes": [],
+          "health_notes": [],
+          "error_samples": [],
+          "skipped_reason": "",
+          "status": "ok"
+        }
+      }
+    }
+  }
+}
