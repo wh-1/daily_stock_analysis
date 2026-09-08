@@ -50,6 +50,11 @@ on:
         required: false
         default: false
         type: boolean
+      trigger_source:
+        description: '触发来源标记（仅用于追溯，如 automation-e2c2bd0d / manual-test）'
+        required: false
+        default: ''
+        type: string
 
 # 并发控制：同一时间只运行一个选股任务
 concurrency:
@@ -89,6 +94,7 @@ jobs:
             echo "### 幂等闸门"
             echo ""
             echo "- 触发事件：${{ github.event_name }}"
+            echo "- 触发来源：${{ github.event.inputs.trigger_source || '未标记（人工或 cron）' }}"
             echo "- 归档日期（北京时间）：${DATE}"
             echo "- 当天是否已有产出：${SKIP}"
             if [ "$SKIP" = "true" ]; then
