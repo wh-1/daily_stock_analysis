@@ -45,6 +45,11 @@ on:
         required: false
         default: ''
         type: string
+      force:
+        description: '强制重跑（忽略"当天已产出"的幂等闸门）'
+        required: false
+        default: false
+        type: boolean
 
 # 并发控制：同一时间只运行一个选股任务
 concurrency:
@@ -60,6 +65,38 @@ jobs:
     steps:
       - name: 随机延迟（避免固定时间访问）
         run: sleep $((RANDOM % 60))  # 随机延迟0-60秒启动
+
+      # 幂等闸门：GitHub 的 schedule 触发可能延迟数小时（2026-09-07 实测登记延迟 5h38m），
+      # 与本地兜底 dispatch 撞车时会导致同一天跑两次（飞书重复推送、signals 同日重复归档覆盖）。
+      # 开跑前先查 signals 分支当天是否已有归档文件，已存在则整轮跳过（可选 force=true 强跑）。
+      - name: 幂等闸门（当天已产出则跳过）
+        id: gate
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE=$(TZ='Asia/Shanghai' date '+%Y%m%d')
+          SKIP=false
+          if [ "${{ github.event.inputs.force }}" != "true" ]; then
+            URL="https://api.github.com/repos/${{ github.repository }}/contents/signals/screening_${DATE}.json?ref=signals"
+            if curl -sf -H "Authorization: Bearer $GH_TOKEN" \
+                 -H "Accept: application/vnd.github+json" "$URL" -o /dev/null; then
+              SKIP=true
+            fi
+          fi
+          echo "skip=$SKIP" >> "$GITHUB_OUTPUT"
+          echo "北京时间 ${DATE} 归档状态：已存在=${SKIP}"
+          {
+            echo "### 幂等闸门"
+            echo ""
+            echo "- 触发事件：${{ github.event_name }}"
+            echo "- 归档日期（北京时间）：${DATE}"
+            echo "- 当天是否已有产出：${SKIP}"
+            if [ "$SKIP" = "true" ]; then
+              echo "- 结论：**跳过本轮**（已产出，未重复推送/归档）"
+            else
+              echo "- 结论：正常执行（force=${{ github.event.inputs.force || 'false' }}）"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: 检出代码
         uses: actions/checkout@v5
@@ -80,6 +117,7 @@ jobs:
           mkdir -p data logs reports
 
       - name: 执行每日选股
+        if: steps.gate.outputs.skip != 'true'
         env:
           # ==========================================
           # AI 配置
@@ -409,7 +447,7 @@ jobs:
             || echo "::warning::选股运行未成功，已跳过（不影响其他流程）"
 
       - name: 推送选股结果到飞书
-        if: always()
+        if: always() && steps.gate.outputs.skip != 'true'
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
           FEISHU_WEBHOOK_SECRET: ${{ secrets.FEISHU_WEBHOOK_SECRET }}
@@ -664,7 +702,7 @@ jobs:
       # Actions 本身无状态，runner 结束即销毁；不归档的话本地永远拿不到历史信号，
       # 也就无法做任何回测。用独立孤儿分支可避免污染 dev 的提交历史。
       - name: 归档信号到 signals 分支
-        if: always()
+        if: always() && steps.gate.outputs.skip != 'true'
         run: |
           DATE=$(TZ='Asia/Shanghai' date '+%Y%m%d')
           SRC="reports/screening_${DATE}.json"
